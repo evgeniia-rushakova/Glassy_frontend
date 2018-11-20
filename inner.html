@@ -7,87 +7,191 @@
   <body>
 	<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
 <header class="main-header">
-	<a class="main-header-logo" href="index.html">
-	<img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
-</a>
 	<nav class="main-navigation">
+		<a class="main-header-logo" href="index.html">
+			<img src="img/logo.svg" alt="Логотип магазина" width="154" height="64">
+		</a>
 		<ul class="site-navigation">
-			<li><a>Каталог</a></li>
+			<li class="site-navigation-current"><a href="inner.html">Каталог</a></li>
 			<li><a href="delievery.html">Доставка и оплата</a></li>
 			<li><a href="about.html">О Компании</a></li>
 		</ul>
 		<ul class="user-navigation">
-			<li><a href="#">Искать</a></li>
-			<li><a href="#">Вход</a></li>
-			<li><a href="Bucket.html">Корзина</a></li>
+			<li class="login-link">Вход</li>
 		</ul>
 	</nav>
 </header>
-<main class="main-catalogue">
-<section class="page-path">
-	<h2 class="visually-hidden">Выбор из каталога</h2>
-	<a href="index.html">Главная </a> 
-	<span> >> </span>
-	<a href="catalog.html">Каталог </a>
-	<span> >> </span>
-	<a>Сливочное</a>
-</section>
-
-
-
-
-<section class="type-of-icecream-list">
-	<h1>Сливочное мороженое</h1>
-	<ul class="list-of-taste">
-		<li class="taste-item"><span>310 р/кг</span>
-			<p>Сливочое с апельсиновым джемом и цитрусовой стружкой</p>
-			<img src="img/orange.svg" alt="orange"	height="267" width="267"></li>
-		<li class="taste-item"><span>380 р/кг</span>
-		 	<p>Сливочно-кофейное с кусочками шоколада</p>
-		 	<img src="img/coffee.svg" alt="coffee"	height="267" width="267"></li>
-		<li class="taste-item"><span>355 р/кг </span>
-			<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-			<img src="img/strawberry.svg" alt="strawberry"	height="267" width="267"></li>
-		<li class="taste-item"><span>415 р/кг</span>
-			<p>Сливочное крем-брюле с карамельной подливкой</p>
-			<img src="img/creme-brulee.svg" alt="creme-brulee"	height="267" width="267"></li>
-		<li class="taste-item"><span>325 р/кг</span>
-			<p>Сливочное с брусничным джемом</p>
-			<img src="img/cowberry.svg" alt="cowberry"	height="267" width="267"></li>
-		<li class="taste-item"><span>410 р/кг</span>
-			<p>Сливочно-черничное с цельными ягодами черники</p>
-			<img src="img/blueberry.svg" alt="blueberry"	height="267" width="267"></li>
-		<li class="taste-item"><span>375 р/кг</span>
-			<p>Сливочно-лимонное с карамельной присыпкой</p>
-			<img src="img/lemon.svg" alt="lemon"	height="267" width="267"></li>
-		<li class="taste-item"><span>415 р/кг</span>
-			<p>Сливочное крем-брюле с карамельной подливкой</p>
-			<img src="img/creme-brulee.svg" alt="creme-brulee"	height="267" width="267"></li>
-		<li class="taste-item"><span>320 р/кг</span>
-			<p>Сливочное с шоколадной стружкой</p>
-			<img src="img/chocoshavings.svg" alt="chocoshavings"	height="267" width="267"></li>
-		<li class="taste-item"><span>440 р/кг</span>
-			<p>Сливочно-ванильное с кусочками шоколада</p>
-			<img src="img/vanilla-chocolate.svg" alt="vanilla-chocolate"	height="267" width="267"></li>
-		<li class="taste-item"><span>435 р/кг</span>
-			<p>Сливочное с ментоловым сиропом</p>
-			<img src="img/mentol.svg" alt="mentol"	height="267" width="267"></li>
-		<li class="taste-item"><span>355 р/кг</span>
-			<p>Сливочное с кусочками черного шоколада</p>
-			<img src="img/chocopieces.svg" alt="chocopieces"	height="267" width="267"></li>
-		<li class="taste-item"><span>420 р/кг</span>
-			<p>Сливочное с мятным сиропом</p>
-			<img src="img/mintsirup.svg" alt="mintsirup"	height="267" width="267"></li>
-
-
-
-
+<main class="container">
+	<ul class="breadcrumbs">
+		<li><a href="index.html">Главная</a></li>
+		<li><a href="catalogue.html">Каталог</a></li>
+		<li class="breadcrumb-current">Сливочное</li>
+	</ul>
+<section class="catalog">
+	<h2 class="page-title">Сливочное мороженое</h2>
+	<section class="filters">
+        <h3 class="visually-hidden">Фильтр товаров</h3>
+    </section>
+	<ul class="catalog-list">
+		<li class="catalog-item">
+			<p class="catalog-item-price">310 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочое с апельсиновым джемом и цитрусовой стружкой</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/orange.svg" alt="orange"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">380 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочно-кофейное с кусочками шоколада</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/coffee.svg" alt="coffee"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">355 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочно-клубничное с присыпкой из белого шоколада</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/strawberry.svg" alt="strawberry"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">415 h<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочное крем-брюле с карамельной подливкой</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/creme-brulee.svg" alt="creme-brulee"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">325 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочное с брусничным джемом</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/cowberry.svg" alt="cowberry"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">410 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочно-черничное с цельными ягодами черники</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/blueberry.svg" alt="blueberry"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">375 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочно-лимонное с карамельной присыпкой</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/lemon.svg" alt="lemon"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">415 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочное крем-брюле с карамельной подливкой</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/creme-brulee.svg" alt="creme-brulee"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">320 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочное с шоколадной стружкой</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/chocoshavings.svg" alt="chocoshavings"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">440 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочно-ванильное с кусочками шоколада</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/vanilla-chocolate.svg" alt="vanilla-chocolate"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">435 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочное с ментоловым сиропом</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/mentol.svg" alt="mentol"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">355 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочное с кусочками черного шоколада</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/chocopieces.svg" alt="chocopieces"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
+		<li class="catalog-item">
+			<p class="catalog-item-price">420 р<span>/кг</span></p>
+				<a href="catalog-item.html">
+					<h4>Сливочное с мятным сиропом</h4>
+				</a>
+			<p class="catalog-item-image">
+				<a href="catalog-item.html">
+					<img src="img/mintsirup.svg" alt="mintsirup"	height="267" width="267">
+				</a>
+			</p>
+			<a class="button" href="#">Быстрый просмотр</a>
+		</li>
 	</ul>
 </section>
-
-
 </main>
-
 <footer class="main-footer">
 	<div class="footer-social">
 		<ul>
@@ -105,8 +209,10 @@
 		<a href="ecology.html">Экологические стандарты</a>
     </section>    
     <div class="madefor">
-    	<img src="img/htmlacademy-logo.svg" alt="HTML-Academy" height="108" width="39">
-    	<p>Сделано в HTML Academy © 2017</p>
+    	<a href=https://htmlacademy.ru/intensive/htmlcss>
+    		<img src="img/htmlacademy-logo.svg" alt="HTML-Academy" height="108" width="39">
+    	</a>
+    	<a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
     </div>
    </footer>
   </body>
