@@ -1,7 +1,498 @@
 body {
-
-margin: 0; 
-background: #849d8f; 
-color: white;
+	margin: 0;
+	padding: 0;
+	font-family:"Roboto", "Arial", sans-serif; 
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: normal;
+	color: white;
+	text-transform: none;
+	background-color: #849d8f; 
 }
+.visually-hidden {
+	position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+a {
+	text-decoration: none;
+	color:#ffffff;
+
+}
+.main-navigation,
+.user-navigation-general {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+	text-align: left;
+	color: #ffffff;
+}
+.site-navigation,
+.user-navigation,
+.catalog-navigation {
+	list-style: none;
+}
+
+.site-navigation li,
+.user-navigation li{
+	display: inline-block;
+}
+.catalog-navigation {
+	display: none;
+}
+/*
+.site-navigation>li:hover .catalog-navigation{
+	display:block;
+}  что-то неправильно написала,потом разберусь
+*/
+.site-navigation a {
+	display:block;
+	color:#ffffff;
+}
+.user-navigation a {
+	text-align: right;
+	display:block;
+	color:#ffffff;
+}
+
+.site-navigation a:hover,
+.user-navigation a:hover{
+  	background-color: #f7f6f3;
+  	border-radius:10px;
+  	color: #323232; 
+}
+.user-navigation a:focus,
+.site-navigation a:focus{
+	width: 87px;
+	height: 32px;
+	box-shadow: inset 0px 2px 1px 0 #696969;
+	background-color: #ededed;
+	border-radius:10px;
+  	color: #323232; 
+}
+
+
+.contacts-information p {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 16px;
+	letter-spacing: normal;
+	text-align: right;
+	color: #ffffff;
+}
+.contacts-information a {
+	font-family: "Roboto", sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 24px;
+	letter-spacing: normal;
+	text-align: right;
+	color: #ffffff;
+}
+.slide1,
+.slide2,
+.slide3 {
+	width: 582px;
+	height: 367px;
+}
+.slider h2 {
+	 font-family: "Roboto", sans-serif;
+	 font-size: 60px;
+	 font-weight: bold;
+	 font-style: normal;
+	 font-stretch: normal;
+	 line-height: 60px;
+	 letter-spacing: normal;
+	 text-align: center;
+	 color: #ffffff;
+}
+.button {
+	box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: -webkit-linear-gradient(bottom, #e74a35, #f26843);
+  background-image: -o-linear-gradient(bottom, #e74a35, #f26843);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+	border-radius: 50px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  font-family: "Roboto",sans-serif;
+  font-size: inherit;
+  font-weight: bold;
+  font-style: normal;
+ 	font-stretch: normal;	
+}
+.button:hover {
+    box-shadow: 0px 2px 2px 0 #ac1000;
+    background-image: linear-gradient(to top, #e74a35, #f26843), 
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));/*почему не срабатывает ховер?вернее,срабатывает но основной цвет не меняется*/ 
+}
+.button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, #e74a35, #f26843),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
+}	
+
+.topping-gifts {
+	display: inline;
+	width: 560px;
+	height: 229px;
+}
+.topping-gifts h3{
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 41px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.topping-gifts p{
+  font-family: "Roboto",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.raspberry{
+  display: inline-block;
+  background-color:#DC143C;
+  background-image:url("../img/raspberry-promo.jpg");
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 560px;
+  height: 229px;
+}
+.chocolate{
+  display:inline-block;
+  background-color:#8B4513;
+  background-image:url("../img/chocolate-promo.jpg");
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 560px;
+  height: 229px;
+}
+.catalog-list li{
+display: inline-block;
+}
+.catalog-item {
+	width: 293px;
+	height: 405px;
+}
+.catalog-item:hover {
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: rgba(248,247,244,0.2);
+}
+.catalog-item img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.catalog-item span {
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-family: Roboto;
+  font-size: 45px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 45px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.catalog-item span span {
+text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-family: Robotvalue~="/кг"o;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 45px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.catalog-item p {
+	font-family: "Roboto",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.our-features {
+  width: 1146px;
+  min-height: 306px;
+  object-fit: contain;
+  border-radius: 15px;
+  background-image:url(img/waffle.jpg);
+  background-color:#f0c954;
+}
+.our-features b {
+	font-family: "Roboto",sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 30px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+  display:inline-block;
+  padding-left: 21px;
+  padding-top: 29px;
+}
+.our-features p {
+	font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+  display:inline-block;
+  width: 476px;
+  padding-left: 76px;
+}
+.our-blog {
+	width: 560px;
+	min-height: 220px;
+	display: inline-block;
+	border-radius:15px;
+	background-color: #ffffff;
+	background-image: url(img/blogphoto.jpg);
+	margin:40px 0 0 27px;
+}
+.our-blog h4 {
+	width: 161px;
+  height: 14px;
+  font-family: "Roboto",sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+  padding-left: 20px;
+  margin-top: 0;
+}
+.our-blog a {
+	font-family: "Roboto",sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 30px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+  text-decoration: underline;
+  padding-left:19px;
+  padding-top:13px;
+	width:279px;
+	display:block;
+}
+.subscribe {
+	display:inline-block;
+	width:549px;
+	min-height: 220px;
+	margin-left: 26px;
+	margin-top: 40px;
+	border-radius: 10px;
+  background-color: #f8f7f4;
+}
+.subscribe label {
+	font-family: "Roboto",sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5a5a5a;
+  display: inline-block;
+  max-width: 506px;
+}
+.subscribe-form {
+	padding-top: 38px;
+	padding-left: 26px;
+	display: inline-block;
+}
+input[type="email"],
+input[type="password"],
+input[type="text"],
+.feedback-item textarea{
+height: 44px;
+border:1px solid rgba(178, 178, 178, 0.52);
+border-radius: 5px;
+/*margin-right: 11px; надо потом не забыть поправить*/
+
+}
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="text"]:hover,
+.feedback-item textarea:hover {
+	border:2px solid rgba(178, 178, 178, 0.52);
+}
+input[type="email"]:active,
+input[type="password"]:active,
+input[type="text"]:active,
+.feedback-item textarea:active {
+	border:2px solid rgba(46, 136, 228, 0.52);
+}
+.contacts {
+display: block;
+width: 302px;
+height: 305px;
+border-radius: 15px;
+background-color: #ffffff;
+position: absolute;
+right:27px;
+top:63px;
+}
+.contacts p {
+	padding-left:25px;
+	padding-top:32px;
+	width: 252px;
+}
+.contacts span {
+	font-family: "Roboto",sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+}
+.contacts b {
+	font-family: "Roboto",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+}
+.contacts a{
+	display: block;
+	margin:26px 25px 31px 25px;
+}
+.map {
+	margin-top:39px;
+	width: 1200px;
+	height: 430px;
+	position:relative;
+}
+.modal-feedback {
+	width: 478px;
+  height: 443px;
+  border-radius: 10px;
+  background-color: #f8f7f4;
+  position: relative;
+}
+.modal-feedback h2 {
+	font-family: "Roboto",sans-serif;
+  font-size: 24px;
+  font-weight:bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+  padding: 20px 0 0 24px;
+}
+.feedback-item {
+	padding-left: 24px;
+}
+.feedback-item textarea {
+	width:428px;
+	height: 155px;
+}
+.feedback-item input {
+	width:267px;
+	height:44px;
+}
+.modal-feedback .button[type="submit"]{
+	max-height: 44px;
+	display: block;
+	font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: right;
+  color: #fefefe;
+  position: absolute;
+  bottom:27px;
+  right:26px;
+  vertical-align: middle;
+}
+.modal-login {
+	width: 277px;
+  height: 214px;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  position: absolute;
+  right:58px;
+  top:59px;
+}
+.login-form input[type="email"],
+ .login-form input[type="password"]{
+margin-bottom: 20px;
+}
+.login-form {
+	padding-top: 20px;
+	padding-left: 19px;
+}
+.help-me {
+	display:inline-block;
+	width: 120px;
+	float: left;
+}
+.restore,
+.registration-user {
+	font-family: "Roboto",sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+  text-decoration: underline;
+}
+
+
+
+
+
 
