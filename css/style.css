@@ -4,9 +4,6 @@ body {
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: normal;
-	color: white;
-	text-transform: none;
 	background-color: #849d8f;
 }
 
@@ -32,12 +29,6 @@ a {
 	text-align: center;
 	color: #ffffff;
 	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-	font-family: "Roboto", sans-serif;
-	font-size: inherit;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
-	min-height: 44px;
 }
 
 .button:hover {
@@ -69,6 +60,7 @@ a {
 .site-navigation li,
 .user-navigation li {
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .catalog-navigation {
@@ -96,7 +88,7 @@ a {
 .user-navigation a:focus,
 .site-navigation a:focus {
 	width: 87px;
-	height: 32px;
+	min-height: 32px;
 	box-shadow: inset 0px 2px 1px 0 #696969;
 	background-color: #ededed;
 	border-radius: 10px;
@@ -104,7 +96,7 @@ a {
 }
 
 .contacts-information p {
-	font-family: "Roboto", sans-serif;
+	/*font-family: "Roboto",Arial,sans-serif;*/
 	font-size: 14px;
 	font-weight: bold;
 	font-style: normal;
@@ -116,7 +108,7 @@ a {
 }
 
 .contacts-information a {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 22px;
 	font-weight: bold;
 	font-style: normal;
@@ -129,7 +121,7 @@ a {
 
 .search-on-site {
 	width: 341px;
-	height: 84px;
+	min-height: 84px;
 	border-radius: 5px;
 	background-color: #f8f7f4;
 }
@@ -141,10 +133,9 @@ a {
 	margin-left: 15px;
 }
 
-input[placeholder="Что ищем?"] {
+.placeholder {
 	padding-left: 15px;
 }
-
 
 /*мне каждый плейсхолдер так прописать или можно как-то универсальный отступ для всех прописать?*/
 
@@ -156,7 +147,7 @@ input[placeholder="Что ищем?"] {
 }
 
 .slider h2 {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 60px;
 	font-weight: bold;
 	font-style: normal;
@@ -172,7 +163,7 @@ input[placeholder="Что ищем?"] {
 .slide3 a {
 	padding: 17px 43px 16px 41px;
 	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-	font-family: Roboto;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 32px;
 	font-weight: bold;
 	font-style: normal;
@@ -186,13 +177,12 @@ input[placeholder="Что ищем?"] {
 .topping-gifts {
 	display: inline;
 	width: 560px;
-	height: 229px;
 	margin-left: 26px;
-	/*position: relative;*/
+	position: relative;
 }
 
 .topping-gifts h3 {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 35px;
 	font-weight: bold;
 	font-style: normal;
@@ -208,7 +198,7 @@ input[placeholder="Что ищем?"] {
 /*почему между h3 и p такое большое расстояние?*/
 
 .topping-gifts p {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: normal;
@@ -222,7 +212,7 @@ input[placeholder="Что ищем?"] {
 
 .topping-gifts a {
 	padding: 15px 24px 14px 22px;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: normal;
@@ -231,10 +221,12 @@ input[placeholder="Что ищем?"] {
 	letter-spacing: normal;
 	text-align: center;
 	color: #ffffff;
-	margin-left: 20px;
-	/* position: absolute;
+	position: absolute;
+	width: 165px;
   right:46px;
-  bottom:23px;*/
+  bottom:23px;
+  right:21px;
+  bottom: 23px;
 	/*Вот так наверное делать не надо,кнопка растягивается.как тогда ее направо поместить*/
 }
 
@@ -245,7 +237,7 @@ input[placeholder="Что ищем?"] {
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	width: 560px;
-	height: 229px;
+	vertical-align: middle;
 }
 
 .chocolate {
@@ -255,7 +247,6 @@ input[placeholder="Что ищем?"] {
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	width: 560px;
-	height: 229px;
 }
 
 .catalog-list li {
@@ -280,7 +271,7 @@ input[placeholder="Что ищем?"] {
 
 .catalog-item span {
 	text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
-	font-family: Roboto;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 45px;
 	font-weight: bold;
 	font-style: normal;
@@ -291,7 +282,7 @@ input[placeholder="Что ищем?"] {
 	color: #ffffff;
 }
 
-.catalog-item span span {
+.catalog-item span span {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 	text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 	font-family: Robotvalue~="/кг"o;
 	font-size: 30px;
@@ -305,7 +296,7 @@ input[placeholder="Что ищем?"] {
 }
 
 .catalog-item.catalog-item-description {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif,;
 	font-size: 16px;
 	font-weight: 500;
 	font-style: normal;
@@ -318,7 +309,7 @@ input[placeholder="Что ищем?"] {
 
 .catalog-item a[class="button"] {
 	padding: 13px 17px 13px 17px;
-	font-family: Roboto;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: normal;
@@ -342,7 +333,7 @@ input[placeholder="Что ищем?"] {
 }
 
 .our-features b {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	font-style: normal;
@@ -357,7 +348,7 @@ input[placeholder="Что ищем?"] {
 }
 
 .our-features p {
-	font-family: Roboto;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	font-style: normal;
@@ -385,7 +376,7 @@ input[placeholder="Что ищем?"] {
 .our-blog h4 {
 	width: 161px;
 	height: 14px;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 	font-style: normal;
@@ -399,7 +390,7 @@ input[placeholder="Что ищем?"] {
 }
 
 .our-blog a {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	font-style: normal;
@@ -443,7 +434,7 @@ input[placeholder="Что ищем?"] {
 /*не могу задать длину этой кнопки.что я делаю не так или сделать как в .catalog-item a[class="button"]???*/
 
 .subscribe label {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	font-style: normal;
@@ -509,7 +500,7 @@ input[type="text"]:active,
 }
 
 .contacts span {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	font-style: normal;
@@ -521,7 +512,7 @@ input[type="text"]:active,
 }
 
 .contacts b {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: normal;
@@ -538,7 +529,7 @@ input[type="text"]:active,
 	padding: : 13px 28px 13px 28px;
 	margin-left: 25px;
 	vertical-align: middle;
-	font-family: Roboto;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: normal;
@@ -566,7 +557,7 @@ input[type="text"]:active,
 }
 
 .modal-feedback h2 {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	font-style: normal;
@@ -638,7 +629,7 @@ input[type="text"]:active,
 
 .restore,
 .registration-user {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 13px;
 	font-weight: normal;
 	font-style: normal;
@@ -671,7 +662,7 @@ input[type="text"]:active,
 }
 
 .commercial-information a {
-	font-family: Roboto;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 13px;
 	font-weight: normal;
 	font-style: normal;
@@ -714,7 +705,7 @@ input[type="text"]:active,
 }
 
 .sorting-filters .submit-result {
-	font-family: Roboto;
+	font-family: "Roboto",Arial,sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	font-style: normal;
