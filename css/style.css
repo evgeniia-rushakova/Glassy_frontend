@@ -17,7 +17,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .button {
@@ -25,7 +25,7 @@ a {
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 50px;
   text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
@@ -46,7 +46,7 @@ a {
   line-height: 18px;
   font-weight: bold;
   text-align: left;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .site-navigation,
@@ -72,31 +72,18 @@ a {
   line-height: 16px;
 }
 
-.site-navigation a {
-  font-size: 16px;
-  line-height: 18px;
-}
-
-
-/*помоги!не могу стилизовать меню)почему ничего из вышеперечисленного не работает?*/
-
-
-/*
-.catalog-navigation {
-	display: none;
-}потом с выпадающим меню разберусь*/
 
 .site-navigation a {
   display: block;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 16px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .user-navigation a {
   text-align: right;
   display: block;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .site-navigation a:hover,
@@ -118,7 +105,6 @@ a {
 
 .contacts-information
 /*Не понимаю,почему в индекс стилизация происходит,а в иннер нет,хотя все скопировано с индекса*/
-
 {
   font-size: 14px;
 }
@@ -133,10 +119,10 @@ a {
   width: 341px;
   min-height: 84px;
   border-radius: 5px;
-  background-color: #f8f7f4;
+  background-color: rgba(248, 247, 244, 1);
 }
 
-.search-on-site input[type="search"] {
+.search-on-site .input-style {
   width: 311px;
   height: 44px;
   margin-top: 20px;
@@ -161,7 +147,7 @@ a {
   font-size: 60px;
   line-height: 60px;
   text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .slide1 a,
@@ -184,7 +170,7 @@ a {
 .topping-gifts h3 {
   font-size: 35px;
   line-height: 41px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
   padding-left: 19px;
   margin: 0;
   margin-top: 16px;
@@ -194,7 +180,7 @@ a {
   font-size: 18px;
   font-weight: bold;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
   padding-left: 20px;
   margin: 0;
   margin-top: 15px;
@@ -263,7 +249,7 @@ a {
   line-height: 45px;
   letter-spacing: normal;
   text-align: left;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .catalog-item-price span {
@@ -283,10 +269,10 @@ a {
   line-height: 22px;
   letter-spacing: normal;
   text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
-.catalog-item a[class="button"] {
+.catalog-item .button-visual {
   padding: 13px 17px 13px 17px;
   font-size: 18px;
   font-weight: bold;
@@ -331,7 +317,7 @@ a {
   display: inline-block;
   vertical-align: middle;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1);
   background-image: url("../img/blogphoto.jpg");
   margin-top: 40px;
   margin-left: 27px;
@@ -364,7 +350,7 @@ a {
   margin-left: 26px;
   margin-top: 40px;
   border-radius: 10px;
-  background-color: #f8f7f4;
+  background-color: rgba(248, 247, 244, 1);
   border-image-source: url("../img/border-candy.svg");
   border-image-repeat: stretch;
   border-image-width: 5px;
@@ -373,16 +359,15 @@ a {
   /*какие-то неправильные параметры задаю?*/
 }
 
-.subscribe-form.button[type="subscribe"] {
+.subscribe-block-button {
   padding: 19px 13px 19px 14px;
   max-height: 44px;
   min-width: 129px;
   display: block;
   padding-left: 11px;
+  font-weight: bold;
 }
 
-
-/*не могу задать длину этой кнопки.что я делаю не так или сделать как в .catalog-item a[class="button"]???*/
 
 .subscribe-block label {
   line-height: 22px;
@@ -400,13 +385,7 @@ a {
   vertical-align: middle;
 }
 
-.subscribe-form input[type="email"] {
-  width: 368px;
-}
-
-input[type="email"],
-input[type="password"],
-input[type="text"],
+.input-feedback
 .feedback-item textarea {
   height: 44px;
   border: 1px solid rgba(178, 178, 178, 0.52);
@@ -414,16 +393,12 @@ input[type="text"],
   /*margin-right: 11px; надо потом не забыть поправить*/
 }
 
-input[type="email"]:hover,
-input[type="password"]:hover,
-input[type="text"]:hover,
+input-feedback:hover,
 .feedback-item textarea:hover {
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
 
-input[type="email"]:active,
-input[type="password"]:active,
-input[type="text"]:active,
+input-feedback:active,
 .feedback-item textarea:active {
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
@@ -433,7 +408,7 @@ input[type="text"]:active,
   width: 302px;
   height: 305px;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1);
   position: absolute;
   right: 27px;
   top: 63px;
@@ -477,7 +452,7 @@ input[type="text"]:active,
   width: 478px;
   height: 443px;
   border-radius: 10px;
-  background-color: #f8f7f4;
+  background-color: rgba(248, 247, 244, 1);
 }
 
 .modal-feedback h2 {
@@ -501,11 +476,12 @@ input[type="text"]:active,
   height: 44px;
 }
 
-.modal-feedback .button[type="submit"] {
+.feedback-button {
   max-height: 44px;
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
+  padding:14px 24px;
 }
 
 .modal-login {
@@ -513,14 +489,14 @@ input[type="text"]:active,
   height: 214px;
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-  background-color: #f8f7f4;
+  background-color: rgba(248, 247, 244, 1);
   position: absolute;
   right: 58px;
   top: 59px;
 }
 
-.login-form input[type="email"],
-.login-form input[type="password"] {
+.login-form .user-email,
+.login-form .user-password {
   margin-bottom: 20px;
 }
 
@@ -542,11 +518,21 @@ input[type="text"]:active,
   color: #323232;
   text-decoration: underline;
 }
+.modal-login-button {
+  padding:14px 25px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
 
 .footer-social {
   margin-left: 31px;
+}
+.footer-social ul {
+    list-style: none;  
+}
   .footer-social li {
-    list-style: none;
+
     display: inline-block;
     vertical-align: middle;
   }
@@ -562,33 +548,33 @@ input[type="text"]:active,
     font-size: 13px;
     line-height: 18px;
   }
-  .commercial-information li:first-child {
+  .commercial-block li:first-child a /*не стилизуется.опять не так что-то пишу*/{
     font-weight: bold;
   }
-  /*как сделать как на макете две аккуратные колонки?*опять сетки*/
   .copyright {
     display: inline-block;
     vertical-align: middle;
     margin-left: 232px;
-    /*Вот почему этот блок уполз вниз,а не к соседним блокам?сетки*/
     margin-top: 0;
   }
   .copyright a {
     display: block;
   }
-  /*inner начинается тут*/
-  .breadcrumbs li {
+  /*inner начинается тут*******************************************************************************/
+  .breadcrumbs li,
+  .breadcrumb-current {
     display: inline-block;
     font-size: 14px;
     line-height: 16px;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
     vertical-align: middle;
+    list-style: none;
   }
-  .sorting-filters label {
+  .sorting-name {
     font-size: 14px;
     font-weight: bold;
     line-height: 16px;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
   }
   .filter-item {
     display: inline-block;
@@ -599,7 +585,7 @@ input[type="text"]:active,
     font-size: 14px;
     font-weight: bold;
     line-height: 16px;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
   }
   .sort-fat-item {
     display: inline-block;
@@ -610,11 +596,16 @@ input[type="text"]:active,
     font-size: 16px;
     line-height: 18px;
   }
+  .topping-check {
+    font-size: 16px;
+    line-height: 18px;
+    color:rgba(255, 255, 255, 1);
+  }
   .sorting-filters .submit-result {
     font-size: 16px;
     line-height: 18px;
     font-weight: bold;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
     padding: 12px 29px 9px 31px;
     background-color: #849d8f;
     border-radius: 20px;
@@ -623,13 +614,12 @@ input[type="text"]:active,
   .catalog h1 {
     font-size: 35px;
     line-height: 41px;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
   }
 }
 
-.pagination li {
-  list-style: none;
-  /*почему маркеры не убираются?*/
+.pagination ul{
+  list-style: none;/*почему маркеры не убираются?*/
 }
 
 .pager-item a,
