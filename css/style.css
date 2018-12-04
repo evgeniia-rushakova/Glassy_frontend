@@ -22,8 +22,6 @@ a {
 
 .button {
 	box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-	background-image: -webkit-linear-gradient(bottom, #e74a35, #f26843);
-	background-image: -o-linear-gradient(bottom, #e74a35, #f26843);
 	background-image: linear-gradient(to top, #e74a35, #f26843);
 	border-radius: 50px;
 	text-align: center;
@@ -33,13 +31,13 @@ a {
 
 .button:hover {
 	box-shadow: 0px 2px 2px 0 #ac1000;
-	background-image: linear-gradient(to top, #e74a35, #f26843), linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
-	/*почему не срабатывает ховер?вернее,срабатывает но основной цвет не меняется*/
+	background-image: linear-gradient(to top, #e74a35, #f26843);
+	/*ховер потом поправить*/
 }
 
 .button:active {
 	box-shadow: inset 0px 2px 2px 0 #942718;
-	background-image: linear-gradient(to bottom, #e74a35, #f26843), linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
+	background-image: linear-gradient(to bottom, #e74a35, #f26843);
 }
 
 .main-navigation,
@@ -62,20 +60,36 @@ a {
 	display: inline-block;
 	vertical-align: middle;
 }
-
+.active a,
+.catalog-navigation-item a{
+	 font-size: 16px;
+	 line-height: 18px;
+}
+.user-navigation-item a {
+	font-size: 14px;
+	line-height: 16px;
+}
+.site-navigation a {
+	font-size: 16px;
+	line-height: 18px;
+}/*помоги!не могу стилизовать меню)почему ничего из вышеперечисленного не работает?*/
+/*
 .catalog-navigation {
 	display: none;
-}
+}потом с выпадающим меню разберусь*/
 
 .site-navigation a {
 	display: block;
 	color: #ffffff;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 .user-navigation a {
 	text-align: right;
 	display: block;
 	color: #ffffff;
+
 }
 
 .site-navigation a:hover,
@@ -95,28 +109,14 @@ a {
 	color: #323232;
 }
 
-.contacts-information p {
-	/*font-family: "Roboto",Arial,sans-serif;*/
+.contacts-information/*Не понимаю,почему в индекс стилизация происходит,а в иннер нет,хотя все скопировано с индекса*/{
 	font-size: 14px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: 16px;
-	letter-spacing: normal;
-	text-align: right;
-	color: #ffffff;
 }
 
-.contacts-information a {
-	font-family: "Roboto",Arial,sans-serif;
+.contacts-information a {/*тот же самый вопрос-в индекс работает,в иннер нет*/
 	font-size: 22px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 24px;
-	letter-spacing: normal;
-	text-align: right;
-	color: #ffffff;
+
 }
 
 .search-on-site {
@@ -137,23 +137,18 @@ a {
 	padding-left: 15px;
 }
 
-/*мне каждый плейсхолдер так прописать или можно как-то универсальный отступ для всех прописать?*/
+/*cстилизовать плэйсхолдеры*/
 
 .slide1,
 .slide2,
 .slide3 {
-	width: 582px;
+	width: 700px;
 	height: 367px;
 }
 
 .slider h2 {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 60px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 60px;
-	letter-spacing: normal;
 	text-align: center;
 	color: #ffffff;
 }
@@ -163,71 +158,47 @@ a {
 .slide3 a {
 	padding: 17px 43px 16px 41px;
 	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 32px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: 44px;
-	letter-spacing: normal;
-	text-align: center;
-	color: #ffffff;
+	line-height: 44px;/*размер кнопок не сходится,разобраться позже*/
 }
 
 .topping-gifts {
 	display: inline;
 	width: 560px;
 	margin-left: 26px;
-	position: relative;
+	min-height: 229px;
 }
 
 .topping-gifts h3 {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 35px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 41px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #ffffff;
-	padding-left: 20px;
+	padding-left: 19px;
+	margin:0;
+	margin-top: 16px;
 }
 
 
-/*почему между h3 и p такое большое расстояние?*/
-
 .topping-gifts p {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 22px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #ffffff;
 	padding-left: 20px;
+	margin: 0;
+	margin-top: 15px;
 }
 
 .topping-gifts a {
 	padding: 15px 24px 14px 22px;
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 24px;
-	letter-spacing: normal;
-	text-align: center;
-	color: #ffffff;
-	position: absolute;
 	width: 165px;
-  right:46px;
-  bottom:23px;
   right:21px;
   bottom: 23px;
-	/*Вот так наверное делать не надо,кнопка растягивается.как тогда ее направо поместить*/
+	/*Высота кнопки расходится с макетом поправить*/
 }
 
 .raspberry {
@@ -269,7 +240,7 @@ a {
 	margin: 0 auto;
 }
 
-.catalog-item span {
+.catalog-item-price {/*на макете значок Р немного съезжает*/
 	text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 	font-family: "Roboto",Arial,sans-serif;
 	font-size: 45px;
@@ -282,7 +253,7 @@ a {
 	color: #ffffff;
 }
 
-.catalog-item span span {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.catalog-item-price span{
 	text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 	font-family: Robotvalue~="/кг"o;
 	font-size: 30px;
@@ -309,17 +280,10 @@ a {
 
 .catalog-item a[class="button"] {
 	padding: 13px 17px 13px 17px;
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 24px;
-	letter-spacing: normal;
-	text-align: center;
-	vertical-align: middle;
-	color: #fefefe;
-	height: 44px;
+	min-height: 44px;
 	min-width: 200px;
 }
 
@@ -332,34 +296,21 @@ a {
 	background-color: #f0c954;
 }
 
-.our-features b {
-	font-family: "Roboto",Arial,sans-serif;
+.our-features b {/*слово магазин совпадает а дальше все расползается с макетом*/
 	font-size: 24px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 30px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #323232;
 	display: inline-block;
-	padding-left: 21px;
-	padding-top: 29px;
+	padding-left: 18px;
+	padding-top: 25px;
 }
 
 .our-features p {
-	font-family: "Roboto",Arial,sans-serif;
-	font-size: 16px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: 22px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #323232;
-	display: inline-block;
+	display: inline-block;/*тоже сетки,наверное*/
 	width: 476px;
 	padding-left: 76px;
+	margin-top: 0;
 }
 
 .our-blog {
@@ -374,39 +325,25 @@ a {
 }
 
 .our-blog h4 {
-	width: 161px;
 	height: 14px;
-	font-family: "Roboto",Arial,sans-serif;
-	font-size: 16px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: 22px;
-	letter-spacing: normal;
-	text-align: left;
-	color: #323232;
-	padding-left: 20px;
-	padding-top: 16px;
+	margin:0;
+	padding-top: 22px;
+	padding-left: 19px;
 }
 
 .our-blog a {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 24px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 30px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #323232;
 	text-decoration: underline;
 	padding-left: 19px;
-	padding-top: 13px;
-	width: 279px;
+	margin-top: 13px;
+	width: 286px;
 	display: block;
 }
 
-.subscribe {
+.subscribe-block {
 	display: inline-block;
 	width: 549px;
 	min-height: 220px;
@@ -417,7 +354,7 @@ a {
 	border-image-source: url("../img/border-candy.svg");
 	border-image-repeat: stretch;
 	border-image-width: 5px;
-	border-image-slice: : 5px 5px 5px 5px;
+	border-image-slice: : 5px;
 	border-image-outset: 0;
 	/*какие-то неправильные параметры задаю?*/
 }
@@ -433,15 +370,8 @@ a {
 
 /*не могу задать длину этой кнопки.что я делаю не так или сделать как в .catalog-item a[class="button"]???*/
 
-.subscribe label {
-	font-family: "Roboto",Arial,sans-serif;
-	font-size: 16px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
+.subscribe-block label {
 	line-height: 22px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #5a5a5a;
 	display: inline-block;
 	max-width: 506px;
@@ -495,50 +425,29 @@ input[type="text"]:active,
 
 .contacts p {
 	padding-left: 25px;
-	padding-top: 32px;
-	width: 252px;
+	padding-top: 12px;
 }
 
 .contacts span {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 14px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 20px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #323232;
 }
 
 .contacts b {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 24px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #323232;
 }
 
 .contacts a {
 	display: block;
 	max-width: 252px;
-	padding: : 13px 28px 13px 28px;
+	padding: : 13px 28px 13px 28px;/*не сработал разобраться позже*/
 	margin-left: 25px;
-	vertical-align: middle;
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 24px;
-	letter-spacing: normal;
-	text-align: center;
-	color: #fefefe;
-	/*Как текст "форма обратной связи" выровнять по центру?у меня есть vertical-align и паддинги*/
 }
 
 .map {
@@ -553,18 +462,11 @@ input[type="text"]:active,
 	height: 443px;
 	border-radius: 10px;
 	background-color: #f8f7f4;
-	position: relative;
 }
 
 .modal-feedback h2 {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 24px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 28px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #323232;
 	padding: 20px 0 0 24px;
 }
@@ -585,19 +487,9 @@ input[type="text"]:active,
 
 .modal-feedback .button[type="submit"] {
 	max-height: 44px;
-	display: block;
 	font-size: 18px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 24px;
-	letter-spacing: normal;
-	text-align: right;
-	color: #fefefe;
-	position: absolute;
-	bottom: 27px;
-	right: 26px;
-	vertical-align: middle;
 }
 
 .modal-login {
@@ -629,14 +521,8 @@ input[type="text"]:active,
 
 .restore,
 .registration-user {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 13px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 24px;
-	letter-spacing: normal;
-	text-align: left;
 	color: #323232;
 	text-decoration: underline;
 }
@@ -662,25 +548,20 @@ input[type="text"]:active,
 }
 
 .commercial-information a {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 13px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 18px;
-	letter-spacing: normal;
-	text-align: left;
-	color: #ffffff;
-	white-space: pre-wrap;
+}
+.commercial-information li:first-child {
+font-weight: bold;
 }
 
 
-/*как сделать как на макете две аккуратные колонки?*/
+/*как сделать как на макете две аккуратные колонки?*опять сетки*/
 
 .copyright {
 	display: inline-block;
 	margin-left: 232px;
-	/*Вот почему этот блок уполз вниз,а не к соседним блокам?*/
+	/*Вот почему этот блок уполз вниз,а не к соседним блокам?сетки*/
 	float: right;
 	margin-top: 0;
 }
@@ -694,36 +575,72 @@ input[type="text"]:active,
 
 .breadcrumbs li {
 	display: inline-block;
+	font-size: 14px;
+	line-height: 16px;
+	color:#ffffff;
+}
+.sorting-filters label{
+font-size: 14px;
+font-weight: bold;
+line-height: 16px;
+color:#ffffff;
 }
 
 .filter-item {
 	display: inline-block;
 }
+.filter-item b,
+.toppings b{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	color:#ffffff;
+}
 
 .sort-fat-item {
 	display: inline-block;
 }
+.sort-fat-item label,
+.toppings label {
+	font-size: 16px;
+	line-height: 18px;
+}
+
 
 .sorting-filters .submit-result {
-	font-family: "Roboto",Arial,sans-serif;
 	font-size: 16px;
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 18px;
-	letter-spacing: normal;
-	text-align: left;
+	font-weight: bold;
 	color: #ffffff;
 	padding: 12px 29px 9px 31px;
 	background-color: #849d8f;
 	border-radius: 20px;
+}/*здесь тоже не стилизуется,исправить пока не трогаю*/
+.catalog h1 {
+	font-size: 35px;
+	line-height: 41px;
+	color: #ffffff;
 }
 
 
-/*здесь тоже не стилизуется,исправить*/
 
 
 }
 .pagination li {
-	display: inline-block;
+	list-style: none;/*почему маркеры не убираются?*/
+
 }
+.pager-item a,
+.pager-last a,
+.pager-current span,
+.pager-next span {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+}
+.copyright a {
+	font-size: 12px;
+	line-height: 16px;
+}
+/*подредактировать кнопки стилизовать инпуты вставить задний фон на слайдер убрать лишние селекторы в цсс в каталоге поправить паджинатор спросить про фокус в каталоге*/
+/*с 10 до 20 ежедневно стилизовать сортировка по популярности сливочное мороженое* нопка применить в форме/
