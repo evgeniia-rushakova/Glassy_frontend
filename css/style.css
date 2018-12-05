@@ -103,14 +103,11 @@ a {
   color: #323232;
 }
 
-.contacts-information
-/*Не понимаю,почему в индекс стилизация происходит,а в иннер нет,хотя все скопировано с индекса*/
-{
+.contacts-information {
   font-size: 14px;
 }
 
 .contacts-information a {
-  /*тот же самый вопрос-в индекс работает,в иннер нет*/
   font-size: 22px;
   line-height: 24px;
 }
@@ -375,7 +372,7 @@ a {
 }
 
 .subscribe-form {
-  margin: 5px 5px 5px 5px;
+  margin: 5px;
   width: 550px;
   min-height: 210px;
   background-color: rgba(255, 255, 255, 1);
