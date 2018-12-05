@@ -345,18 +345,13 @@ a {
 .subscribe-block {
   display: inline-block;
   vertical-align: middle;
-  width: 549px;
+  width: 560px;
   min-height: 220px;
   margin-left: 26px;
   margin-top: 40px;
   border-radius: 10px;
   background-color: rgba(248, 247, 244, 1);
-  border-image-source: url("../img/border-candy.svg");
-  border-image-repeat: stretch;
-  border-image-width: 5px;
-  border-image-slice: : 5px;
-  border-image-outset: 0;
-  /*какие-то неправильные параметры задаю?*/
+  background-image:repeating-linear-gradient(135deg, #f8f7f4, #f8f7f4 7px, #94ceff 7px, #94ceff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);;
 }
 
 .subscribe-block-button {
@@ -380,9 +375,11 @@ a {
 }
 
 .subscribe-form {
-  padding-left: 26px;
-  display: inline-block;
-  vertical-align: middle;
+  margin: 5px 5px 5px 5px;
+  width: 550px;
+  min-height: 210px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
 }
 
 .input-feedback
