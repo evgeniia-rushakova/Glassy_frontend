@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin-left:27px;
+  margin-right: 27px;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -484,9 +485,6 @@ input-feedback:active,
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(248, 247, 244, 1);
-  position: absolute;
-  right: 58px;
-  top: 59px;
 }
 
 .login-form .user-email,
@@ -630,8 +628,30 @@ input-feedback:active,
   line-height: 16px;
 }
 
-
-/*подредактировать кнопки стилизовать инпуты вставить задний фон на слайдер убрать лишние селекторы в цсс в каталоге поправить паджинатор спросить про фокус в каталоге*/
-
-
-/*с 10 до 20 ежедневно стилизовать сортировка по популярности сливочное мороженое* нопка применить в форме/
+/*********************Макросетки*************************/
+}
+.navigation-wrapper {/*Почему не работает?в инспекторе работает,если подключить через стайл работает.а здесь нет*/
+  min-height:100px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin:0;
+  padding: 0;
+  flex-direction: row;
+}
+.catalog-navigation {
+  display:none;
+}
+.main-header-logo {
+  margin:0;
+  padding:0;
+  width: 155px;
+}
+.main-navigation {
+  width:400px;
+}
+.user-navigation-general {
+  width:300px;
+  margin:0;
+  padding:0;
+}

@@ -5,43 +5,38 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/outline.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">
-      <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
-      </a>
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li class="active"><a href="catalog.html">Каталог</a></li>
-          <ul class="catalog-navigation">
-            <li class="catalog-navigation-item"><a href="new.html">Новинки</a></li>
-            <li class="catalog-navigation-item"><a href="inner.html">Сливочное</a></li>
-            <li class="catalog-navigation-item"><a href="cherbets.html">Щербеты</a></li>
-            <li class="catalog-navigation-item"><a href="fruit-ice.html">Фруктовый лед</a></li>
-            <li class="catalog-navigation-item"><a href="melorin.html">Мелорин</a></li>
+      <div class="navigation-wrapper">
+        <a class="main-header-logo">
+        <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
+        </a>
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li class="active"><a href="catalog.html">Каталог</a></li>
+            <ul class="catalog-navigation">
+              <li class="catalog-navigation-item"><a href="new.html">Новинки</a></li>
+              <li class="catalog-navigation-item"><a href="inner.html">Сливочное</a></li>
+              <li class="catalog-navigation-item"><a href="cherbets.html">Щербеты</a></li>
+              <li class="catalog-navigation-item"><a href="fruit-ice.html">Фруктовый лед</a></li>
+              <li class="catalog-navigation-item"><a href="melorin.html">Мелорин</a></li>
+            </ul>
+            <li class="catalog-navigation-item"><a href="delievery.html">Доставка и оплата</a></li>
+            <li class="catalog-navigation-item"><a href="about.html">О Компании</a></li>
           </ul>
-          <li class="catalog-navigation-item"><a href="delievery.html">Доставка и оплата</a></li>
-          <li class="catalog-navigation-item"><a href="about.html">О Компании</a></li>
-        </ul>
-      </nav>
-      <nav class="user-navigation-general">
-        <ul class="user-navigation">
-          <li class="user-navigation-item"><a href="#">Искать</a></li>
-          <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
-          <li class="use-navigation-item"><a class="bucket-link" href="Bucket.html">Корзина</a></li>
-        </ul>
-        <p class="contacts-information" aria-label="Часы работы и телефон">С 10 до 20, ежедневно <a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
-      </nav>
-      <section class="modal modal-search">
-        <h3 class="visually-hidden">Поиск</h3>
-        <form class="search-on-site" action="https://echo.htmlacademy.ru" method="get">
-          <label class="visually-hidden" for="find">Введите сюда искомую информацию</label>
-          <input class="placeholder input-style" type="search" placeholder="Что ищем?" name="find" id="find">
-          <button class="visually-hidden" type="submit">Искать</button>
-        </form>
-      </section>
+        </nav>
+        <nav class="user-navigation-general">
+          <ul class="user-navigation">
+            <li class="user-navigation-item"><a href="#">Искать</a></li>
+            <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
+            <li class="use-navigation-item"><a class="bucket-link" href="Bucket.html">Корзина</a></li>
+          </ul>
+      </div>
+        </nav>
+      <p class="contacts-information" aria-label="Часы работы и телефон">С 10 до 20, ежедневно <a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого "Глэcси"</h1>
@@ -149,39 +144,6 @@
           <a class="button" href="writeme.html">Форма обратной связи</a>
         </section>
       </section>
-      <section class="modal modal-feedback">
-        <h2>Мы обязательно вам ответим!</h2>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="feedback-item">
-            <label><span class="visually-hidden">Ваше Имя</span>
-            <input class="placeholder input-feedback" type="text" name="name" placeholder="Как вас зовут?">
-            </label>
-          </p>
-          <p class="feedback-item">
-            <label><span class="visually-hidden">Ваш e-mail</span>
-            <input  class="placeholder input-feedback" type="email" name="email" placeholder="Ваша почта для ответа?">
-            </label>
-          </p>
-          <p class="feedback-item">
-            <textarea class="input-feedback" placeholder="Напишите что-нибудь..."></textarea>
-          </p>
-          <button class="button feedback-button" type="submit">Отправить</button>
-        </form>
-      </section>
-      <section class="modal modal-login">
-        <h2 class="visually-hidden">Личный кабинет</h2>
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="user-email">Электронная почта</label>
-          <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
-          <label class="visually-hidden" for="user-password">Пароль</label>
-          <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
-          <button class="button modal-login-button" type="submit">Войти</button>
-          <div class="help-me">
-            <a class="restore" href="#">Забыли пароль?</a>
-            <a class="registration-user" href="#">Новая регистрация</a>
-          </div>
-        </form>
-      </section>
     </main>
     <footer class="main-footer">
       <div class="footer-social">
@@ -208,5 +170,46 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
       </div>
     </footer>
+    <section class="modal modal-search">
+        <h3 class="visually-hidden">Поиск</h3>
+        <form class="search-on-site" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="find">Введите сюда искомую информацию</label>
+          <input class="placeholder input-style" type="search" placeholder="Что ищем?" name="find" id="find">
+          <button class="visually-hidden" type="submit">Искать</button>
+        </form>
+      </section>
+      <section class="modal modal-login">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="user-email">Электронная почта</label>
+          <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
+          <button class="button modal-login-button" type="submit">Войти</button>
+          <div class="help-me">
+            <a class="restore" href="#">Забыли пароль?</a>
+            <a class="registration-user" href="#">Новая регистрация</a>
+          </div>
+        </form>
+      </section>
+      <section class="modal modal-feedback">
+        <h2>Мы обязательно вам ответим!</h2>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="feedback-item">
+            <label><span class="visually-hidden">Ваше Имя</span>
+            <input class="placeholder input-feedback" type="text" name="name" placeholder="Как вас зовут?">
+            </label>
+          </p>
+          <p class="feedback-item">
+            <label><span class="visually-hidden">Ваш e-mail</span>
+            <input  class="placeholder input-feedback" type="email" name="email" placeholder="Ваша почта для ответа?">
+            </label>
+          </p>
+          <p class="feedback-item">
+            <textarea class="input-feedback" placeholder="Напишите что-нибудь..."></textarea>
+          </p>
+          <button class="button feedback-button" type="submit">Отправить</button>
+        </form>
+      </section>      
   </body>
 </html>
