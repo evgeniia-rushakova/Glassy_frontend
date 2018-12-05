@@ -1,5 +1,5 @@
 body {
-  margin:0 27px;
+  margin:0;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -32,7 +32,6 @@ a {
 .button:hover {
   box-shadow: 0 2px 2px 0 #ac1000;
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  /*ховер потом поправить*/
 }
 
 .button:active {
@@ -105,6 +104,9 @@ a {
 
 .contacts-information {
   font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  color:rgba(255, 255, 255, 1);
 }
 
 .contacts-information a {
@@ -126,12 +128,12 @@ a {
   margin-left: 15px;
 }
 
-.placeholder {
+.placeholder {/*cстилизовать плэйсхолдеры*/
   padding-left: 15px;
 }
 
 
-/*cстилизовать плэйсхолдеры*/
+
 
 .slide1,
 .slide2,
@@ -155,7 +157,6 @@ a {
   font-size: 32px;
   font-weight: bold;
   line-height: 44px;
-  /*размер кнопок не сходится,разобраться позже*/
 }
 
 .topping-gifts {
@@ -191,7 +192,6 @@ a {
   width: 165px;
   right: 21px;
   bottom: 23px;
-  /*Высота кнопки расходится с макетом поправить*/
 }
 
 .raspberry {
@@ -215,7 +215,6 @@ a {
 }
 
 .catalog-list li {
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -231,12 +230,10 @@ a {
 
 .catalog-item img {
   border-radius: 50%;
-  display: block;
   margin: 0 auto;
 }
 
 .catalog-item-price {
-  /*на макете значок Р немного съезжает*/
   text-shadow:rgba(49, 50, 53, 0.5);
   font-family: "Roboto", ""Arial"", sans-serif;
   font-size: 45px;
@@ -288,7 +285,6 @@ a {
 }
 
 .our-features b {
-  /*слово магазин совпадает а дальше все расползается с макетом*/
   font-size: 24px;
   line-height: 30px;
   color: #323232;
@@ -317,7 +313,6 @@ a {
   background-color: rgba(255, 255, 255, 1);
   background-image: url("../img/blogphoto.jpg");
   margin-top: 40px;
-  margin-left: 27px;
 }
 
 .our-blog h4 {
@@ -522,15 +517,15 @@ input-feedback:active,
 .footer-social ul {
     list-style: none;  
 }
-  .footer-social li {
+.footer-social li {
 
     display: inline-block;
     vertical-align: middle;
-  }
-  .commercial-information {
+}
+.commercial-information {
     max-width: 305px;
     margin-left: 234px;
-  }
+}
   .commercial-block li {
     list-style: none;
     padding-left: 32px;
@@ -539,7 +534,7 @@ input-feedback:active,
     font-size: 13px;
     line-height: 18px;
   }
-  .commercial-block li:first-child a /*не стилизуется.опять не так что-то пишу*/{
+  .commercial-block li:first-child a{
     font-weight: bold;
   }
   .copyright {
@@ -551,7 +546,7 @@ input-feedback:active,
   .copyright a {
     display: block;
   }
-  /*inner начинается тут*******************************************************************************/
+  /*inner начинается тут***********************/
   .breadcrumbs li,
   .breadcrumb-current {
     display: inline-block;
@@ -627,29 +622,87 @@ input-feedback:active,
 }
 
 /*********************Макросетки*************************/
-}
-.navigation-wrapper {/*Почему не работает?в инспекторе работает,если подключить через стайл работает.а здесь нет*/
-  min-height:100px;
+
+.navigation-wrapper {
+  min-height:65px;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin:0;
-  padding: 0;
+  justify-content: flex-start;
   flex-direction: row;
 }
 .catalog-navigation {
   display:none;
 }
 .main-header-logo {
+  display: block;
   margin:0;
   padding:0;
   width: 155px;
-}
-.main-navigation {
-  width:400px;
 }
 .user-navigation-general {
   width:300px;
   margin:0;
   padding:0;
+  align-self: flex-end;
+}
+.main-navigation {
+  width: 350px;
+  margin:0;
+  padding:0;
+}
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+.special-offer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.topping-gifts {
+  margin:0;
+  padding: 0;
+}
+.type-of-icecream-list {
+  margin-bottom: 174px;/*временная мера,чтобы отодвинуть нижний блок*/
+}
+.catalog-list {
+  display: flex;
+  margin:35px 0 0 0;
+  padding:0;
+  margin:0;
+}
+/*
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+}
+.catalog-item-price {
+order:2;
+}
+.catalog-item img {
+order:1;
+}
+.catalog-item-description {
+order:3;
+}
+*/
+.blog-subscribe-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.map {
+  width:1200px;/*Вопрос-что делать с картой?
+  она шире всего контента на странице(на макете).
+  Или это в ее ширину должен быть класс контейнер?*/
+}
+.main-footer {
+  margin-top: 35px;
+  display:flex;
+
+}
+.footer-social,
+.footer-social ul{
+  padding:0;
+  margin:0;
 }
