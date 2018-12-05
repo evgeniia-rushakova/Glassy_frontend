@@ -1,6 +1,5 @@
 body {
-  margin-left:27px;
-  margin-right: 27px;
+  margin:0 27px;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -226,7 +225,7 @@ a {
 }
 
 .catalog-item:hover {
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  box-shadow:rgba(0, 0, 0, 0.4);
   background-color: rgba(248, 247, 244, 0.2);
 }
 
@@ -238,8 +237,8 @@ a {
 
 .catalog-item-price {
   /*на макете значок Р немного съезжает*/
-  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
-  font-family: "Roboto", Arial, sans-serif;
+  text-shadow:rgba(49, 50, 53, 0.5);
+  font-family: "Roboto", ""Arial"", sans-serif;
   font-size: 45px;
   font-weight: bold;
   font-style: normal;
@@ -251,15 +250,15 @@ a {
 }
 
 .catalog-item-price span {
-  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
-  font-family: "Roboto", Arial, sans-serif, ;
+  text-shadow:rgba(49, 50, 53, 0.5);
+  font-family: "Roboto", "Arial", sans-serif ;
   font-size: 30px;
   font-weight: bold;
   line-height: 45px;
 }
 
 .catalog-item.catalog-item-description {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -380,7 +379,7 @@ a {
   border-radius: 10px;
 }
 
-.input-feedback
+.input-feedback,
 .feedback-item textarea {
   height: 44px;
   border: 1px solid rgba(178, 178, 178, 0.52);
@@ -608,7 +607,6 @@ input-feedback:active,
     line-height: 41px;
     color: rgba(255, 255, 255, 1);
   }
-}
 
 .pagination ul{
   list-style: none;/*почему маркеры не убираются?*/
