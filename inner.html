@@ -11,39 +11,49 @@
   <body>
     <header class="main-header container">
       <div class="container navigation-wrapper">
+        <a class="main-header-logo" href="index.html">
+        <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
+        </a>
         <nav class="main-navigation">
-          <a class="main-header-logo" href="index.html">
-          <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
-          </a>
           <ul class="site-navigation">
             <li class="site-navigation-current"><a href="inner.html">Каталог</a></li>
-            <li><a href="delievery.html">Доставка и оплата</a></li>
-            <li><a href="about.html">О Компании</a></li>
+                <ul class="catalog-navigation">
+                  <li class="catalog-navigation-item"><a href="new.html">Новинки</a></li>
+                  <li class="catalog-navigation-item"><a href="inner.html">Сливочное</a></li>
+                  <li class="catalog-navigation-item"><a href="cherbets.html">Щербеты</a></li>
+                  <li class="catalog-navigation-item"><a href="fruit-ice.html">Фруктовый лед</a></li>
+                  <li class="catalog-navigation-item"><a href="melorin.html">Мелорин</a></li>
+                </ul>
+            <li class="catalog-navigation-item"><a href="delievery.html">Доставка и оплата</a></li>
+            <li class="catalog-navigation-item"><a href="about.html">О Компании</a></li>
           </ul>
         </nav>
         <nav class="user-navigation-general">
           <ul class="user-navigation">
-            <li><a href="#" aria-label="Искать"><img src="img/search.svg" width="17" height="17" alt="Искать"></a></li>
-            <li><a href="#"><img src="img/entrance.svg" width="21" height="19" alt="Вход">Вход</a></li>
-            <li><a href="Bucket.html"><img src="img/bucket.svg" width="21" height="20" alt="Корзина">Корзина</a></li>
+            <li class="user-navigation-item"><a href="#">Искать</a></li>
+            <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
+            <li class="use-navigation-item"><a class="bucket-link" href="Bucket.html">Корзина</a></li>
           </ul>
-        </nav>
-      </div>
-      <p class="contacts-information" aria-label="Часы работы и телефон">С 10 до 20, ежедневно <a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
-    </header>
-    <main class="container">
+      </nav>
+    </div>
+    <div class="information-breadcrumbs">
+      <p class="contacts-information" aria-label="Часы работы и телефон"><span>С 10 до 20, ежедневно</span><a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalogue.html">Каталог</a></li>
         <li class="breadcrumb-current">Сливочное</li>
       </ul>
+    </div>      
+    </header>
+    <main class="container">
       <section class="filters">
-        <h2 class="visually-hidden">Фильтр выбора мороженого</h2>
+        <h1 class="page-title">Сливочное мороженое</h1>
         <form class="sorting-filters" action="https://echo.htmlacademy.ru" method="post">
+        <div class="first-row-sorting">
           <b class="sorting-name">Сортировка:</b>
+          <div class="filters-row">
           <p class="filter-item">
             <label class="visually-hidden" for="sortfor">
-              Сортировка:
               <select name="sorting" id="sortfor">
                 <option value="popularity">по популярности</option>
                 <option value="price">по цене</option>
@@ -79,9 +89,13 @@
               <input type="radio" name="fat" value="more 30">
               </label>
             </p>
+            </div>
           </div>
+        </div>
+        <div class="second-row-sorting">
           <p class="toppings filter-item">
-            <b>Наполнители:</b>
+            <b class="sorting-name">Наполнители:</b>
+            <div class="filters-row">
             <label class="topping-check">шоколадные
             <input class="topping-choise" type="checkbox" name="topping" value="chocolate-topping" checked>
             </label>
@@ -99,13 +113,15 @@
             </label>
           </p>
           <button class="submit-result" type="submit">Применить</button>
+        </div>
+      </div>
         </form>
       </section>
       <section class="catalog">
-        <h1 class="page-title">Сливочное мороженое</h1>
+        <h1 class="visually-hidden">Каталог товаров</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
-          <ul class="catalog-list">
+          <ul class="catalog-list catalog-inner">
             <li class="catalog-item">
               <a href="catalog-item.html">
                 <p class="catalog-item-price">310 &#8381<span>/кг</span></p>
@@ -225,39 +241,46 @@
           </ul>
         </section>
       </section>
-      <ul class="pagination">
-        <li class="pager-last disabled" ><a href="#" title="Назад"> < </a></li>
-        <li class="pager-current first"><span>1</span></li>
-        <li class="pager-item"><a href="#" title="На страницу номер 2">2</a></li>
-        <li class="pager-item"><a href="#" title="На страницу номер 3">3</a></li>
-        <li class="pager-item"><a href="#" title="На страницу номер 4">4</a></li>
-        <li class="pager-item"><a href="#" title="На страницу номер 5">5</a></li>
-        <li class="pager-next last"><a href="#" title="Вперед"> > </a></li>
-      </ul>
+      <div class="paginator">
+        <ul class="pagination">
+          <li class="pager-last disabled" ><a href="#" title="Назад"> < </a></li>
+          <li class="pager-current first"><span>1</span></li>
+          <li class="pager-item"><a href="#" title="На страницу номер 2">2</a></li>
+          <li class="pager-item"><a href="#" title="На страницу номер 3">3</a></li>
+          <li class="pager-item"><a href="#" title="На страницу номер 4">4</a></li>
+          <li class="pager-item"><a href="#" title="На страницу номер 5">5</a></li>
+          <li class="pager-next last"><a href="#" title="Вперед"> > </a></li>
+        </ul>
+      </div>
     </main>
-    <div class="footer-social">
-      <ul>
-        <li><a class="social-link" href="#"><img src="img/twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
-        <li><a class="social-link" href="#"><img src="img/instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
-        <li><a class="social-link" href="#"><img src="img/facebook.svg" width="32" height="32" alt="Фейсбук"></a></li>
-        <li><a class="social-link" href="#"><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
-      </ul>
-    </div>
-    <section class="commercial-information">
-      <h2 class="visually-hidden"> Коммерческая информация </h2>
-      <ul class="commercial-block">
-        <li class="commercial-block-item"><a href="forproviders.html">Для поставщиков</a></li>
-        <li class="commercial-block-item"><a href="production.html">О производстве</a></li>
-        <li class="commercial-block-item"><a href="documents.html">Наши документы</a></li>
-        <li class="commercial-block-item"><a href="ecology.html">Экологические стандарты</a></li>
-      </ul>
-    </section>
-    <div class="copyright">
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-      <img src="img/logo-htmlacademy-small.svg" alt="HTML-Academy" height="39" width="108">
-      </a>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
-    </div>
+    <footer class="main-footer container">
+      <div class="footer-social">
+        <ul>
+          <li><a class="social-link" href="#"><img src="img/twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
+          <li><a class="social-link" href="#"><img src="img/instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
+          <li><a class="social-link" href="#"><img src="img/facebook.svg" width="32" height="32" alt="Фейсбук"></a></li>
+          <li><a class="social-link" href="#"><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
+        </ul>
+      </div>
+      <section class="commercial-information">
+        <h2 class="visually-hidden"> Коммерческая информация </h2>
+        <ul class="commercial-block">
+          <div class="commercial-column-first">
+            <li class="commercial-block-item"><a href="forproviders.html">Для поставщиков</a></li>
+            <li class="commercial-block-item"><a href="production.html">О производстве</a></li>
+          </div>
+          <div class="commercial-column-second">
+            <li class="commercial-block-item"><a href="documents.html">Наши документы</a></li>
+            <li class="commercial-block-item"><a href="ecology.html">Экологические стандарты</a></li>
+        </div>
+        </ul>
+      </section>
+      <div class="copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/logo-htmlacademy-small.svg" alt="HTML-Academy" height="39" width="108">
+        </a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
+      </div>
     </footer>
   </body>
 </html>

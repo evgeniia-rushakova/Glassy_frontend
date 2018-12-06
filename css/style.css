@@ -173,10 +173,10 @@ body {
 }
  .catalog-list li {
      vertical-align: middle;
+     list-style: none;
 }
  .catalog-item {
      width: 293px;
-     height: 405px;
 }
  .catalog-item:hover {
      box-shadow:rgba(0, 0, 0, 0.4);
@@ -244,7 +244,6 @@ body {
  .our-features p {
      color: #323232;
      display: inline-block;
-    /*тоже сетки,наверное*/
      vertical-align: middle;
      width: 476px;
      padding-left: 76px;
@@ -426,9 +425,6 @@ body {
      line-height: 24px;
      font-weight: bold;
 }
- .footer-social {
-     margin-left: 31px;
-}
  .footer-social ul {
      list-style: none;
 }
@@ -437,7 +433,7 @@ body {
      vertical-align: middle;
 }
  .commercial-information {
-     max-width: 305px;
+    /* max-width: 305px;*/
      margin-left: 234px;
 }
  .commercial-block li {
@@ -448,19 +444,22 @@ body {
      font-size: 13px;
      line-height: 18px;
 }
- .commercial-block li:first-child a{
+ .commercial-column-first li:first-child a{
      font-weight: bold;
 }
  .copyright {
      display: inline-block;
      vertical-align: middle;
-     margin-left: 232px;
+     margin-left: 123px;
      margin-top: 0;
 }
  .copyright a {
      display: block;
 }
 /*inner начинается тут***********************/
+.page-title {
+     color:rgba(255, 255, 255, 1);
+}
  .breadcrumbs li, .breadcrumb-current {
      display: inline-block;
      font-size: 14px;
@@ -507,7 +506,6 @@ body {
      background-color: #849d8f;
      border-radius: 20px;
 }
-/*здесь тоже не стилизуется,исправить пока не трогаю*/
  .catalog h1 {
      font-size: 35px;
      line-height: 41px;
@@ -515,7 +513,6 @@ body {
 }
  .pagination ul{
      list-style: none;
-    /*почему маркеры не убираются?*/
 }
  .pager-item a, .pager-last a, .pager-current span, .pager-next span {
      font-size: 16px;
@@ -546,17 +543,55 @@ body {
      width:300px;
      margin:0;
      padding:0;
-     align-self: flex-end;
+     margin-left: 374px;
+}
+.site-navigation {
+     margin:0;
+     margin-left: 24px;
+     padding:0;
+     display: flex;
+     width: 350px;
+     justify-content: space-between;
 }
  .main-navigation {
      width: 350px;
      margin:0;
      padding:0;
 }
+.contacts-information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.contact-information a {
+     margin-top:6px;
+}
+.contact-information span {
+     margin-top:6px;
+}
+.slider {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 36px;
+}
+.slide1,
+.slide2,
+.slide3 {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.slide1 h2,
+.slide2 h2,
+.slide3 h2{
+     padding: 0;
+     margin: 0;
+}
+
  .container {
      width: 1146px;
      margin: 0 auto;
-     padding: 0 27px;
 }
  .special-offer {
      display: flex;
@@ -568,8 +603,7 @@ body {
      padding: 0;
 }
  .type-of-icecream-list {
-     margin-bottom: 174px;
-    /*временная мера,чтобы отодвинуть нижний блок*/
+     margin-bottom: 40px;
 }
  .catalog-list {
      display: flex;
@@ -577,7 +611,8 @@ body {
      padding:0;
      margin:0;
 }
-/* .catalog-item {
+/*пока сюда не надо смотреть
+ .catalog-item {
      display: flex;
      flex-direction: column;
 }
@@ -597,13 +632,115 @@ body {
 }
  .map {
      width:1200px;
-    /*Вопрос-что делать с картой? она шире всего контента на странице(на макете). Или это в ее ширину должен быть класс контейнер?*/
+    /*Вопрос-что делать с картой? она шире всего контента на странице(на макете). 
+    Или это в ее ширину должен быть класс контейнер?
+     еще-что делатьс блоком адреса?тоже через флекс спозиционировать?*/
 }
  .main-footer {
-     margin-top: 35px;
+     margin-top: 22px;
      display:flex;
+     min-height: 103px;
 }
- .footer-social, .footer-social ul{
+ .footer-social ul{
      padding:0;
      margin:0;
+     margin-top: 18px;
+     min-width: 185px;
+     display: flex;
+     justify-content: space-between;
+     /*вопрос-на пиксель-перфекте видно,что иконки немного сдвинуты вниз и влево.
+     мне надо их двигать тоже?*/
+}
+.commercial-block {
+     min-width: 410px;
+     display: flex;
+     padding: 0;
+     margin:0;
+     margin-top: 13px;
+}
+.commercial-block li {
+     padding:0;
+     margin:0;
+}
+.commercial-column-first {
+     min-height: 40px;
+     min-width: 115px;
+     display: flex;
+     flex-direction: column;
+}
+.commercial-column-second {
+     min-height: 40px;
+     min-width: 165px;
+     display: flex;
+     flex-direction: column;
+     margin-left: 26px;
+}
+
+.modal {
+     margin-top: 50px;/*это временная мера,чисто чтобы отлепить от футера окна*/
+}
+/*******сетки иннера********/
+.information-breadcrumbs /*Глупый вопрос:как этот блок вообще нормально назвать можно?*/{
+     display: flex;
+     justify-content: space-between;
+}
+.information-breadcrumbs>.contacts-information {
+     order:1;
+     padding:0;
+     margin:0;
+}
+.breadcrumbs li {
+     padding:0;
+     margin:0;
+}
+.first-row-sorting,
+.second-row-sorting {
+     display:flex;
+     flex-direction: column;
+}
+.filters {
+     margin-bottom: 40px;
+}
+.filter-item {
+     padding: 0;
+     margin:0;
+}
+.filters-row {
+     display: flex;
+     align-items: baseline;
+}
+.catalog-inner {
+     display: flex;
+     width: 1148px;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+.catalog-item  {
+     padding: 0;
+     margin:0;
+     width: 267px;
+     margin-bottom: 40px;
+}
+/*Очередной вопрос:что делать с кнопкой быстрый просмотр,которая вылезает в ховере?
+вероятно,сейчас этот вопрос меня интересовать не должен,типа рано ;*/
+
+.catalog-item-price {
+     padding: 0;
+     margin:0;
+}
+.pagination li {
+     list-style: none;
+     padding:0;
+     margin:0;
+}
+.paginator {
+     display: flex;
+     justify-content: flex-end;
+}
+.pagination {
+     display: flex;
+     width: 190px;
+     justify-content: space-between;
+     padding: 0;
+     margin: 0;
 }
