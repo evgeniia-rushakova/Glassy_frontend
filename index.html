@@ -30,9 +30,9 @@
         </nav>
         <nav class="user-navigation-general">
           <ul class="user-navigation">
-            <li class="user-navigation-item"><a href="#"><img src="img/search.svg" alt="Искать" width="17" height="17"></a></li>
-            <li class="user-navigation-item"><a class="login-link" href="#"><img src="img/entrance.svg" alt="Войти" width="21" height="19">Вход</a></li>
-            <li class="user-navigation-item"><a class="bucket-link" href="Bucket.html"><img src="img/bucket.svg" alt="Корзина" width="21" height="20">Пусто</a></li>
+            <li class="user-navigation-item"><a href="#">Поиск</a></li>
+            <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
+            <li class="user-navigation-item"><a class="bucket-link" href="Bucket.html">Пусто</a></li>
           </ul>
       </nav>
     </div>
@@ -124,8 +124,11 @@
         <a class="10-ways" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <div class="subscribe-block">
+
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-          <label for="email-subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </label>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+          <label for="email-subscribe" class="visually-hidden">Введите сюда электронную почту</label>
+
           <div class="subscribe-wrapper">
             <input class="placeholder subscribe-placeholder" type="email" id="email-subscribe" placeholder="Электронная почта">
             <button class="button subscribe-block-button" type="submit">Отправить</button>
@@ -133,6 +136,7 @@
         </form>
       </div>
         </div>
+    </main>      
       <section class="map">
         <h2 class="visually-hidden">Как нас найти</h2>
         <img src="img/map.png" alt="Адрес магазина:ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
@@ -148,7 +152,7 @@
           <a class="button" href="writeme.html">Форма обратной связи</a>
         </section>
       </section>
-    </main>
+
     <footer class="main-footer container">
       <div class="footer-social">
         <ul>
@@ -219,7 +223,7 @@
           <button class="button feedback-button" type="submit">Отправить</button>
         </form>
       </section> 
-      <section class="bucket">
+      <section class="modal bucket">
         <table class="client-choise">
           <tr class="client-choise-row">
             <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
