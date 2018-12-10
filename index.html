@@ -10,29 +10,29 @@
   </head>
   <body>
     <header class="main-header container">
-      <div class="container navigation-wrapper">
+      <div class="navigation-wrapper">
         <a class="main-header-logo">
         <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li class="active"><a href="catalog.html">Каталог</a></li>
+            <li class="active"><a href="catalog.html">Каталог</a>
                 <ul class="catalog-navigation">
                   <li class="catalog-navigation-item"><a href="new.html">Новинки</a></li>
                   <li class="catalog-navigation-item"><a href="inner.html">Сливочное</a></li>
                   <li class="catalog-navigation-item"><a href="cherbets.html">Щербеты</a></li>
                   <li class="catalog-navigation-item"><a href="fruit-ice.html">Фруктовый лед</a></li>
                   <li class="catalog-navigation-item"><a href="melorin.html">Мелорин</a></li>
-                </ul>
+                </ul></li>
             <li class="catalog-navigation-item"><a href="delievery.html">Доставка и оплата</a></li>
             <li class="catalog-navigation-item"><a href="about.html">О Компании</a></li>
           </ul>
         </nav>
         <nav class="user-navigation-general">
           <ul class="user-navigation">
-            <li class="user-navigation-item"><a href="#">Искать</a></li>
-            <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
-            <li class="use-navigation-item"><a class="bucket-link" href="Bucket.html">Корзина</a></li>
+            <li class="user-navigation-item"><a href="#"><img src="img/search.svg" alt="Искать" width="17" height="17"></a></li>
+            <li class="user-navigation-item"><a class="login-link" href="#"><img src="img/entrance.svg" alt="Войти" width="21" height="19">Вход</a></li>
+            <li class="user-navigation-item"><a class="bucket-link" href="Bucket.html"><img src="img/bucket.svg" alt="Корзина" width="21" height="20">Пусто</a></li>
           </ul>
       </nav>
     </div>
@@ -76,7 +76,7 @@
               <img src="img/orange.jpg" alt="orange" height="267" width="267">
               <p class="catalog-item-description">Сливочое с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
-            <a class="button-visual" href="#">Быстрый просмотр</a>
+            <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -86,7 +86,7 @@
               </p>
               <p class="catalog-item-description">Сливочно-кофейное с кусочками шоколада</p>
             </a>
-            <a class="button-visual" href="#">Быстрый просмотр</a>
+            <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -96,7 +96,7 @@
               </p>
               <p class="catalog-item-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
             </a>
-            <a class="button-visual" href="#">Быстрый просмотр</a>
+            <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -106,7 +106,7 @@
               </p>
               <p class="catalog-item-description">Сливочное крем-брюле с карамельной подливкой</p>
             </a>
-            <a class="button-visual" href="#">Быстрый просмотр</a>
+            <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -126,8 +126,10 @@
       <div class="subscribe-block">
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="email-subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </label>
-          <input class="placeholder" type="email" id="email-subscribe" placeholder="Электронная почта">
-          <button class="button subscribe-block-button" type="submit">Отправить</button>
+          <div class="subscribe-wrapper">
+            <input class="placeholder subscribe-placeholder" type="email" id="email-subscribe" placeholder="Электронная почта">
+            <button class="button subscribe-block-button" type="submit">Отправить</button>
+        </div>
         </form>
       </div>
         </div>

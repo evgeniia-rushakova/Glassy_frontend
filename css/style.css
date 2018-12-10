@@ -43,10 +43,6 @@ body {
  .site-navigation, .user-navigation, .catalog-navigation {
      list-style: none;
 }
- .site-navigation li, .user-navigation li {
-     display: inline-block;
-     vertical-align: middle;
-}
  .active a, .catalog-navigation-item a {
      font-size: 16px;
      line-height: 18px;
@@ -56,14 +52,12 @@ body {
      line-height: 16px;
 }
  .site-navigation a {
-     display: block;
      color: rgba(255, 255, 255, 1);
      font-size: 16px;
      line-height: 18px;
 }
  .user-navigation a {
      text-align: right;
-     display: block;
      color: rgba(255, 255, 255, 1);
 }
  .site-navigation a:hover, .user-navigation a:hover {
@@ -104,6 +98,9 @@ body {
  .placeholder {
     /*cстилизовать плэйсхолдеры*/
      padding-left: 15px;
+     padding-top: 14px;
+     padding-bottom: 14px;
+     border-radius: 5px;
 }
  .slide1, .slide2, .slide3 {
      width: 700px;
@@ -154,8 +151,6 @@ body {
      width: 165px;
      align-self: flex-end;
      margin-top: 46px;
-     right: 21px;
-     bottom: 23px;
      margin-right: 21px;
 }
  .raspberry {
@@ -174,9 +169,6 @@ body {
 }
  .catalog-list li {
      list-style: none;
-}
- .catalog-item {
-     width: 293px;
 }
  .catalog-item:hover {
      box-shadow:rgba(0, 0, 0, 0.4);
@@ -252,8 +244,6 @@ body {
  .our-blog {
      width: 560px;
      min-height: 220px;
-     display: inline-block;
-     vertical-align: middle;
      border-radius: 10px;
      background-color: rgba(255, 255, 255, 1);
      background-image: url("../img/blogphoto.jpg");
@@ -274,11 +264,8 @@ body {
      padding-left: 19px;
      margin-top: 13px;
      width: 286px;
-     display: block;
 }
  .subscribe-block {
-     display: inline-block;
-     vertical-align: middle;
      width: 560px;
      min-height: 220px;
      margin-left: 26px;
@@ -289,21 +276,18 @@ body {
     ;
 }
  .subscribe-block-button {
-     padding: 19px 13px 19px 14px;
+     padding: 13px 30px;
      max-height: 44px;
-     min-width: 129px;
-     display: block;
-     padding-left: 11px;
      font-weight: bold;
+     align-self: flex-end;
 }
  .subscribe-block label {
      line-height: 22px;
      color: #5a5a5a;
-     display: inline-block;
-     vertical-align: middle;
      max-width: 506px;
      padding-bottom: 38px;
-     padding-top: 33px;
+     padding-top: 30px;
+     padding-left: 20px;
 }
  .subscribe-form {
      margin: 5px;
@@ -311,6 +295,10 @@ body {
      min-height: 210px;
      background-color: rgba(255, 255, 255, 1);
      border-radius: 10px;
+}
+.subscribe-placeholder {
+     margin-left: 20px;
+     min-width: 360px;
 }
  .input-feedback, .feedback-item textarea {
      height: 44px;
@@ -326,7 +314,6 @@ body {
      border: 2px solid rgba(46, 136, 228, 0.52);
 }
  .contacts {
-     display: block;
      width: 302px;
      height: 305px;
      border-radius: 15px;
@@ -350,7 +337,6 @@ body {
      color: #323232;
 }
  .contacts a {
-     display: block;
      max-width: 252px;
      padding: 13px 28px 13px 28px;
      margin-left: 25px;
@@ -409,8 +395,6 @@ body {
      padding-left: 19px;
 }
  .help-me {
-     display: inline-block;
-     vertical-align: middle;
      width: 120px;
 }
  .restore, .registration-user {
@@ -428,10 +412,6 @@ body {
  .footer-social ul {
      list-style: none;
 }
- .footer-social li {
-     display: inline-block;
-     vertical-align: middle;
-}
  .commercial-information {
     /* max-width: 305px;*/
      margin-left: 234px;
@@ -448,24 +428,17 @@ body {
      font-weight: bold;
 }
  .copyright {
-     display: inline-block;
-     vertical-align: middle;
      margin-left: 123px;
      margin-top: 0;
-}
- .copyright a {
-     display: block;
 }
 /*inner начинается тут***********************/
 .page-title {
      color:rgba(255, 255, 255, 1);
 }
  .breadcrumbs li, .breadcrumb-current {
-     display: inline-block;
      font-size: 14px;
      line-height: 16px;
      color: rgba(255, 255, 255, 1);
-     vertical-align: middle;
      list-style: none;
 }
  .sorting-name {
@@ -474,20 +447,20 @@ body {
      line-height: 16px;
      color: rgba(255, 255, 255, 1);
 }
- .filter-item {
+ /*.filter-item {
      display: inline-block;
      vertical-align: middle;
-}
+}*/
  .filter-item b, .toppings b {
      font-size: 14px;
      font-weight: bold;
      line-height: 16px;
      color: rgba(255, 255, 255, 1);
 }
- .sort-fat-item {
+/* .sort-fat-item {
      display: inline-block;
      vertical-align: middle;
-}
+}*/
  .sort-fat-item label, .toppings label {
      font-size: 16px;
      line-height: 18px;
@@ -530,20 +503,32 @@ body {
      justify-content: flex-start;
      flex-direction: row;
 }
- .catalog-navigation {
+ .catalog-navigation{
      display:none;
 }
- .main-header-logo {
-     display: block;
-     margin:0;
-     padding:0;
-     width: 155px;
+.active:hover .catalog-navigation {
+     display: flex;
+     flex-direction: column;
 }
+.catalog-navigation-item {
+     margin-left: -40px;
+}
+
+/*Выпадающее меню скрывается с помощью .submenu {display: none;}, 
+при наведении показывается с помощью .topmenu li:hover .submenu {display: block;}.*/
  .user-navigation-general {
-     width:300px;
+     min-width:300px;
      margin:0;
      padding:0;
-     margin-left: 374px;
+     margin-left: 350px;
+}
+.user-navigation {
+     display: flex;
+     justify-content: space-around;
+     align-items: baseline;
+     padding: 0;
+     margin:0;
+     padding-top: 20px;
 }
 .site-navigation {
      margin:0;
@@ -554,9 +539,10 @@ body {
      justify-content: space-between;
 }
  .main-navigation {
-     width: 350px;
+     width: 375px;
      margin:0;
      padding:0;
+     padding-top: 20px;
 }
 .contacts-information {
     display: flex;
@@ -607,9 +593,9 @@ body {
 }
  .catalog-list {
      display: flex;
-     margin:35px 0 0 0;
      padding:0;
      margin:0;
+     justify-content: space-between;
 }
 /*пока сюда не надо смотреть
  .catalog-item {
@@ -630,6 +616,11 @@ body {
      display: flex;
      justify-content: space-between;
 }
+.subscribe-form {
+     display: flex;
+     flex-direction: column;
+}
+
  .map {
      width:1200px;
     /*Вопрос-что делать с картой? она шире всего контента на странице(на макете). 
@@ -637,9 +628,9 @@ body {
      еще-что делатьс блоком адреса?тоже через флекс спозиционировать?*/
 }
  .main-footer {
-     margin-top: 22px;
+     padding-top: 22px;
      display:flex;
-     min-height: 103px;
+     padding-bottom: 30px;
 }
  .footer-social ul{
      padding:0;
@@ -648,8 +639,6 @@ body {
      min-width: 185px;
      display: flex;
      justify-content: space-between;
-     /*вопрос-на пиксель-перфекте видно,что иконки немного сдвинуты вниз и влево.
-     мне надо их двигать тоже?*/
 }
 .commercial-block {
      min-width: 410px;
@@ -688,6 +677,11 @@ body {
      order:1;
      padding:0;
      margin:0;
+}
+.breadcrumbs{
+     display: flex;
+     justify-content: space-between;
+     min-width: 230px;
 }
 .breadcrumbs li {
      padding:0;
@@ -732,6 +726,9 @@ body {
      list-style: none;
      padding:0;
      margin:0;
+}
+.pager-current.first{
+     color: rgba(255, 255, 255, 1);
 }
 .paginator {
      display: flex;
