@@ -138,6 +138,15 @@ body {
      text-align: right;
      color: rgba(255, 255, 255, 1);
 }
+.user-navigation li:first-child {
+     background-image: url("../img/search.svg");
+     background-repeat: no-repeat;
+}
+.user-navigation li:first-child:hover {
+     background-image: url("../img/search.svg");
+     background-repeat: no-repeat;
+     background-color: rgba(255,255,255,1)
+}
 .site-navigation {
      margin:0;
      margin-left: 24px;
