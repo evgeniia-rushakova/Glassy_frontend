@@ -192,22 +192,93 @@ body {
      padding-bottom: 14px;
      border-radius: 5px;
 }
+.slider {
+     position: relative;
+     width: 1200px;
+     /*margin-top: -115px;*/
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 36px;
+}
+
+.slide1{
+     background: url(../img/first-slide.png) no-repeat;
+     background-color:#849d8f;
+}
+
+.slide2{
+     background: url(../img/second-slide.png) no-repeat;
+     background-color:#8996a6;
+     
+}
+.slide3{
+     background: url(../img/third-slide.png) no-repeat;
+     background-color:#9d8b84;
+     
+}
+.slider-slides {
+     width: 300%;
+}
+.slider-inner {
+     overflow: hidden;
+}
+.slider-controls label {
+  display: inline-block;
+  margin: 0 8px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  cursor: pointer;
+  border:2px solid rgba(255, 255, 255, 1);
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#btn-1:checked ~ .slider-inner .slider-slides {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .slider-slides {
+  transform: translate(-1200px);
+}
+
+#btn-3:checked ~ .slider-inner .slider-slides {
+  transform: translate(-2400px);
+}
+.slider input[type="radio"] {
+  display: none;
+}
  .slide1, .slide2, .slide3 {
-     width: 700px;
-     height: 367px;
+     width: 1200px;
+     height: 881px;
+     float: left;
 }
  .slider h2 {
      font-size: 60px;
      line-height: 60px;
      text-align: center;
      color: rgba(255, 255, 255, 1);
+     margin-top:385px;
+     width:715px;
+     white-space: pre-wrap;
+     margin-bottom: 20px;
 }
  .slide1 a, .slide2 a, .slide3 a {
-     padding: 17px 43px 16px 41px;
+     padding: 10px 40px;
      text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
      font-size: 32px;
      font-weight: bold;
      line-height: 44px;
+}
+.slide1,
+.slide2,
+.slide3 {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 }
  .topping-gifts {
      width: 560px;
@@ -687,25 +758,7 @@ body {
 .contact-information span {
      margin-top:6px;
 }
-.slider {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin-bottom: 36px;
-}
-.slide1,
-.slide2,
-.slide3 {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-}
-.slide1 h2,
-.slide2 h2,
-.slide3 h2{
-     padding: 0;
-     margin: 0;
-}
+
 
  .container {
      width: 1146px;

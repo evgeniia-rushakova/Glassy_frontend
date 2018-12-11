@@ -40,20 +40,32 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого "Глэcси"</h1>
-      <div class="visually-hidden"><div class="slider">
-        <div class="slide slide1">
-          <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-          <a class="button" href="#">Давайте оба!</a>
-        </div>
-        <div class="slide slide2">
-          <h2>Шоколадный пломбир и лимонный сорбет</h2>
-          <a class="button" href="#">Давайте оба!</a>
-        </div>
-        <div class="slide slide3">
-          <h2>Пломбир с помадкой и клубничный щербет</h2>
-          <a class="button" href="#">Давайте оба!</a>
-        </div>
-      </div></div>
+      <div class="slider">
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+        <div class="slider-inner">
+          <div class="slider-slides" >
+            <div class="slide1">
+              <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+              <a class="button" href="#">Давайте оба!</a>
+          </div>
+          <div class="slide2">
+            <h2>Шоколадный пломбир и лимонный сорбет</h2>
+            <a class="button" href="#">Давайте оба!</a>
+          </div>
+          <div class="slide3">
+            <h2>Пломбир с помадкой и клубничный щербет</h2>
+            <a class="button" href="#">Давайте оба!</a>
+          </div>
+      </div>
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>      
+    </div>
+      </div>
       <section class="special-offer">
         <h2 class="visually-hidden">Специальные предложения</h2>
         <div class="topping-gifts raspberry">
