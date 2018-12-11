@@ -173,6 +173,11 @@ body {
 .contact-information span {
      margin-top:6px;
 }
+.modal-search {
+     position: absolute;
+     top:59px;
+     right:162px;
+}
  .search-on-site {
      width: 341px;
      min-height: 84px;
@@ -401,6 +406,7 @@ body {
      flex-wrap:wrap;
      justify-content: space-around;
      margin-bottom: 40px;
+     position: relative;
 }
  .our-features b {
      font-size: 24px;
@@ -416,23 +422,44 @@ body {
      margin:0;
      padding: 0;
      padding-bottom: 25px;
+     padding-left:53px;
 }
-.our-features p:first-child::before{
+.our-features .icecream::after{
      background: url("../img/icecream-logo-features.svg") no-repeat;
      content:"";
+     width: 49px;
+     height: 49px;
+     position: absolute;
+     top: 94px;
+     left: 19px;
 }
-.our-features p:nth-child(2)::before {
+.our-features .leaf::after {
      background: url("../img/leaf.svg") no-repeat;
      content:"";
+     width: 49px;
+     height: 49px;
+     position: absolute;
+     top: 182px;
+     left: 20px;
 }
-.our-features p:nth-child(3)::before {
+.our-features .cow::after {
      background: url("../img/cow-features.svg") no-repeat;
      content:"";
+     width: 49px;
+     height: 49px;
+     position: absolute;
+     top: 94px;
+     right: 513px;
 }
-.our-features p:last-child::before {
+.our-features .temperature::after {
      background: url("../img/temperature-features.svg") no-repeat;
      content:"";
-}/*не работает.почему?*/
+     width: 49px;
+     height: 49px;
+     position: absolute;
+     top: 180px;
+    right: 513px;
+}
 
  .our-blog {
      width: 560px;
@@ -503,7 +530,6 @@ body {
      flex-direction: column;
 }
  .input-feedback, .feedback-item textarea {
-     height: 44px;
      border: 1px solid rgba(178, 178, 178, 0.52);
      border-radius: 5px;
     /*margin-right: 11px;
@@ -550,11 +576,15 @@ body {
      height: 430px;
      position: relative;
 }
+
  .modal-feedback {
      width: 478px;
-     height: 443px;
      border-radius: 10px;
      background-color: rgba(248, 247, 244, 1);
+     position: absolute;
+    top: 337px;
+    left: 341px;
+     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
  .modal-feedback h2 {
      font-size: 24px;
@@ -562,40 +592,60 @@ body {
      color: #323232;
      padding: 20px 0 0 24px;
 }
+ .modal-feedback h2::after {
+     content: "";
+     background-image: url("../img/close.svg");
+     position: absolute;
+     width:17px;
+     height: 17px;
+     top:17px;
+     right:17px;
+ }
  .feedback-item {
      padding-left: 24px;
 }
  .feedback-item textarea {
-     width: 428px;
      height: 155px;
+     width: 375px;
 }
  .feedback-item input {
      width: 267px;
-     height: 44px;
+}
+.feedback-item .placeholder {
+    padding: 13px 15px;
+}
+.input-feedback {
+     padding: 13px 25px 25px 25px;
 }
  .feedback-button {
      max-height: 44px;
      font-size: 18px;
      font-weight: bold;
      line-height: 24px;
-     padding:14px 24px;
+     padding:7px 24px;
+     margin-left: 315px;
+     margin-bottom: 25px;
 }
  .modal-login {
      width: 277px;
-     height: 214px;
      border-radius: 5px;
      box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
      background-color: rgba(248, 247, 244, 1);
+     position: absolute;
+     top: 59px;
+     right: 134px;
 }
  .login-form .user-email, .login-form .user-password {
      margin-bottom: 20px;
 }
  .login-form {
-     padding-top: 20px;
-     padding-left: 19px;
+     padding: 20px;
 }
  .help-me {
      width: 120px;
+}
+.help-wrapper {
+     display: flex;
 }
  .restore, .registration-user {
      font-size: 13px;
@@ -604,10 +654,11 @@ body {
      text-decoration: underline;
 }
  .modal-login-button {
-     padding:14px 25px;
+     padding:0 20px;
      font-size: 18px;
      line-height: 24px;
      font-weight: bold;
+     margin-right: 20px;
 }
 .bucket {
      background-color: rgba(248,247,244,1);
@@ -620,7 +671,13 @@ body {
      display: flex;
      flex-direction: column;
      margin-left: 20px;
+     position: absolute;
+     top:59px;
+     right:27px;
 
+}
+.modal {
+     display: none;
 }
 .client-choise {
      width: 590px;
@@ -843,9 +900,6 @@ body {
      margin-left: 26px;
 }
 
-.modal {
-     margin-top: 50px;/*это временная мера,чисто чтобы отлепить от футера окна*/
-}
 /*******сетки иннера********/
 .information-breadcrumbs /*Глупый вопрос:как этот блок вообще нормально назвать можно?*/{
      display: flex;
@@ -922,7 +976,4 @@ body {
      justify-content: space-between;
      padding: 0;
      margin: 0;
-}
-.modal {
-     display: none;
 }

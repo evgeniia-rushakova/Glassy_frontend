@@ -125,10 +125,10 @@
       <section class="our-features">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
-        <p class="features icon-feature">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        <p class="features icon-feature">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-        <p class="features icon-feature">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-        <p class="features icon-feature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        <p class="features icon-feature icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        <p class="features icon-feature cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        <p class="features icon-feature leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+        <p class="features icon-feature temperature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
       </section>
     <div class="blog-subscribe-wrapper">
       <article class="our-blog">
@@ -209,10 +209,12 @@
           <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
           <label class="visually-hidden" for="user-password">Пароль</label>
           <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
-          <button class="button modal-login-button" type="submit">Войти</button>
-          <div class="help-me">
-            <a class="restore" href="#">Забыли пароль?</a>
-            <a class="registration-user" href="#">Новая регистрация</a>
+          <div class="help-wrapper">
+            <button class="button modal-login-button" type="submit">Войти</button>
+            <div class="help-me">
+              <a class="restore" href="#">Забыли пароль?</a>
+              <a class="registration-user" href="#">Новая регистрация</a>
+            </div>
           </div>
         </form>
       </section>
@@ -235,28 +237,5 @@
           <button class="button feedback-button" type="submit">Отправить</button>
         </form>
       </section> 
-      <section class="modal bucket">
-        <h4 class="visually-hidden">bucket</h4>
-        <table class="client-choise">
-          <tr class="client-choise-row">
-            <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-            <td><img src="img/orange.jpg" width="33" height="33" alt="пломбир апельсин"></td>
-            <td><a class="icecream-link" href="#">Пломбир с апельсиновым джемом</a></td>
-            <td><p>1,5кг х <span>200 руб.</span></p></td>
-            <td><p>300 руб</p></td>
-          </tr>
-          <tr class="client-choise-row">
-            <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-            <td><img src="img/strawberry.jpg" width="33" height="33" alt="пломбир клубника"></td>
-            <td><a class="icecream-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-            <td><p>1,5кг х <span>300 руб.</span></p></td>
-            <td><p>450 руб</p></td>
-          </tr>
-          <tr class="client-choise-row-amount">
-            <td colspan="5">Итого: 750 руб.</td>
-          </tr> 
-        </table>
-        <a class="button button-choise" href="#">Оформить заказ</a>
-      </section>     
-  </body>
+    </body>
 </html>
