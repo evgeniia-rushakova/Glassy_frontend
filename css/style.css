@@ -751,8 +751,11 @@ input[type="radio"].visually-hidden {
 .client-choise-row-amount {
      font-size: 15px;
      line-height: 18px;
-     color: rgba(50,50,50,1);font-weight: bold;
+     color: rgba(50,50,50,1);
+     font-weight: bold;
      text-align: right;
+     height: 46px;
+     border-top:1px solid rgba(202, 202, 199,1);
 }
 .button-choise {
      font-size: 18px;
