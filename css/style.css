@@ -34,11 +34,13 @@ input[type="radio"].visually-hidden {
      text-align: center;
      color: rgba(255, 255, 255, 1);
      text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+     border: none;
 }
  .button:hover {
-     box-shadow: 0 2px 2px 0 #ac1000;
-     background-image: linear-gradient(to top, #e74a35, #f26843);
-}
+     box-shadow: 0px 2px 2px 0 rgb(172, 16, 0);
+    background: rgba(242, 127, 101, 1);
+ }
+
  .button:active {
      box-shadow: inset 0 2px 2px 0 #942718;
      background-image: linear-gradient(to bottom, #e74a35, #f26843);
@@ -62,10 +64,6 @@ input[type="radio"].visually-hidden {
      list-style: none;
 }
 
-.catalog-navigation-item a {
-     font-size: 16px;
-     line-height: 18px;
-}
  .user-navigation-item a {
      font-size: 14px;
      line-height: 16px;
@@ -81,6 +79,7 @@ input[type="radio"].visually-hidden {
      font-size: 16px;
      line-height: 18px;
      white-space: pre;
+     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .catalog-navigation {
 
@@ -98,6 +97,11 @@ input[type="radio"].visually-hidden {
      min-width: 143px;
      border-radius: 5px;
 }
+.catalog-navigation-item a:active, .user-navigation a:active  {
+     box-shadow: inset 0px 2px 1px 0 rgba(105, 105, 105,1);
+     background-color: rgba(237, 237, 237,1);
+
+}
 
 .catalog-navigation-item a:hover, .user-navigation a:hover {
      color: rgba(51,51,51,1);
@@ -107,8 +111,6 @@ input[type="radio"].visually-hidden {
      white-space: pre;
 }
  .user-navigation a:focus {
-     width: 87px;
-     min-height: 32px;
      box-shadow: inset 0 2px 1px 0 #696969;
      background-color: #ededed;
      border-radius: 25px;
@@ -138,6 +140,16 @@ input[type="radio"].visually-hidden {
 }
  .catalog-navigation li:first-child a{
      font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+}
+.current-page {
+     background-color: rgba(208, 112, 88, 1);
+     color: rgba(255, 255, 255, 1);
+     padding: 10px 13px;
+     border-radius: 25px;
 }
 .user-navigation-general {
      min-width:300px;
@@ -259,12 +271,17 @@ input[type="radio"].visually-hidden {
      position: absolute;
      top:59px;
      right:162px;
+     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
  .search-on-site {
      width: 341px;
-     min-height: 84px;
      border-radius: 5px;
      background-color: rgba(248, 247, 244, 1);
+     padding:15px;
+}
+
+
+
 }
  .search-on-site .input-style {
      width: 311px;
@@ -278,6 +295,7 @@ input[type="radio"].visually-hidden {
      padding-top: 14px;
      padding-bottom: 14px;
      border-radius: 5px;
+     border:1px solid rgba(211, 211, 210, 1);
 }
  .topping-gifts {
      width: 560px;
@@ -340,13 +358,17 @@ input[type="radio"].visually-hidden {
  .catalog-list li {
      list-style: none;
 }
- .catalog-item:hover {
+ .catalog-item:hover{
+     position: relative;
+}
+.catalog-item:hover.background-hover{
+     position: absolute;
      box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
      background-color: rgba(248, 247, 244, 0.2);
      min-height: 405px;
-     position: absolute;
      z-index: 2;
 }
+
  .catalog-item:hover .button-visual{
      display:block;
      position: absolute;
@@ -399,6 +421,7 @@ input[type="radio"].visually-hidden {
      color: rgba(255, 255, 255, 1);
      padding:0;
      margin: 0;
+     text-decoration: underline rgba(255,255,255,0.2);
 
 }
 
@@ -601,6 +624,7 @@ input[type="radio"].visually-hidden {
     top: 337px;
     left: 341px;
      box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+     z-index: 5;
 }
  .modal-feedback h2 {
      font-size: 24px;
@@ -666,9 +690,17 @@ input[type="radio"].visually-hidden {
  .restore, .registration-user {
      font-size: 13px;
      line-height: 24px;
-     color: #323232;
+     color: rgba(50, 50, 50, 1);;
      text-decoration: underline;
 }
+ .restore:hover, .registration-user:hover,
+  .restore:active, .registration-user:active {
+     font-size: 13px;
+     line-height: 24px;
+     color: rgba(232, 77, 55, 1);
+     text-decoration: underline;
+}
+
  .modal-login-button {
      padding:0 20px;
      font-size: 18px;
@@ -692,9 +724,9 @@ input[type="radio"].visually-hidden {
      right:27px;
 
 }
-.modal {
+/*.modal {
      display: none;
-}
+}*/
 .client-choise {
      width: 590px;
      padding-left: 16px;
@@ -715,6 +747,7 @@ input[type="radio"].visually-hidden {
      background: none;
 }
 
+
 .client-choise-row-amount {
      font-size: 15px;
      line-height: 18px;
@@ -734,6 +767,17 @@ input[type="radio"].visually-hidden {
  .footer-social ul {
      list-style: none;
 }
+.social-link img {
+     opacity: 0.8;
+     border:2px solid rgba(255,255,255,0.5);
+     border-radius:50%;
+}
+.social-link:hover img {
+     opacity: 1;
+}
+.social-link:active img {
+     background-color: rgba(233, 233, 233, 0.7);
+}
  .commercial-information {
     /* max-width: 305px;*/
      margin-left: 234px;
@@ -745,7 +789,13 @@ input[type="radio"].visually-hidden {
  .commercial-information a {
      font-size: 13px;
      line-height: 18px;
+     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+.commercial-information a:hover,
+.commercial-information a:active {
+     color:rgba(255, 188, 158, 1);
+}
+
  .commercial-column-first li:first-child a{
      font-weight: bold;
 }
@@ -753,7 +803,9 @@ input[type="radio"].visually-hidden {
      margin-left: 123px;
      margin-top: 0;
      display: flex;
-    flex-direction: column;
+     flex-direction: column;
+     font-size: 12px;
+     line-height: 16px;
 }
 /*inner начинается тут***********************/
 .page-title {
@@ -794,7 +846,7 @@ input[type="radio"].visually-hidden {
      line-height: 18px;
      color:rgba(255, 255, 255, 1);
 }
- .sorting-filters .submit-result {
+ .sorting-filters {
      font-size: 16px;
      line-height: 18px;
      font-weight: bold;
@@ -802,6 +854,25 @@ input[type="radio"].visually-hidden {
      padding: 12px 29px 9px 31px;
      background-color: #849d8f;
      border-radius: 20px;
+}
+.submit-result {
+     border: 2px solid rgba(255,255,255,1);
+     font-size: 16px;
+     line-height: 18px;
+     font-weight: bold;
+     color: rgba(255, 255, 255, 1);
+     padding: 10px 30px;
+     background-color: rgba(255,255,255,0.2);
+     border-radius: 20px;
+}
+.submit-result:hover {
+    background-color: rgba(255,255,255,1); 
+    color: rgba(0, 0, 0, 1);
+}
+.submit-result:active {
+  box-shadow: inset 0px 2px 1px 0 rgb(105, 105, 105);
+  background-color: rgb(237, 237, 237);
+  border:none;
 }
  .catalog h1 {
      font-size: 35px;
@@ -815,10 +886,35 @@ input[type="radio"].visually-hidden {
      font-size: 16px;
      line-height: 18px;
      font-weight: bold;
+     padding: 5px 3px;
+     min-width: 25px;
 }
- .copyright a {
-     font-size: 12px;
-     line-height: 16px;
+.pager-item:hover {
+     background-color: rgba(255, 255, 255,0.2);
+    padding: 5px 3px;
+    border-radius: 50%;
+    min-width: 25px;
+    text-align: center;
+}
+.pager-item:active {
+     background-color: rgba(255, 255, 255,1);
+     color:rgba(0,0,0,1);
+}
+.pager-item:active a{
+     color:rgba(0,0,0,1);
+}
+.pagination .disabled {
+  opacity: 0.2;
+}
+
+
+.copyright span{
+     border-bottom: 1px solid rgba(255,255,255,0.2);
+
+}
+.copyright span:hover,
+.copyright span:active {
+     color:rgba(255, 188, 158, 1);
 }
 /*********************Макросетки*************************/
 
