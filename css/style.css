@@ -95,7 +95,10 @@ input[type="radio"].visually-hidden {
      background-color: rgba(248,247,244,1);
      box-shadow: 0 0 20px rgba(0,0,0,0.4); 
      min-width: 143px;
+     position: relative;
      border-radius: 5px;
+     position: absolute;
+     z-index: 1;
 }
 .catalog-navigation-item a:active, .user-navigation a:active  {
      box-shadow: inset 0px 2px 1px 0 rgba(105, 105, 105,1);
@@ -270,7 +273,7 @@ input[type="radio"].visually-hidden {
 .modal-search {
      position: absolute;
      top:59px;
-     right:162px;
+     right:455px;
      box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
  .search-on-site {
@@ -290,12 +293,15 @@ input[type="radio"].visually-hidden {
      margin-left: 15px;
 }
  .placeholder {
-    /*cстилизовать плэйсхолдеры*/
      padding-left: 15px;
      padding-top: 14px;
      padding-bottom: 14px;
      border-radius: 5px;
      border:1px solid rgba(211, 211, 210, 1);
+     width: inherit;
+}
+.placeholder:hover {
+     border:2px solid rgba(154, 154, 154, 0.52);
 }
  .topping-gifts {
      width: 560px;
@@ -622,7 +628,7 @@ input[type="radio"].visually-hidden {
      background-color: rgba(248, 247, 244, 1);
      position: absolute;
     top: 337px;
-    left: 341px;
+    left: calc(50% - 240px);
      box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
      z-index: 5;
 }
@@ -673,7 +679,7 @@ input[type="radio"].visually-hidden {
      background-color: rgba(248, 247, 244, 1);
      position: absolute;
      top: 59px;
-     right: 134px;
+     right: 335px;
 }
  .login-form .user-email, .login-form .user-password {
      margin-bottom: 20px;
@@ -718,10 +724,9 @@ input[type="radio"].visually-hidden {
      box-shadow: 0 0 20px rgba(0,0,0,0.4) ;
      display: flex;
      flex-direction: column;
-     margin-left: 20px;
      position: absolute;
      top:59px;
-     right:27px;
+     right:210px;
 
 }
 /*.modal {
@@ -729,13 +734,17 @@ input[type="radio"].visually-hidden {
 }*/
 .client-choise {
      width: 590px;
-     padding-left: 16px;
-     padding-top: 20px;
+     margin-left: 16px;
+     margin-top: 20px;
+     border-collapse:collapse;
 }
 .icecream-link {
      font-size: 13px;
      line-height: 16px;
      color: rgba(50,50,50,1);  
+}
+.client-choise-row {
+     height: 60px;
 }
 .client-choise-row span {
      color: rgba(153,153,153,1);
