@@ -217,10 +217,6 @@ input[type="radio"].visually-hidden {
      box-shadow: inset 0px 2px 1px 0 rgba(105, 105, 105,1);
      background-color: rgba(237, 237, 237,1);
 }
-.user-navigation-item a {
-     font-size: 14px;
-     line-height: 16px;
-}
 
 .user-navigation-item img {
      padding-right:5px;
@@ -256,6 +252,35 @@ input[type="radio"].visually-hidden {
      display: block;
      padding:8px;
 }
+
+/********modal********/
+     display: none;
+     position: absolute;
+     top:59px;
+     right:412px;
+     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+     z-index: 1;
+}
+.search-link:hover .modal-search {
+    position: absolute;
+     top:59px;
+     right:455px;
+     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+     display: flex;
+     z-index: 1;
+}
+
+ .search-on-site {
+     border-radius: 5px;
+     background-color: rgba(248, 247, 244, 1);
+}
+
+ .search-on-site .input-style {
+     width: 311px;
+     height: 44px;
+     margin:20px 15px;
+}
+/**************/
 .login-link {
      position: relative;
 }
@@ -304,6 +329,7 @@ input[type="radio"].visually-hidden {
     align-items: flex-end;
     padding:0;
     margin:0;
+    margin-right: 30px;
 }
  .contacts-information a {
      font-size: 22px;
@@ -315,7 +341,7 @@ input[type="radio"].visually-hidden {
 }
 /**********************MAIN**********************/
  .container {
-     width: 1146px;
+     width: 1174px;
      margin: 0 auto;
 }
 /*******Special-offer*******/
@@ -973,7 +999,7 @@ input[type="radio"].visually-hidden {
 }
 /**************************Модальные окна**************/
 /**search**/
-.modal-search {
+/*.modal-search {
      display: none;
 }
 .user-navigation .search-link:hover .modal-search {
@@ -995,7 +1021,7 @@ input[type="radio"].visually-hidden {
      height: 44px;
      margin-top: 20px;
      margin-left: 15px;
-}
+}*/
 /****feedback***/
 .modal-feedback {
      width: 478px;
