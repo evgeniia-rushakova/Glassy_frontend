@@ -10,16 +10,17 @@
   </head>
   <body>
 <header class="main-header container">
+ <header class="main-header container">
       <div class="navigation-wrapper">
-        <a class="main-header-logo" href="index.html">
+        <a class="main-header-logo">
         <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li class="active catalog-navigation-item current-page"><a href="catalog.html">Каталог</a>
+            <li class="active catalog-navigation-item inner current-page"><a href="catalog.html">Каталог</a>
                 <ul class="catalog-navigation">
                   <li class="catalog-navigation-item-submenu"><a href="new.html">Новинки</a></li>
-                  <li class="catalog-navigation-item-submenu inner"><a href="inner.html">Сливочное</a></li>
+                  <li class="catalog-navigation-item-submenu"><a href="inner.html">Сливочное</a></li>
                   <li class="catalog-navigation-item-submenu"><a href="cherbets.html">Щербеты</a></li>
                   <li class="catalog-navigation-item-submenu"><a href="fruit-ice.html">Фруктовый лед</a></li>
                   <li class="catalog-navigation-item-submenu"><a href="melorin.html">Мелорин</a></li>
@@ -30,10 +31,60 @@
         </nav>
         <nav class="user-navigation-general">
           <ul class="user-navigation">
-            <li class="user-navigation-item"><a class="search-link" href="#" aria-label="Поиск"></a></li>
-            <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
-            <li class="user-navigation-item"><a class="bucket-link" href="Bucket.html">Пусто</a></li>
-          </ul>
+            <li class="user-navigation-item search-hover"><a class="search-link" href="#" aria-label="Поиск"></a>
+              <section class="modal modal-search">
+                <h3 class="visually-hidden">Поиск</h3>
+                <form class="search-on-site" action="https://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden" for="find">Введите сюда искомую информацию</label>
+                  <input class="placeholder input-style" type="search" placeholder="Что ищем?" name="find" id="find">
+                  <button class="visually-hidden" type="submit">Искать</button>
+                </form>
+              </section>
+            </li>
+            <li class="user-navigation-item login-hover"><a class="login-link" href="#">Вход</a>
+              <section class="modal modal-login">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <label class="visually-hidden" for="user-email">Электронная почта</label>
+                  <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
+                  <label class="visually-hidden" for="user-password">Пароль</label>
+                  <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
+                <div class="help-wrapper">
+                <button class="button modal-login-button" type="submit">Войти</button>
+                <div class="help-me">
+                <a class="restore" href="#">Забыли пароль?</a>
+                <a class="registration-user" href="#">Новая регистрация</a>
+                </div>
+              </div>
+              </form>
+            </section>
+          </li>
+          <li class="user-navigation-item bucket-hover"><a class="bucket-link" href="Bucket.html">Пусто</a>
+            <section class="modal bucket">
+              <h4 class="visually-hidden">bucket</h4>
+              <table class="client-choise">
+                <tr class="client-choise-row">
+                  <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
+                  <td><img src="img/orange.jpg" width="33" height="33" alt="пломбир апельсин"></td>
+                  <td><a class="icecream-link" href="#">Пломбир с апельсиновым джемом</a></td>
+                  <td><p>1,5кг х <span>200 руб.</span></p></td>
+                  <td><p>300 руб</p></td>
+                </tr>
+                <tr class="client-choise-row">
+                  <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
+                  <td><img src="img/strawberry.jpg" width="33" height="33" alt="пломбир клубника"></td>
+                  <td><a class="icecream-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                  <td><p>1,5кг х <span>300 руб.</span></p></td>
+                  <td><p>450 руб</p></td>
+                </tr>
+                <tr class="client-choise-row-amount">
+                  <td colspan="5">Итого: 750 руб.</td>
+                </tr> 
+              </table>
+              <a class="button button-choise" href="#">Оформить заказ</a>
+            </section>   
+          </li>
+        </ul>
       </nav>
     </div>
     <div class="information-breadcrumbs">
