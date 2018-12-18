@@ -27,6 +27,7 @@ input[type="radio"].visually-hidden {
      text-decoration: none;
      color: rgba(255, 255, 255, 1);
 }
+
  .button {
      box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
      background-image: linear-gradient(to top, #e74a35, #f26843);
@@ -36,6 +37,7 @@ input[type="radio"].visually-hidden {
      text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
      border: none;
 }
+
  .button:hover {
      box-shadow: 0px 2px 2px 0 rgb(172, 16, 0);
     background: rgba(242, 127, 101, 1);
@@ -193,16 +195,15 @@ input[type="radio"].visually-hidden {
 
 .user-navigation-item {
      border-radius: 25px;
-     white-space: pre;
      background-color: rgba(255, 255, 255,0.2);
 }
-.user-navigation-item:nth-child(2),
-.user-navigation-item:nth-child(3)
+.login-hover,
+.bucket-hover
 {
      padding:7px 13px;
 }
 
-.user-navigation-item a {
+.user-navigation-item>a {
      font-size: 14px;
     line-height: 16px;
     font-weight: bold;
@@ -210,7 +211,7 @@ input[type="radio"].visually-hidden {
 .user-navigation-item:hover {
      background: rgba(248,247,244,1);
      }
-.user-navigation-item:hover a {
+.user-navigation-item:hover>a {
      color: rgba(51,51,51,1);
 }
 .user-navigation-item:active  {
@@ -228,12 +229,7 @@ input[type="radio"].visually-hidden {
      text-align: right;
      color: rgba(255, 255, 255, 1);
 }
-.user-navigation li:nth-child(2) a{
-     padding-left: 35px;
-}
-.user-navigation li:nth-child(3) a{
-     padding-left: 35px;
-}
+
 .user-navigation .search-link{
      background-image: url("../img/search.svg");
      background-repeat: no-repeat;
@@ -253,19 +249,14 @@ input[type="radio"].visually-hidden {
      padding:8px;
 }
 
-/********modal********/
+/********modal-search********/
 .modal-search {
      display: none;
-     position: absolute;
-     top:59px;
-     right:412px;
-     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-     z-index: 1;
 }
-.search-link:hover .modal-search {
+.search-hover:hover .modal-search {
     position: absolute;
-     top:59px;
-     right:455px;
+     top:53px;
+     right:416px;
      box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
      display: flex;
      z-index: 1;
@@ -282,6 +273,9 @@ input[type="radio"].visually-hidden {
      margin:20px 15px;
 }
 /**************/
+.login-hover a{
+     padding-left: 35px;
+}
 .login-link {
      position: relative;
 }
@@ -298,13 +292,72 @@ input[type="radio"].visually-hidden {
     left: -2px;
     top: -8px;
 }
-.user-navigation li:nth-child(2):hover .login-link:before{ 
+.login-hover:hover .login-link:before{ 
     background-image: url(../img/enter-hover.svg);
 }
-.bucket-link {
+/****modal-login*****/
+.modal-login {
+     
+     display: none;
+}
+.login-hover:hover .modal-login {
+    display: block;
+    width: 277px;
+     border-radius: 5px;
+     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+     background-color: rgba(248, 247, 244, 1);
+     position: absolute;
+     top: 54px;
+     right: 314px;
+    }
+ .login-form .user-email, .login-form .user-password {
+     margin-bottom: 20px;
+}
+
+ .login-form {
+     padding: 20px;
+}
+ .help-me {
+     width: 120px;
+}
+.help-wrapper {
+     display: flex;
+}
+ .help-me .restore,.help-me .registration-user {
+     font-size: 13px;
+     line-height: 24px;
+     color: rgba(50, 50, 50, 1);
+     text-decoration: underline;
+     font-weight: normal;
+     white-space: pre;
+     padding: 0;
+}
+ .restore:hover, .registration-user:hover,
+  .restore:active, .registration-user:active {
+     font-size: 13px;
+     line-height: 24px;
+     color: rgba(232, 77, 55, 1);
+     text-decoration: underline;
+}
+
+ .modal-login-button {
+     padding:13px 25px;
+     font-size: 18px;
+     line-height: 24px;
+     font-weight: bold;
+     margin-right: 20px;
+     align-self: center;
+}
+
+/***/
+
+.bucket-hover {
      position: relative;
 }
-.bucket-link::before{ 
+.bucket-hover>a{
+     padding-left: 35px;
+}
+.bucket-hover::before{ 
     background-image: url(../img/bucket.svg);
     background-repeat: no-repeat;
     background-position: 9px 7px;
@@ -314,12 +367,83 @@ input[type="radio"].visually-hidden {
     padding: 8px;
     position: absolute;
     content: "";
-    left: -2px;
-    top: -8px;
+    left: 10px;
+    top: 1px;
 }
-.bucket-link:hover::before{ 
+.bucket-hover:hover::before{ 
     background-image: url(../img/bucket-hover.svg);
 }
+/****bucket****/
+.bucket {
+     display:none;
+}
+.bucket-hover:hover .bucket {
+    background-color: rgba(248,247,244,1);
+     font-size: 13px;
+     line-height: 16px;
+     color: rgba(50,50,50,1);
+     width: 633px;
+     border-radius: 5px;
+     box-shadow: 0 0 20px rgba(0,0,0,0.4) ;
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+     top:59px;
+     right:210px;
+}
+
+.client-choise {
+     width: 590px;
+     margin-left: 16px;
+     margin-top: 20px;
+     border-collapse:collapse;
+}
+.icecream-link {
+     font-size: 13px;
+     line-height: 16px;
+     color: rgba(50,50,50,1);  
+     font-weight: normal;
+}
+.client-choise-row {
+     height: 60px;
+}
+.client-choise-row img {
+    border-radius: 50%;
+}
+.client-choise-row span {
+     color: rgba(153,153,153,1);
+}
+.clients-choise-row .delete {
+     width: 12px;
+     padding:0;
+     margin:0;
+     background: none;
+}
+.clients-choise-row .icecream-link {
+    font-weight: normal;
+    padding: 0;
+}
+
+.client-choise-row-amount {
+     font-size: 15px;
+     line-height: 18px;
+     color: rgba(50,50,50,1);
+     font-weight: bold;
+     text-align: right;
+     height: 46px;
+     border-top:1px solid rgba(202, 202, 199,1);
+}
+.button-choise {
+     font-size: 18px;
+     line-height: 24px;
+     padding:13px 14px;
+     font-weight: bold; 
+     align-self: flex-end; 
+     margin-bottom: 21px;
+     margin-right: 15px;
+     margin-top: 15px;   
+}
+/***contact-information***/
 .contacts-information {
      font-size: 14px;
      line-height: 16px;
@@ -423,14 +547,11 @@ input[type="radio"].visually-hidden {
 .catalog-list li {
      list-style: none;
 }
- .catalog-item:hover{
-     position: relative;
-}
-.catalog-item:hover.background-hover{
-     position: absolute;
+
+.catalog-item:hover{
+    
      box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
      background-color: rgba(248, 247, 244, 0.2);
-     min-height: 405px;
      z-index: 2;
 }
 
@@ -1003,30 +1124,7 @@ input[type="radio"].visually-hidden {
      margin: 0;
 }
 /**************************Модальные окна**************/
-/**search**/
-/*.modal-search {
-     display: none;
-}
-.user-navigation .search-link:hover .modal-search {
-     position: absolute;
-     top:59px;
-     right:455px;
-     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-     display: block;
-}
- .search-on-site {
-     width: 341px;
-     border-radius: 5px;
-     background-color: rgba(248, 247, 244, 1);
-     padding:15px;
-}
 
- .search-on-site .input-style {
-     width: 311px;
-     height: 44px;
-     margin-top: 20px;
-     margin-left: 15px;
-}*/
 /****feedback***/
 .modal-feedback {
      width: 478px;
@@ -1079,108 +1177,4 @@ input[type="radio"].visually-hidden {
      margin-left: 315px;
      margin-bottom: 25px;
 }
-/****login*****/
-.modal-login {
-     width: 277px;
-     border-radius: 5px;
-     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-     background-color: rgba(248, 247, 244, 1);
-     position: absolute;
-     top: 59px;
-     right: 335px;
-     display: none;
-}
- .login-form .user-email, .login-form .user-password {
-     margin-bottom: 20px;
-}
- .login-form {
-     padding: 20px;
-}
- .help-me {
-     width: 120px;
-}
-.help-wrapper {
-     display: flex;
-}
- .restore, .registration-user {
-     font-size: 13px;
-     line-height: 24px;
-     color: rgba(50, 50, 50, 1);;
-     text-decoration: underline;
-}
- .restore:hover, .registration-user:hover,
-  .restore:active, .registration-user:active {
-     font-size: 13px;
-     line-height: 24px;
-     color: rgba(232, 77, 55, 1);
-     text-decoration: underline;
-}
 
- .modal-login-button {
-     padding:0 20px;
-     font-size: 18px;
-     line-height: 24px;
-     font-weight: bold;
-     margin-right: 20px;
-}
-/****bucket****/
-.bucket {
-     background-color: rgba(248,247,244,1);
-     font-size: 13px;
-     line-height: 16px;
-     color: rgba(50,50,50,1);
-     width: 633px;
-     border-radius: 5px;
-     box-shadow: 0 0 20px rgba(0,0,0,0.4) ;
-     display: none/*flex;*/;
-     flex-direction: column;
-     position: absolute;
-     top:59px;
-     right:210px;
-
-}
-
-.client-choise {
-     width: 590px;
-     margin-left: 16px;
-     margin-top: 20px;
-     border-collapse:collapse;
-}
-.icecream-link {
-     font-size: 13px;
-     line-height: 16px;
-     color: rgba(50,50,50,1);  
-}
-.client-choise-row {
-     height: 60px;
-}
-.client-choise-row span {
-     color: rgba(153,153,153,1);
-}
-.clients-choise-row .delete {
-     width: 12px;
-     padding:0;
-     margin:0;
-     background: none;
-}
-
-
-.client-choise-row-amount {
-     font-size: 15px;
-     line-height: 18px;
-     color: rgba(50,50,50,1);
-     font-weight: bold;
-     text-align: right;
-     height: 46px;
-     border-top:1px solid rgba(202, 202, 199,1);
-}
-.button-choise {
-     font-size: 18px;
-     line-height: 24px;
-     padding:13px 14px;
-     font-weight: bold; 
-     align-self: flex-end; 
-     margin-bottom: 21px;
-     margin-right: 15px;
-     margin-top: 15px;   
-}
