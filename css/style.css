@@ -254,6 +254,7 @@ input[type="radio"].visually-hidden {
 }
 
 /********modal********/
+.modal-search {
      display: none;
      position: absolute;
      top:59px;
@@ -702,6 +703,7 @@ input[type="radio"].visually-hidden {
      padding-top: 22px;
      display:flex;
      padding-bottom: 30px;
+     border-top:1px solid rgba(255,255,255,0.3);
 }
 /**footer-social**/
  .footer-social ul{
@@ -947,6 +949,9 @@ input[type="radio"].visually-hidden {
 
 }
 /*****paginator****/
+.paginator {
+    margin-bottom: 30px;
+}
 .pagination ul{
      list-style: none;
 }
