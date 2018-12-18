@@ -28,7 +28,7 @@ a {
 }
 
 .button {
-  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  box-shadow:0px 2px 2px 0px rgba(172,16,0,1);
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 50px;
   text-align: center;
@@ -38,7 +38,7 @@ a {
 }
 
 .button:hover {
-  box-shadow: 0px 2px 2px 0 rgb(172, 16, 0);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0,1);
   background: rgba(242, 127, 101, 1);
 }
 
@@ -590,16 +590,37 @@ a {
   list-style: none;
 }
 
-.catalog-item:hover {
+.catalog-item {
+  padding: 0;
+  margin: 0;
+  width: 293px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+
+}
+
+
+.catalog-item:hover::after {
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(248, 247, 244, 0.2);
   z-index: 2;
+  position: absolute;
+  content: "";
+  min-height: 405px;
+  width: 293px;
+  border-radius:5px;
+  top:0;
+  left:0;
 }
+
 
 .catalog-item:hover .button-visual {
   display: block;
   position: absolute;
-  bottom: 22px;
+  top:341px;
 }
 
 .catalog-item .button-visual {
@@ -609,6 +630,7 @@ a {
   line-height: 24px;
   min-width: 200px;
   display: none;
+  z-index: 3;
 }
 
 .catalog-item img {
@@ -637,18 +659,21 @@ a {
 }
 
 .catalog-item-price {
-  text-shadow: rgba(49, 50, 53, 0.5);
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 45px;
   font-weight: bold;
   font-style: normal;
-  font-stretch: normal;
   line-height: 45px;
   letter-spacing: normal;
   text-align: left;
   color: rgba(255, 255, 255, 1);
   z-index: 1;
-}
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 223px;
+  right:117px;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item-price span {
@@ -1159,25 +1184,6 @@ input-feedback:active, .feedback-item textarea:active {
   justify-content: space-between;
 }
 
-.catalog-item {
-  padding: 0;
-  margin: 0;
-  width: 293px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-bottom: 20px;
-  z-index: 1;
-}
-
-.catalog-item-price {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 223px;
-  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
-}
 /*****paginator****/
 .paginator {
   margin-bottom: 30px;
