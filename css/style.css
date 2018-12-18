@@ -64,7 +64,7 @@ input[type="radio"].visually-hidden {
      flex-direction: row;
 
 }
- .main-navigation, .user-navigation-general {
+ .main-navigation{
      font-size: 16px;
      line-height: 18px;
      font-weight: bold;
@@ -80,7 +80,7 @@ input[type="radio"].visually-hidden {
      margin:0;
      padding:0;
      padding-top: 15px;
-     margin-right: 300px;
+     margin-right: 365px;
 }
 .site-navigation {
      margin:0;
@@ -164,18 +164,21 @@ input[type="radio"].visually-hidden {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.current-page {
-     background-color: rgba(208, 112, 88, 1);
-     color: rgba(255, 255, 255, 1);
-     padding: 10px 13px;
-     border-radius: 25px;
+
 }
+
 .user-navigation-general {
      min-width:325px;
      margin:0;
      padding:0;
      display: flex;
     justify-content: flex-end;
+ 
+     font-size: 16px;
+     line-height: 18px;
+     font-weight: bold;
+     text-align: left;
+     color: rgba(255, 255, 255, 1);
 
 }
 .user-navigation {
@@ -185,6 +188,7 @@ input[type="radio"].visually-hidden {
      padding: 0;
      margin:0;
      width: 250px;
+        margin-top:15px;
 }
 
 .user-navigation-item {
@@ -423,7 +427,22 @@ input[type="radio"].visually-hidden {
 .catalog-item-image {
      margin-left: 13px;
      margin-bottom: 0;
+     position: relative;
 }
+.hit::before {
+    background-image: url(../img/hit.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 7px;
+    width: 61px;
+    height: 61px;
+    display: block;
+    padding: 8px;
+    position: absolute;
+    content: "";
+    left: -6px;
+    top: -4px;
+
+    }
  .catalog-item-price {
      text-shadow:rgba(49, 50, 53, 0.5);
      font-family: "Roboto", "Arial", sans-serif;
@@ -435,6 +454,8 @@ input[type="radio"].visually-hidden {
      letter-spacing: normal;
      text-align: left;
      color: rgba(255, 255, 255, 1);
+     z-index: 1;
+}
 }
  .catalog-item-price span {
      text-shadow:rgba(49, 50, 53, 0.5);
@@ -688,6 +709,7 @@ input[type="radio"].visually-hidden {
 .commercial-block li {
      padding:0;
      margin:0;
+     list-style: none;
 }
 .commercial-column-first {
      min-height: 40px;
@@ -695,6 +717,8 @@ input[type="radio"].visually-hidden {
      display: flex;
      flex-direction: column;
      padding:0;
+     margin:0;
+     margin-right: 28px;
 }
 .commercial-column-second {
      min-height: 40px;
@@ -703,14 +727,13 @@ input[type="radio"].visually-hidden {
      flex-direction: column;
      margin-left: 26px;
      padding:0;
+     margin:0;
+
 }
 .commercial-information {
      margin-left: 234px;
 }
- .commercial-block li {
-     list-style: none;
-     padding-left: 32px;
-}
+
  .commercial-information a {
      font-size: 13px;
      line-height: 18px;
@@ -720,9 +743,25 @@ input[type="radio"].visually-hidden {
 .commercial-information a:active {
      color:rgba(255, 188, 158, 1);
 }
-
+.commercial-column-first li:first-child {
+    position: relative;
+}
  .commercial-column-first li:first-child a{
      font-weight: bold;
+}
+
+.commercial-column-first li:first-child:before {
+    background-image: url(../img/love.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 7px;
+    width: 15px;
+    height: 13px;
+    display: block;
+    padding: 8px;
+    position: absolute;
+    content: "";
+    left: -31px;
+    top: -1px;
 }
 /*****copyright******/
  .copyright {
@@ -743,6 +782,15 @@ input[type="radio"].visually-hidden {
 }
 /***************INNER************/
 /*****HEADER******/
+.current-page {
+     background-color: rgba(208, 112, 88, 1);
+     color: rgba(255, 255, 255, 1);
+     padding: 10px 13px;
+     border-radius: 25px;
+ }
+ .current-page a {
+    border-bottom:none;
+ }
 .page-title {
      color:rgba(255, 255, 255, 1);
 }
@@ -880,15 +928,18 @@ input[type="radio"].visually-hidden {
      font-size: 16px;
      line-height: 18px;
      font-weight: bold;
-     padding: 5px 3px;
-     min-width: 25px;
+     padding:6px;
+        padding-top: 4px;
+    display: block;
+}
+.pager-item {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-align: center;
 }
 .pager-item:hover {
      background-color: rgba(255, 255, 255,0.2);
-    padding: 5px 3px;
-    border-radius: 50%;
-    min-width: 25px;
-    text-align: center;
 }
 .pager-item:active {
      background-color: rgba(255, 255, 255,1);
@@ -906,7 +957,8 @@ input[type="radio"].visually-hidden {
      margin:0;
 }
 .pager-current.first{
-     color: rgba(255, 255, 255, 1);
+     color: rgba(0, 0, 0, 1);
+     background-color: rgba(255,255,255,1);
 }
 .paginator {
      display: flex;
