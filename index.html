@@ -16,14 +16,14 @@
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li class="active catalog-navigation-item"><a href="catalog.html">Каталог</a>
+            <div class="wrapper"><li class="active catalog-navigation-item"><a href="catalog.html">Каталог</a>
                 <ul class="catalog-navigation">
                   <li class="catalog-navigation-item-submenu"><a href="new.html">Новинки</a></li>
                   <li class="catalog-navigation-item-submenu"><a href="inner.html">Сливочное</a></li>
                   <li class="catalog-navigation-item-submenu"><a href="cherbets.html">Щербеты</a></li>
                   <li class="catalog-navigation-item-submenu"><a href="fruit-ice.html">Фруктовый лед</a></li>
                   <li class="catalog-navigation-item-submenu"><a href="melorin.html">Мелорин</a></li>
-                </ul></li>
+                </ul></li></div>
             <li class="catalog-navigation-item"><a href="delievery.html">Доставка и оплата</a></li>
             <li class="catalog-navigation-item"><a href="about.html">О Компании</a></li>
           </ul>
@@ -41,22 +41,25 @@
               </section>
             </li>
             <li class="user-navigation-item login-hover"><a class="login-link" href="#">Вход</a>
+
               <section class="modal modal-login">
                 <h2 class="visually-hidden">Личный кабинет</h2>
-                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <label class="visually-hidden" for="user-email">Электронная почта</label>
-                  <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
-                  <label class="visually-hidden" for="user-password">Пароль</label>
-                  <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
-                <div class="help-wrapper">
-                <button class="button modal-login-button" type="submit">Войти</button>
-                <div class="help-me">
-                <a class="restore" href="#">Забыли пароль?</a>
-                <a class="registration-user" href="#">Новая регистрация</a>
-                </div>
+                  <div class="modal-login-wrapper">
+                    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                      <label class="visually-hidden" for="user-email">Электронная почта</label>
+                      <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
+                    <div class="help-wrapper">
+                    <button class="button modal-login-button" type="submit">Войти</button>
+                    <div class="help-me">
+                    <a class="restore" href="#">Забыли пароль?</a>
+                    <a class="registration-user" href="#">Новая регистрация</a>
+                  </div>
               </div>
               </form>
             </section>
+
           </li>
           <li class="user-navigation-item bucket-hover"><a class="bucket-link" href="Bucket.html">Пусто</a>
             <section class="modal bucket">
@@ -88,7 +91,7 @@
     </div>
       <p class="contacts-information" aria-label="Часы работы и телефон"><span>С 10 до 20, ежедневно</span><a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
       <section class="slider">
-        </section>
+      </section>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого "Глэcси"</h1>
@@ -188,8 +191,9 @@
             <span>Для заказов по телефону:</span><br>
             <a class="telephone-number" href=”tel:8-812-450-25-25″>8 812 450-25-25</a><br>
             <span>(с 10 до 20 ежедневно)</span>
-          </p>
-          <a class="button" href="writeme.html">Форма обратной связи</a>
+          </p>  
+            <a class="button" href="writeme.html">Форма обратной связи</a>
+          
         </section>
       </section>
 
@@ -205,19 +209,17 @@
       <section class="commercial-information">
         <h2 class="visually-hidden"> Коммерческая информация </h2>
         <div class="commercial-block">
-          <ul class="commercial-column-first">
+          <ul class="commercial-column">
             <li class="commercial-block-item"><a href="forproviders.html">Для поставщиков</a></li>
-            <li class="commercial-block-item"><a href="production.html">О производстве</a></li>
-          </ul>
-          <ul class="commercial-column-second">
             <li class="commercial-block-item"><a href="documents.html">Наши документы</a></li>
+            <li class="commercial-block-item"><a href="production.html">О производстве</a></li>
             <li class="commercial-block-item"><a href="ecology.html">Экологические стандарты</a></li>
         </ul>
         </div>
       </section>
       <div class="copyright">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy-small.svg" alt="HTML-Academy" height="39" width="108">
+        <img src="img/logo-name.svg" alt="HTML-Academy" height="39" width="108">
         </a>
         <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в <span>HTML Academy</span> © 2017</a>
       </div>
