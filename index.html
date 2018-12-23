@@ -16,21 +16,24 @@
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <div class="wrapper"><li class="active catalog-navigation-item"><a href="catalog.html">Каталог</a>
-                <ul class="catalog-navigation">
-                  <li class="catalog-navigation-item-submenu"><a href="new.html">Новинки</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="inner.html">Сливочное</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="cherbets.html">Щербеты</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="fruit-ice.html">Фруктовый лед</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="melorin.html">Мелорин</a></li>
-                </ul></li></div>
+            <li class="active catalog-navigation-item">
+              <a href="catalog.html">Каталог</a>
+              <ul class="catalog-navigation">
+                <li class="catalog-navigation-item-submenu"><a href="new.html">Новинки</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="inner.html">Сливочное</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="cherbets.html">Щербеты</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="fruit-ice.html">Фруктовый лед</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="melorin.html">Мелорин</a></li>
+              </ul>
+            </li>
             <li class="catalog-navigation-item"><a href="delievery.html">Доставка и оплата</a></li>
             <li class="catalog-navigation-item"><a href="about.html">О Компании</a></li>
           </ul>
         </nav>
         <nav class="user-navigation-general">
           <ul class="user-navigation">
-            <li class="user-navigation-item search-hover"><a class="search-link" href="#" aria-label="Поиск"></a>
+            <li class="user-navigation-item search-hover">
+              <a class="search-link" href="#" aria-label="Поиск"></a>
               <section class="modal modal-search">
                 <h3 class="visually-hidden">Поиск</h3>
                 <form class="search-on-site" action="https://echo.htmlacademy.ru" method="get">
@@ -40,55 +43,64 @@
                 </form>
               </section>
             </li>
-            <li class="user-navigation-item login-hover"><a class="login-link" href="#">Вход</a>
-
+            <li class="user-navigation-item login-hover">
+              <a class="login-link" href="#">Вход</a>
               <section class="modal modal-login">
                 <h2 class="visually-hidden">Личный кабинет</h2>
-                  <div class="modal-login-wrapper">
-                    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                      <label class="visually-hidden" for="user-email">Электронная почта</label>
-                      <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
-                      <label class="visually-hidden" for="user-password">Пароль</label>
+                <div class="modal-login-wrapper">
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="visually-hidden" for="user-email">Электронная почта</label>
+                    <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
+                    <label class="visually-hidden" for="user-password">Пароль</label>
                     <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
                     <div class="help-wrapper">
-                    <button class="button modal-login-button" type="submit">Войти</button>
-                    <div class="help-me">
-                    <a class="restore" href="#">Забыли пароль?</a>
-                    <a class="registration-user" href="#">Новая регистрация</a>
-                  </div>
-              </div>
-              </form>
-            </section>
-
-          </li>
-          <li class="user-navigation-item bucket-hover"><a class="bucket-link" href="Bucket.html">Пусто</a>
-            <section class="modal bucket">
-              <h4 class="visually-hidden">bucket</h4>
-              <table class="client-choise">
-                <tr class="client-choise-row">
-                  <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-                  <td><img src="img/orange.jpg" width="33" height="33" alt="пломбир апельсин"></td>
-                  <td><a class="icecream-link" href="#">Пломбир с апельсиновым джемом</a></td>
-                  <td><p>1,5кг х <span>200 руб.</span></p></td>
-                  <td><p>300 руб</p></td>
-                </tr>
-                <tr class="client-choise-row">
-                  <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-                  <td><img src="img/strawberry.jpg" width="33" height="33" alt="пломбир клубника"></td>
-                  <td><a class="icecream-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                  <td><p>1,5кг х <span>300 руб.</span></p></td>
-                  <td><p>450 руб</p></td>
-                </tr>
-                <tr class="client-choise-row-amount">
-                  <td colspan="5">Итого: 750 руб.</td>
-                </tr> 
-              </table>
-              <a class="button button-choise" href="#">Оформить заказ</a>
-            </section>   
-          </li>
-        </ul>
-      </nav>
-    </div>
+                      <button class="button modal-login-button" type="submit">Войти</button>
+                      <div class="help-me">
+                        <a class="restore" href="#">Забыли пароль?</a>
+                        <a class="registration-user" href="#">Новая регистрация</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </li>
+            <li class="user-navigation-item bucket-hover">
+              <a class="bucket-link" href="Bucket.html">Пусто</a>
+              <section class="modal modal-bucket">
+                <h4 class="visually-hidden">bucket</h4>
+                <table class="client-choise">
+                  <tr class="client-choise-row">
+                    <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
+                    <td><img src="img/orange.jpg" width="33" height="33" alt="пломбир апельсин"></td>
+                    <td><a class="icecream-link" href="#">Пломбир с апельсиновым джемом</a></td>
+                    <td>
+                      <p>1,5кг х <span>200 руб.</span></p>
+                    </td>
+                    <td>
+                      <p>300 руб</p>
+                    </td>
+                  </tr>
+                  <tr class="client-choise-row">
+                    <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
+                    <td><img src="img/strawberry.jpg" width="33" height="33" alt="пломбир клубника"></td>
+                    <td><a class="icecream-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                    <td>
+                      <p>1,5кг х <span>300 руб.</span></p>
+                    </td>
+                    <td>
+                      <p>450 руб</p>
+                    </td>
+                  </tr>
+                  <tr class="client-choise-row-amount">
+                    <td colspan="5">Итого: 750 руб.</td>
+                  </tr>
+                </table>
+                <a class="button button-choise" href="#">Оформить заказ</a>
+              </section>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <p class="contacts-information" aria-label="Часы работы и телефон"><span>С 10 до 20, ежедневно</span><a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
       <section class="slider">
       </section>
@@ -115,7 +127,8 @@
             <a href="catalog-item.html">
               <p class="catalog-item-price">310 &#8381;<span>/кг</span></p>
               <p class="catalog-item-image hit">
-              <img src="img/orange.jpg" alt="orange" height="267" width="267"></p>
+                <img src="img/orange.jpg" alt="orange" height="267" width="267">
+              </p>
               <p class="catalog-item-description">Сливочое с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
             <a class="button button-visual" href="#">Быстрый просмотр</a>
@@ -160,43 +173,39 @@
         <p class="features icon-feature leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
         <p class="features icon-feature temperature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
       </section>
-    <div class="blog-subscribe-wrapper">
-      <article class="our-blog">
-        <h4>Новое в нашем блоге</h4>
-        <a class="10-ways" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
-      </article>
-      <div class="subscribe-block">
-
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-          <label for="email-subscribe" class="visually-hidden">Введите сюда электронную почту</label>
-
-          <div class="subscribe-wrapper">
-            <input class="placeholder subscribe-placeholder" type="email" id="email-subscribe" placeholder="Электронная почта">
-            <button class="button subscribe-block-button" type="submit">Отправить</button>
+      <div class="blog-subscribe-wrapper">
+        <article class="our-blog">
+          <h4>Новое в нашем блоге</h4>
+          <a class="10-ways" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
+        </article>
+        <div class="subscribe-block">
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+            <label for="email-subscribe" class="visually-hidden">Введите сюда электронную почту</label>
+            <div class="subscribe-wrapper">
+              <input class="placeholder subscribe-placeholder" type="email" id="email-subscribe" placeholder="Электронная почта">
+              <button class="button subscribe-block-button" type="submit">Отправить</button>
+            </div>
+          </form>
         </div>
-        </form>
       </div>
-        </div>
-    </main>      
-      <section class="map">
-        <h2 class="visually-hidden">Как нас найти</h2>
-        <img src="img/map.png" alt="Адрес магазина:ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
-        <section class="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <p><span>Aдрес главного офиса<br>
-            и офлайн-магазина:</span><br>
-            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
-            <br>
-            <span>Для заказов по телефону:</span><br>
-            <a class="telephone-number" href=”tel:8-812-450-25-25″>8 812 450-25-25</a><br>
-            <span>(с 10 до 20 ежедневно)</span>
-          </p>  
-            <a class="button" href="writeme.html">Форма обратной связи</a>
-          
-        </section>
+    </main>
+    <section class="map">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <img src="img/map.png" alt="Адрес магазина:ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p><span>Aдрес главного офиса<br>
+          и офлайн-магазина:</span><br>
+          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
+          <br>
+          <span>Для заказов по телефону:</span><br>
+          <a class="telephone-number" href=”tel:8-812-450-25-25″>8 812 450-25-25</a><br>
+          <span>(с 10 до 20 ежедневно)</span>
+        </p>
+        <a class="button contact-form-button" href="writeme.html">Форма обратной связи</a>
       </section>
-
+    </section>
     <footer class="main-footer container">
       <div class="footer-social">
         <ul>
@@ -214,7 +223,7 @@
             <li class="commercial-block-item"><a href="documents.html">Наши документы</a></li>
             <li class="commercial-block-item"><a href="production.html">О производстве</a></li>
             <li class="commercial-block-item"><a href="ecology.html">Экологические стандарты</a></li>
-        </ul>
+          </ul>
         </div>
       </section>
       <div class="copyright">
@@ -224,25 +233,122 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в <span>HTML Academy</span> © 2017</a>
       </div>
     </footer>
-     
-      <section class="modal modal-feedback">
-        <h2>Мы обязательно вам ответим!</h2>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="feedback-item">
-            <label><span class="visually-hidden">Ваше Имя</span>
-            <input class="placeholder input-feedback" type="text" name="name" placeholder="Как вас зовут?">
-            </label>
-          </p>
-          <p class="feedback-item">
-            <label><span class="visually-hidden">Ваш e-mail</span>
-            <input  class="placeholder input-feedback" type="email" name="email" placeholder="Ваша почта для ответа?">
-            </label>
-          </p>
-          <p class="feedback-item">
-            <textarea class="input-feedback" placeholder="Напишите что-нибудь..."></textarea>
-          </p>
-          <button class="button feedback-button" type="submit">Отправить</button>
-        </form>
-      </section> 
-    </body>
+    <section class="modal modal-feedback">
+      <h2>Мы обязательно вам ответим!</h2>
+      <a href="#" class="modal-close"></a>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="feedback-item">
+          <label><span class="visually-hidden">Ваше Имя</span>
+          <input class="placeholder input-feedback" type="text" name="name" placeholder="Как вас зовут?">
+          </label>
+        </p>
+        <p class="feedback-item">
+          <label><span class="visually-hidden">Ваш e-mail</span>
+          <input  class="placeholder input-feedback" type="email" name="email" placeholder="Ваша почта для ответа?">
+          </label>
+        </p>
+        <p class="feedback-item">
+          <textarea class="input-feedback" placeholder="Напишите что-нибудь..."></textarea>
+        </p>
+        <button class="button feedback-button" type="submit">Отправить</button>
+      </form>
+    </section>
+    <script>
+      var modalSearch = document.querySelector(".modal-search");
+      var searchLink = document.querySelector(".search-hover");
+      var loginLink = document.querySelector(".login-hover");
+      var modalLogin = document.querySelector(".modal-login");
+      var bucketLink = document.querySelector(".bucket-hover");
+      var modalBucket = document.querySelector(".modal-bucket");
+      var contactButton = document.querySelector(".contact-form-button");
+      var modalFeedback = document.querySelector(".modal-feedback");
+      var modalclose = document.querySelector(".modal-close");
+      var email = modalLogin.querySelector(".user-email");
+      var form = modalLogin.querySelector(".login-form");
+      var password = modalLogin.querySelector(".user-password");
+      var isStorageSupport = true;
+      var storage = "";
+      
+      try {
+      storage = localStorage.getItem("email");
+      } catch (err) {
+      isStorageSupport = false;
+      }
+      
+      
+      searchLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalSearch.classList.add("modal-show-search");
+      });
+      window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modalSearch.classList.contains("modal-show-search")) {
+      modalSearch.classList.remove("modal-show-search");
+      modalSearch.classList.remove("modal-error");
+      }
+      }
+      });
+      
+      loginLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalLogin.classList.add("modal-show-login");
+      });
+      if (storage) {
+      email.value = storage;
+      password.focus();
+      }else{
+      
+      email.focus();
+      }  
+      form.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      modalLogin.classList.remove("modal-error");
+      modalLogin.offsetWidth = modalLogin.offsetWidth;
+      modalLogin.classList.add("modal-error");
+      modalLogin.classList.remove("modal-error");
+      
+      if (!email.value || !password.value) {
+      evt.preventDefault();
+      console.log("Нужно ввести почту и пароль");
+      }  else {
+      if (isStorageSupport) {
+      localStorage.setItem("email", email.value);
+      }
+      }
+      });
+      window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modalLogin.classList.contains("modal-show-login")) {
+      modalLogin.classList.remove("modal-show-login");
+      modalLogin.classList.remove("modal-error");
+      }
+      }
+      });
+      bucketLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalBucket.classList.add("modal-show-bucket");
+      });
+      window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modalBucket.classList.contains("modal-show-bucket")) {
+      modalBucket.classList.remove("modal-show-bucket");
+      modalBucket.classList.remove("modal-show-bucket");
+      }
+      }
+      });
+      
+      contactButton.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalFeedback.classList.add("modal-show-feedback");
+      });
+      modalclose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalFeedback.classList.remove("modal-show-feedback");
+      });
+      
+    </script>
+  </body>
 </html>

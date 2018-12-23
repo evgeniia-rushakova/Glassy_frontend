@@ -9,29 +9,31 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-<header class="main-header container">
- <header class="main-header container">
+    <header class="main-header container">
       <div class="navigation-wrapper">
         <a class="main-header-logo" href="index.html">
         <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li class="active catalog-navigation-item inner current-page"><a href="catalog.html">Каталог</a>
-                <ul class="catalog-navigation">
-                  <li class="catalog-navigation-item-submenu"><a href="new.html">Новинки</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="inner.html">Сливочное</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="cherbets.html">Щербеты</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="fruit-ice.html">Фруктовый лед</a></li>
-                  <li class="catalog-navigation-item-submenu"><a href="melorin.html">Мелорин</a></li>
-                </ul></li>
+            <li class="active catalog-navigation-item inner current-page">
+              <a href="catalog.html">Каталог</a>
+              <ul class="catalog-navigation">
+                <li class="catalog-navigation-item-submenu"><a href="new.html">Новинки</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="inner.html">Сливочное</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="cherbets.html">Щербеты</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="fruit-ice.html">Фруктовый лед</a></li>
+                <li class="catalog-navigation-item-submenu"><a href="melorin.html">Мелорин</a></li>
+              </ul>
+            </li>
             <li class="catalog-navigation-item"><a href="delievery.html">Доставка и оплата</a></li>
             <li class="catalog-navigation-item"><a href="about.html">О Компании</a></li>
           </ul>
         </nav>
         <nav class="user-navigation-general">
           <ul class="user-navigation">
-            <li class="user-navigation-item search-hover"><a class="search-link" href="#" aria-label="Поиск"></a>
+            <li class="user-navigation-item search-hover">
+              <a class="search-link" href="#" aria-label="Поиск"></a>
               <section class="modal modal-search">
                 <h3 class="visually-hidden">Поиск</h3>
                 <form class="search-on-site" action="https://echo.htmlacademy.ru" method="get">
@@ -41,7 +43,8 @@
                 </form>
               </section>
             </li>
-            <li class="user-navigation-item login-hover"><a class="login-link" href="#">Вход</a>
+            <li class="user-navigation-item login-hover">
+              <a class="login-link" href="#">Вход</a>
               <section class="modal modal-login">
                 <h2 class="visually-hidden">Личный кабинет</h2>
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -49,123 +52,132 @@
                   <input class="user-email placeholder" type="email" name="email" placeholder="Электронная почта" id="user-email">
                   <label class="visually-hidden" for="user-password">Пароль</label>
                   <input class="user-password placeholder" type="password" name="password" placeholder="Пароль" id="user-password">
-                <div class="help-wrapper">
-                <button class="button modal-login-button" type="submit">Войти</button>
-                <div class="help-me">
-                <a class="restore" href="#">Забыли пароль?</a>
-                <a class="registration-user" href="#">Новая регистрация</a>
-                </div>
-              </div>
-              </form>
-            </section>
-          </li>
-          <li class="user-navigation-item bucket-hover"><a class="bucket-link" href="Bucket.html">Пусто</a>
-            <section class="modal bucket">
-              <h4 class="visually-hidden">bucket</h4>
-              <table class="client-choise">
-                <tr class="client-choise-row">
-                  <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-                  <td><img src="img/orange.jpg" width="33" height="33" alt="пломбир апельсин"></td>
-                  <td><a class="icecream-link" href="#">Пломбир с апельсиновым джемом</a></td>
-                  <td><p>1,5кг х <span>200 руб.</span></p></td>
-                  <td><p>300 руб</p></td>
-                </tr>
-                <tr class="client-choise-row">
-                  <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-                  <td><img src="img/strawberry.jpg" width="33" height="33" alt="пломбир клубника"></td>
-                  <td><a class="icecream-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                  <td><p>1,5кг х <span>300 руб.</span></p></td>
-                  <td><p>450 руб</p></td>
-                </tr>
-                <tr class="client-choise-row-amount">
-                  <td colspan="5">Итого: 750 руб.</td>
-                </tr> 
-              </table>
-              <a class="button button-choise" href="#">Оформить заказ</a>
-            </section>   
-          </li>
+                  <div class="help-wrapper">
+                    <button class="button modal-login-button" type="submit">Войти</button>
+                    <div class="help-me">
+                      <a class="restore" href="#">Забыли пароль?</a>
+                      <a class="registration-user" href="#">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </section>
+            </li>
+            <li class="user-navigation-item bucket-hover">
+              <a class="bucket-link" href="Bucket.html">Пусто</a>
+              <section class="modal modal-bucket">
+                <h4 class="visually-hidden">bucket</h4>
+                <table class="client-choise">
+                  <tr class="client-choise-row">
+                    <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
+                    <td><img src="img/orange.jpg" width="33" height="33" alt="пломбир апельсин"></td>
+                    <td><a class="icecream-link" href="#">Пломбир с апельсиновым джемом</a></td>
+                    <td>
+                      <p>1,5кг х <span>200 руб.</span></p>
+                    </td>
+                    <td>
+                      <p>300 руб</p>
+                    </td>
+                  </tr>
+                  <tr class="client-choise-row">
+                    <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
+                    <td><img src="img/strawberry.jpg" width="33" height="33" alt="пломбир клубника"></td>
+                    <td><a class="icecream-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                    <td>
+                      <p>1,5кг х <span>300 руб.</span></p>
+                    </td>
+                    <td>
+                      <p>450 руб</p>
+                    </td>
+                  </tr>
+                  <tr class="client-choise-row-amount">
+                    <td colspan="5">Итого: 750 руб.</td>
+                  </tr>
+                </table>
+                <a class="button button-choise" href="#">Оформить заказ</a>
+              </section>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="information-breadcrumbs">
+        <p class="contacts-information" aria-label="Часы работы и телефон"><span>С 10 до 20, ежедневно</span><a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalogue.html">Каталог</a></li>
+          <li class="breadcrumb-current">Сливочное</li>
         </ul>
-      </nav>
-    </div>
-    <div class="information-breadcrumbs">
-      <p class="contacts-information" aria-label="Часы работы и телефон"><span>С 10 до 20, ежедневно</span><a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
-      <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalogue.html">Каталог</a></li>
-        <li class="breadcrumb-current">Сливочное</li>
-      </ul>
-    </div>      
+      </div>
     </header>
     <main class="container">
       <section class="filters">
         <h1 class="page-title">Сливочное мороженое</h1>
         <form class="sorting-filters" action="https://echo.htmlacademy.ru" method="post">
-        <div class="first-row-sorting">
-          <b class="sorting-name">Сортировка:</b>
-          <div class="filters-row">
-          <p class="filter-item">
-            <label class="visually-hidden" for="sortfor">
-              <select name="sorting" id="sortfor">
-                <option value="popularity">по популярности</option>
-                <option value="price">по цене</option>
-                <option value="new">по новизне</option>
-              </select>
-            </label>
-          </p>
-          <p class="filter-item">
-            <label class="topping-check" for="price-range">Цена:</label>
-            <input class="min-price" type="text" value="100 руб.">
-            <input class="max-price" type="text" value="500 руб.">
-            <input type="range" name="price" id="price-range" min="100" max="500" step="5">
-          </p>
-          <div class="filter-item">
-            <b>Жирность:</b>
-            <p class="sort-fat-item">
-              <label class="topping-check">0%
-              <input type="radio" name="fat" value="0">
-              </label>
-            </p>
-            <p class="sort-fat-item">
-              <label class="topping-check">до 10%
-              <input type="radio" name="fat" value="less 10">
-              </label>
-            </p>
-            <p class="sort-fat-item">
-              <label class="topping-check">до 30%
-              <input type="radio" name="fat" value="less 30">
-              </label>
-            </p>
-            <p class="sort-fat-item">
-              <label class="topping-check">выше 30%
-              <input type="radio" name="fat" value="more 30">
-              </label>
-            </p>
+          <div class="first-row-sorting">
+            <b class="sorting-name">Сортировка:</b>
+            <div class="filters-row">
+              <p class="filter-item">
+                <label class="visually-hidden" for="sortfor">
+                  <select name="sorting" id="sortfor">
+                    <option value="popularity">по популярности</option>
+                    <option value="price">по цене</option>
+                    <option value="new">по новизне</option>
+                  </select>
+                </label>
+              </p>
+              <p class="filter-item">
+                <label class="topping-check" for="price-range">Цена:</label>
+                <input class="min-price" type="text" value="100 руб.">
+                <input class="max-price" type="text" value="500 руб.">
+                <input type="range" name="price" id="price-range" min="100" max="500" step="5">
+              </p>
+              <div class="filter-item">
+                <b>Жирность:</b>
+                <p class="sort-fat-item">
+                  <label class="topping-check">0%
+                  <input type="radio" name="fat" value="0">
+                  </label>
+                </p>
+                <p class="sort-fat-item">
+                  <label class="topping-check">до 10%
+                  <input type="radio" name="fat" value="less 10">
+                  </label>
+                </p>
+                <p class="sort-fat-item">
+                  <label class="topping-check">до 30%
+                  <input type="radio" name="fat" value="less 30">
+                  </label>
+                </p>
+                <p class="sort-fat-item">
+                  <label class="topping-check">выше 30%
+                  <input type="radio" name="fat" value="more 30">
+                  </label>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="second-row-sorting">
-          <div class="toppings filter-item">
-            <b class="sorting-name">Наполнители:</b>
-            <div class="filters-row">
-            <label class="topping-check">шоколадные
-            <input class="topping-choise" type="checkbox" name="topping" value="chocolate-topping" checked>
-            </label>
-            <label class="topping-check">сахарные присыпки
-            <input class="topping-choise" type="checkbox" name="topping" value="sugar-sprinkles" checked>
-            </label>
-            <label class="topping-check">фрукты
-            <input class="topping-choise" type="checkbox" name="topping" value="fruits">
-            </label>
-            <label class="topping-check">сиропы
-            <input class="topping-choise" type="checkbox" name="topping" value="sirup">
-            </label>
-            <label class="topping-check">джемы
-            <input class="topping-choise" type="checkbox" name="topping" value="jam"> 
-            </label>
+          <div class="second-row-sorting">
+            <div class="toppings filter-item">
+              <b class="sorting-name">Наполнители:</b>
+              <div class="filters-row">
+                <label class="topping-check">шоколадные
+                <input class="topping-choise" type="checkbox" name="topping" value="chocolate-topping" checked>
+                </label>
+                <label class="topping-check">сахарные присыпки
+                <input class="topping-choise" type="checkbox" name="topping" value="sugar-sprinkles" checked>
+                </label>
+                <label class="topping-check">фрукты
+                <input class="topping-choise" type="checkbox" name="topping" value="fruits">
+                </label>
+                <label class="topping-check">сиропы
+                <input class="topping-choise" type="checkbox" name="topping" value="sirup">
+                </label>
+                <label class="topping-check">джемы
+                <input class="topping-choise" type="checkbox" name="topping" value="jam"> 
+                </label>
+              </div>
+              <button class="submit-result" type="submit">Применить</button>
+            </div>
           </div>
-          <button class="submit-result" type="submit">Применить</button>
-        </div>
-      </div>
         </form>
       </section>
       <section class="catalog">
@@ -177,7 +189,8 @@
               <a href="catalog-item.html">
                 <p class="catalog-item-price">310 &#8381;<span>/кг</span></p>
                 <p class="catalog-item-image">
-              <img src="img/orange.jpg" alt="orange" height="267" width="267"></p>
+                  <img src="img/orange.jpg" alt="orange" height="267" width="267">
+                </p>
                 <p class="catalog-item-description">Сливочое с апельсиновым джемом и цитрусовой стружкой</p>
               </a>
               <a class="button button-visual" href="#">Быстрый просмотр</a>
@@ -320,7 +333,7 @@
             <li class="commercial-block-item"><a href="documents.html">Наши документы</a></li>
             <li class="commercial-block-item"><a href="production.html">О производстве</a></li>
             <li class="commercial-block-item"><a href="ecology.html">Экологические стандарты</a></li>
-        </ul>
+          </ul>
         </div>
       </section>
       <div class="copyright">
@@ -330,6 +343,90 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в <span>HTML Academy</span> © 2017</a>
       </div>
     </footer>
+    <script>
+      var modalSearch = document.querySelector(".modal-search");
+      var searchLink = document.querySelector(".search-hover");
+      var loginLink = document.querySelector(".login-hover");
+      var modalLogin = document.querySelector(".modal-login");
+      var bucketLink = document.querySelector(".bucket-hover");
+      var modalBucket = document.querySelector(".modal-bucket");
+      var modalclose = document.querySelector(".modal-close");
+      var email = modalLogin.querySelector(".user-email");
+      var form = modalLogin.querySelector(".login-form");
+      var password = modalLogin.querySelector(".user-password");
+      var isStorageSupport = true;
+      var storage = "";
       
+      try {
+      storage = localStorage.getItem("email");
+      } catch (err) {
+      isStorageSupport = false;
+      }
+      
+      
+      searchLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalSearch.classList.add("modal-show-search");
+      });
+      window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modalSearch.classList.contains("modal-show-search")) {
+      modalSearch.classList.remove("modal-show-search");
+      modalSearch.classList.remove("modal-error");
+      }
+      }
+      });
+      
+      loginLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalLogin.classList.add("modal-show-login");
+      });
+      if (storage) {
+      email.value = storage;
+      password.focus();
+      }else{
+      
+      email.focus();
+      }  
+      form.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      modalLogin.classList.remove("modal-error");
+      modalLogin.offsetWidth = modalLogin.offsetWidth;
+      modalLogin.classList.add("modal-error");
+      modalLogin.classList.remove("modal-error");
+      
+      if (!email.value || !password.value) {
+      evt.preventDefault();
+      console.log("Нужно ввести почту и пароль");
+      }  else {
+      if (isStorageSupport) {
+      localStorage.setItem("email", email.value);
+      }
+      }
+      });
+      window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modalLogin.classList.contains("modal-show-login")) {
+      modalLogin.classList.remove("modal-show-login");
+      modalLogin.classList.remove("modal-error");
+      }
+      }
+      });
+      bucketLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalBucket.classList.add("modal-show-bucket");
+      });
+      window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modalBucket.classList.contains("modal-show-bucket")) {
+      modalBucket.classList.remove("modal-show-bucket");
+      modalBucket.classList.remove("modal-show-bucket");
+      }
+      }
+      });
+    </script>
   </body>
 </html>
