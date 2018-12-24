@@ -9,6 +9,10 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <div class="slider-wrapper">
     <header class="main-header container">
       <div class="navigation-wrapper">
         <a class="main-header-logo">
@@ -100,11 +104,37 @@
             </li>
           </ul>
         </nav>
-      </div>
+            </div>
       <p class="contacts-information" aria-label="Часы работы и телефон"><span>С 10 до 20, ежедневно</span><a href=”tel:8-812-450-25-25″>8 812 450-25-25</a></p>
-      <section class="slider">
-      </section>
-    </header>
+
+  </header>
+    <section class="slider">
+      <div class="slider-controls">
+            <label for="product-1">Первый</label>
+            <label for="product-2">Второй</label>
+            <label for="product-3">Третий</label>
+          </div>
+      <ul class="slider-list">
+        <li class="slider-item slide" id="slide1">
+              <h3 class="slide-title">
+                Крем-брюле и пломбир с малиновым джемом
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+        <li class="slider-item slide" id="slide2">
+              <h3 class="slide-title">
+                Шоколадный пломбир и лимонный сорбет
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide" id="slide3">
+              <h3 class="slide-title">
+                Пломбир с помадкой и клубничный щербет
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+      </ul>
+    </section>
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого "Глэcси"</h1>
       <section class="special-offer">
@@ -193,6 +223,7 @@
     <section class="map">
       <h2 class="visually-hidden">Как нас найти</h2>
       <img src="img/map.png" alt="Адрес магазина:ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1200" height="430" allowfullscreen></iframe>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p><span>Aдрес главного офиса<br>
@@ -347,8 +378,8 @@
       modalclose.addEventListener("click", function (evt) {
       evt.preventDefault();
       modalFeedback.classList.remove("modal-show-feedback");
-      });
-      
+      }); 
     </script>
   </body>
+</div>
 </html>

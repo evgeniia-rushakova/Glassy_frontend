@@ -113,45 +113,44 @@
         <h1 class="page-title">Сливочное мороженое</h1>
         <form class="sorting-filters" action="https://echo.htmlacademy.ru" method="post">
           <div class="first-row-sorting">
-            <b class="sorting-name">Сортировка:</b>
+            
             <div class="filters-row">
-              <p class="filter-item">
-                <label class="visually-hidden" for="sortfor">
-                  <select name="sorting" id="sortfor">
+              <p class="filter-item-select">
+                <label  for="sortfor"><b class="sorting-name">Сортировка:</b></label>
+                  <select class="sorting-select" name="sorting" id="sortfor">
                     <option value="popularity">по популярности</option>
-                    <option value="price">по цене</option>
-                    <option value="new">по новизне</option>
+                    <option value="pricelow">сначала недорогие</option>
+                    <option value="pricehight">сначала дорогие</option>
+                    <option value="fat">по жирности</option>
                   </select>
-                </label>
               </p>
-              <p class="filter-item">
+              <p class="filter-item-price">
                 <label class="topping-check" for="price-range">Цена:</label>
                 <input class="min-price" type="text" value="100 руб.">
                 <input class="max-price" type="text" value="500 руб.">
                 <input type="range" name="price" id="price-range" min="100" max="500" step="5">
               </p>
-              <div class="filter-item">
+              <div class="filter-item-fat">
                 <b>Жирность:</b>
-                <p class="sort-fat-item">
-                  <label class="topping-check">0%
-                  <input type="radio" name="fat" value="0">
-                  </label>
-                </p>
-                <p class="sort-fat-item">
-                  <label class="topping-check">до 10%
-                  <input type="radio" name="fat" value="less 10">
-                  </label>
-                </p>
-                <p class="sort-fat-item">
-                  <label class="topping-check">до 30%
-                  <input type="radio" name="fat" value="less 30">
-                  </label>
-                </p>
-                <p class="sort-fat-item">
-                  <label class="topping-check">выше 30%
-                  <input type="radio" name="fat" value="more 30">
-                  </label>
-                </p>
+                <div class="sort-fat-item-wrapper">
+                  <p class="sort-fat-item">
+                    
+                    <input type="radio" name="fat" value="0" id="topping0">
+                    <label for="topping0"class="topping-check">0%</label>
+                  </p>
+                  <p class="sort-fat-item">
+                    <input type="radio" name="fat" value="less 10" id="topping10">
+                    <label for="topping10" class="topping-check">до 10%</label>
+                  </p>
+                  <p class="sort-fat-item">
+                    <input type="radio" name="fat" value="less 30" id="topping30">
+                    <label for="topping30" class="topping-check">до 30%</label>
+                  </p>
+                  <p class="sort-fat-item">
+                    <input type="radio" name="fat" value="more 30" id="topping31">
+                    <label for="topping31" class="topping-check">выше 30%</label>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
