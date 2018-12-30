@@ -5,16 +5,16 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <!--<link href="css/outline.css" rel="stylesheet">-->
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
+
     <header class="main-header container">
       <div class="navigation-wrapper">
         <a class="main-header-logo" href="index.html">
         <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation inner">
           <ul class="site-navigation">
             <li class="active catalog-navigation-item inner current-page">
               <a href="catalog.html">Каталог</a>
@@ -62,8 +62,8 @@
                 </form>
               </section>
             </li>
-            <li class="user-navigation-item bucket-hover">
-              <a class="bucket-link" href="Bucket.html">Пусто</a>
+            <li class="user-navigation-item bucket-hover bucket-full">
+              <a class="bucket-link" href="Bucket.html">2 товара</a>
               <section class="modal modal-bucket">
                 <h4 class="visually-hidden">bucket</h4>
                 <table class="client-choise">
@@ -116,7 +116,7 @@
             
             <div class="filters-row">
               <p class="filter-item-select">
-                <label  for="sortfor"><b class="sorting-name">Сортировка:</b></label>
+                <label  for="sortfor"><b class="sorting-name-grade">Сортировка:</b></label>
                   <select class="sorting-select" name="sorting" id="sortfor">
                     <option value="popularity">по популярности</option>
                     <option value="pricelow">сначала недорогие</option>
@@ -124,31 +124,32 @@
                     <option value="fat">по жирности</option>
                   </select>
               </p>
-              <p class="filter-item-price">
-                <label class="topping-check" for="price-range">Цена:</label>
-                <input class="min-price" type="text" value="100 руб.">
-                <input class="max-price" type="text" value="500 руб.">
-                <input type="range" name="price" id="price-range" min="100" max="500" step="5">
-              </p>
+              <div class="filter-item-price">
+                <label class="topping-check" for="price-range">Цена:<span>100 руб.</span> - <span>500 руб.</span></label>
+                <!--<input class="min-price" type="text" value="100 руб.">
+                <input class="max-price" type="text" value="500 руб.">-->
+                <div class="pricerange">
+                <input type="range" name="price" id="price-range" min="100" max="500" step="5"></div>
+              </div>
               <div class="filter-item-fat">
-                <b>Жирность:</b>
+                <b class="filter-fat-label">Жирность:</b>
                 <div class="sort-fat-item-wrapper">
                   <p class="sort-fat-item">
                     
                     <input type="radio" name="fat" value="0" id="topping0">
-                    <label for="topping0"class="topping-check">0%</label>
+                    <label for="topping0">0%</label>
                   </p>
                   <p class="sort-fat-item">
                     <input type="radio" name="fat" value="less 10" id="topping10">
-                    <label for="topping10" class="topping-check">до 10%</label>
+                    <label for="topping10">до 10%</label>
                   </p>
                   <p class="sort-fat-item">
                     <input type="radio" name="fat" value="less 30" id="topping30">
-                    <label for="topping30" class="topping-check">до 30%</label>
+                    <label for="topping30" >до 30%</label>
                   </p>
                   <p class="sort-fat-item">
                     <input type="radio" name="fat" value="more 30" id="topping31">
-                    <label for="topping31" class="topping-check">выше 30%</label>
+                    <label for="topping31" >выше 30%</label>
                   </p>
                 </div>
               </div>
@@ -156,34 +157,34 @@
           </div>
           <div class="second-row-sorting">
             <div class="toppings filter-item">
-              <b class="sorting-name">Наполнители:</b>
+              <b class="sorting-name-toppings">Наполнители:</b>
               <div class="filters-row">
-                <label class="topping-check">шоколадные
-                <input class="topping-choise" type="checkbox" name="topping" value="chocolate-topping" checked>
-                </label>
-                <label class="topping-check">сахарные присыпки
-                <input class="topping-choise" type="checkbox" name="topping" value="sugar-sprinkles" checked>
-                </label>
-                <label class="topping-check">фрукты
-                <input class="topping-choise" type="checkbox" name="topping" value="fruits">
-                </label>
-                <label class="topping-check">сиропы
-                <input class="topping-choise" type="checkbox" name="topping" value="sirup">
-                </label>
-                <label class="topping-check">джемы
-                <input class="topping-choise" type="checkbox" name="topping" value="jam"> 
-                </label>
+                <div class="topping-wrapper">
+                <input class="topping-choise" type="checkbox" name="topping" value="chocolate-topping" id="chocolate-topping"checked>
+                <label for="chocolate-topping" class="topping-check">шоколадные</label>
+                
+                <input class="topping-choise" type="checkbox" name="topping" value="sugar-sprinkles" id="sugar-sprinkles" checked>
+                <label for="sugar-sprinkles" class="topping-check">сахарные присыпки</label>
+                
+                <input class="topping-choise" type="checkbox" name="topping" value="fruits" id="fruits">
+                <label for="fruits" class="topping-check">фрукты</label>
+                
+                <input class="topping-choise" type="checkbox" name="topping" value="sirup" id="sirup">
+                <label for="sirup" class="topping-check">сиропы</label>
+                
+                <input class="topping-choise" type="checkbox" name="topping" value="jam" id="jam"> 
+                <label for="jam" class="topping-check">джемы</label>
               </div>
-              <button class="submit-result" type="submit">Применить</button>
+              <button class="submit-result" type="submit">Применить</button></div>
             </div>
           </div>
         </form>
       </section>
-      <section class="catalog">
+      <section class="catalog-wrapper">
         <h1 class="visually-hidden">Каталог товаров</h1>
-        <section class="filters">
-          <h2 class="visually-hidden">Фильтр товаров</h2>
-          <ul class="catalog-list catalog-inner">
+        <section class="filtered-results">
+          <h2 class="visually-hidden">Товары,отсортированные по вашим параметрам</h2>
+          <ul class="catalog-list">
             <li class="catalog-item ">
               <a href="catalog-item.html">
                 <p class="catalog-item-price">310 &#8381;<span>/кг</span></p>
@@ -427,5 +428,6 @@
       }
       });
     </script>
+
   </body>
 </html>
