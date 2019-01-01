@@ -5,11 +5,17 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <title>HTML Academy: Глейси</title>
+    <!-- Dependencies! -->
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/underscore.js"></script>
     <script type="text/javascript" src="js/no-range-slider.js"></script>
+
+    <!-- Application! -->
     <script type="text/javascript" src="js/Default.js"></script>
-    <title>HTML Academy: Глейси</title>
+
+    <!-- Stylesheets! -->
+    <link rel="stylesheet" type="text/css" href="css/Default.css" />
   </head>
   <body>
 
@@ -130,12 +136,14 @@
               </p>
               <div class="filter-item-price">
                 <label class="topping-check" for="price-range">Цена:<span>100 руб.</span> - <span>500 руб.</span></label>
+                <!--<input class="min-price" type="text" value="100 руб.">
+                <input class="max-price" type="text" value="500 руб.">-->
                 <div class="pricerange">
                   <div ng-app="rangeApp" ng-controller="IndexController">
-                  <section data-ticks="true" data-range-slider class="range-slider" step="10" ng-model="_model[0]" min="100" max="500"></section>
+                  <section data-ticks="true" data-range-slider class="range-slider" step="10" ng-model="_model[0]" min="100" max="600"></section>
                 </div>
               </div>
-              </div>
+            </div>
               <div class="filter-item-fat">
                 <b class="filter-fat-label">Жирность:</b>
                 <div class="sort-fat-item-wrapper">
@@ -433,6 +441,12 @@
       }
       });
     </script>
+<form action="https://echo.htmlacademy.ru" method="post">
+    <div ng-app="rangeApp" ng-controller="IndexController">
+<section data-ticks="true" data-range-slider class="range-slider" step="10" ng-model="_model[0]" min="100" max="600"></section>
 
+</div>
+<button type="submit">send</button>
+</form>
   </body>
 </html>
