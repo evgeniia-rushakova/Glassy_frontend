@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -128,7 +129,7 @@ a {
   margin: 0;
   padding: 0;
   padding-top: 11px;
-  margin-right: 367px;
+  margin-right: 372px;
 }
 
 .user-navigation,
@@ -159,7 +160,8 @@ a {
   color: rgba(51, 51, 51, 1);
 }
 
-.catalog-navigation-item:active {
+.catalog-navigation-item:active,
+.site-navigation >.current-page:active {
   box-shadow: inset 0px 2px 1px 0 rgba(105, 105, 105, 1);
   background-color: rgba(237, 237, 237, 1);
 }
@@ -196,12 +198,13 @@ a {
   border-radius: 5px;
   position: absolute;
   margin-top: 15px;
+  z-index: 2;
 }
 
 .catalog-navigation-item-submenu a:hover {
   background-color: rgba(251, 222, 215, 1);
-  border-radius: inherit;
 }
+
 
 .catalog-navigation-item-submenu a:active {
   background-color: rgba(246, 181, 165, 1);
@@ -225,6 +228,12 @@ a {
 .catalog-navigation li:first-child a {
   font-weight: bold;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+.catalog-navigation li:last-child:hover a{
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 
 
@@ -247,17 +256,17 @@ a {
   align-items: center;
   padding: 0;
   margin: 0;
-  width: 250px;
   margin-top: 13px;
 }
 .user-navigation-item {
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
+  margin-right: 9px;
 }
 .login-hover,
 .bucket-hover {
-  padding: 6px 12px;
+  padding: 2px 18px 6px 8px;
   position: relative;
 }
 .user-navigation-item>a {
@@ -272,6 +281,7 @@ a {
 .user-navigation-item:hover>a,
 .bucket-full>a {
   color: rgba(51, 51, 51, 1);
+  white-space: nowrap;
 }
 .user-navigation-item:active {
   box-shadow: inset 0px 2px 1px 0 rgba(105, 105, 105, 1);
@@ -284,7 +294,7 @@ a {
   text-align: right;
   color: rgba(255, 255, 255, 1);
 }
-.user-navigation .search-link {
+.search-link {
   background-image: url("../img/search.svg");
   background-repeat: no-repeat;
   background-position: 9px 7px;
@@ -299,7 +309,7 @@ a {
   display: none;
 }
 
-/*.search-hover:hover .modal-search,*/
+.search-hover:hover .modal-search,
 .modal-show-search {
   position: absolute;
   top: 34px;
@@ -322,6 +332,13 @@ a {
   height: 17px;
   display: block;
   padding: 8px;
+}
+.search-hover:hover::after {
+  content: "";
+  width: 33px;
+  height: 20px;
+  position: absolute;
+  top:21px;
 }
 .search-on-site {
   border-radius: 5px;
@@ -350,11 +367,19 @@ a {
   padding: 8px;
   position: absolute;
   content: "";
-  left: -2px;
+  left: 2px;
   top: -8px;
 }
 .login-hover:hover .login-link:before {
   background-image: url(../img/enter-hover.svg);
+}
+.login-hover:hover::after {
+    content: "";
+  width: 90px;
+  height: 20px;
+  position: absolute;
+  top:21px;
+  left: 1px
 }
 
 /****modal-login*****/
@@ -362,7 +387,7 @@ a {
   display: none;
 }
 
-/*.login-hover:hover .modal-login,*/
+.login-hover:hover .modal-login,
 .modal-show-login {
   display: block;
   width: 277px;
@@ -436,20 +461,27 @@ a {
   padding: 8px;
   position: absolute;
   content: "";
-  left: 10px;
-  top: 1px;
+  left: 7px;
+  top: -3px;
 }
 .bucket-hover:hover::before {
   background-image: url(../img/bucket-hover.svg);
 }
-
+.bucket-hover:hover::after {
+    content: "";
+  width: 97px;
+  height: 20px;
+  position: absolute;
+  top:21px;
+  left: 1px;
+}
 /****bucket****/
 .modal-bucket {
   display: none;
 }
 
-/*.bucket-hover:hover .bucket,
-.bucket-hover:target .bucket*/
+.bucket-hover:hover .modal-bucket,
+.bucket-hover:target .modal-bucket
 .modal-show-bucket {
   background-color: rgba(248, 247, 244, 1);
   font-size: 13px;
@@ -567,7 +599,7 @@ a {
   padding-top: 276px;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
 }
 .slider-list {
   margin: 0;
@@ -798,12 +830,14 @@ a {
   font-size: 45px;
   font-weight: bold;
   line-height: 45px;
+  letter-spacing: -2px;
   text-align: left;
   color: rgba(255, 255, 255, 1);
   z-index: 1;
   padding: 0;
   margin: 0;
   position: absolute;
+  left: 0;
   top: 225px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 }
@@ -812,6 +846,7 @@ a {
   font-size: 30px;
   font-weight: bold;
   line-height: 45px;
+  padding-left: 4px;
 }
 .catalog-item-description {
   font-family: "Roboto", "Arial", sans-serif;
@@ -835,23 +870,32 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   position: relative;
-  margin-top: 10px;
+  margin-top: 11px;
 }
 .our-features b {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
   padding-left: 18px;
-  padding-top: 25px;
+  padding-top: 27px;
   padding-bottom: 22px;
+  letter-spacing: 0.3px;
 }
 .our-features p {
   color: #323232;
   width: 476px;
   margin: 0;
-  padding: 0 22px 25px 75px;
+  padding: 0 0 25px 75px;
+}
+.our-features .cow,
+.our-features .temperature
+ {
+  color: #323232;
+  width: 476px;
+  margin: 0;
+  padding: 0 28px 25px 0;
 }
 .our-features .icecream::after {
   background: url("../img/icecream-logo-features.svg") no-repeat;
@@ -1066,7 +1110,8 @@ input-feedback:active,
   font-size: 24px;
   line-height: 28px;
   color: #323232;
-  padding: 20px 0 0 24px;
+  padding-left:24px;
+  margin-top: 15px;
 }
 .modal-close {
   background-image: url("../img/close.svg");
@@ -1081,17 +1126,18 @@ input-feedback:active,
   padding-left: 24px;
 }
 .feedback-item textarea {
-  height: 155px;
+      height: 116px;
   width: 375px;
 }
 .feedback-item input {
   width: 267px;
 }
 .feedback-item .placeholder {
-  padding: 13px 15px;
+    padding: 13px 15px;
+    width: 236px;
 }
 .input-feedback {
-  padding: 13px 25px 25px 25px;
+  padding: 13px 37px 25px 13px;
 }
 .feedback-button {
   max-height: 44px;
@@ -1101,7 +1147,7 @@ input-feedback:active,
   padding: 7px 24px;
   margin-left: 315px;
   margin-bottom: 25px;
-  padding: 13px 28px;
+  padding: 11px 25px;
 }
 
 /*****************FOOTER************************/
@@ -1126,18 +1172,57 @@ input-feedback:active,
   display: flex;
   justify-content: space-between;
 }
-.social-link img {
-  opacity: 0.8;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-}
-.social-link:hover img {
+.twitter-social:hover,
+.instagram-social:hover,
+.facebook-social:hover,
+.vkontakte-social:hover {
   opacity: 1;
 }
-.social-link:active img {
-  background-color: rgba(233, 233, 233, 0.7);
+.twitter-social:active,
+.instagram-social:active,
+.facebook-social:active,
+.vkontakte-social:active {
+ border: 2px solid rgba(255, 255, 255, 0.8);
+
 }
 
+.twitter-social {
+  background: url("../img/twitter.svg");
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.8;
+
+}
+.instagram-social {
+  background: url("../img/instagram.svg");
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.facebook-social {
+  background: url("../img/facebook.svg");
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.vkontakte-social {
+  background: url("../img/vk.svg");
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.8;
+}
 /*****Commercial-block*****/
 .commercial-information {
   margin-left: 205px;
@@ -1216,14 +1301,39 @@ input-feedback:active,
 /***************INNER************/
 
 /*****HEADER******/
-.site-navigation >.current-page a{
+.inner {
+  margin-right: 353px;
+  margin-top: 4px;
+}
+.inner .site-navigation {
+  margin-left: 10px;
+}
+.catalog-navigation-item-inner {
+    display: block;
+    padding: 7px 15px 7px 13px;
+    white-space: nowrap;
+
+  }
+  .catalog-navigation-item-inner a{
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+.site-navigation >.current-page {
   background-color: rgba(208, 112, 88, 1);
   color: rgba(255, 255, 255, 1);
-  padding: 7px 13px;
+  border: none;
   border-radius: 25px;
 }
-.current-page a {
+.current-page > a {
   border-bottom: none;
+}
+.current-page:hover::after {
+  content: '';
+  position: absolute;
+  width: 91px;
+  height: 22px;
+  top: 40px;
+    left: 349px;
 }
 .bucket-full:before {
   background: url("../img/bucket-full.svg");
@@ -1236,7 +1346,7 @@ input-feedback:active,
   position: absolute;
   content: "";
   left: 10px;
-  top: 1px;
+  top: -3px;
   cursor: pointer;
 }
 .bucket-full:hover:before {
@@ -1250,21 +1360,20 @@ input-feedback:active,
   position: absolute;
   content: "";
   left: 10px;
-  top: 1px;
+  top: -2px;
   cursor: pointer;
 }
 .page-title {
   color: rgba(255, 255, 255, 1);
   margin: 0;
-  padding-left: 28px;
   font-size: 35px;
   line-height: 41px;
 }
 .breadcrumbs {
   display: flex;
   justify-content: space-between;
-  min-width: 230px;
-  padding-left: 27px;
+  min-width: 220px;
+  padding-left: 0;
   padding-top: 10px;
   margin-bottom: 0;
 }
@@ -1299,7 +1408,6 @@ input-feedback:active,
   order: 1;
   padding: 0;
   margin: 0;
-  margin-right: 27px;
 }
 
 /***************MAIN**************/
@@ -1345,10 +1453,13 @@ input-feedback:active,
     color: rgba(255,255,255,1);
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
   position: relative;
  background:rgba(255,255,255,0.4) url("../img/icon-down-dir.svg")166px 11px no-repeat;
 } 
+.sorting-select:hover {
+  color:rgba(0,0,0,1);
+  background:rgba(255,255,255,0.4) url("../img/icon-down-dir2.svg")166px 11px no-repeat;
+}
 
 .sorting-select option {
   color: black;
@@ -1371,6 +1482,7 @@ input-feedback:active,
   border-radius: 20px;
 }
 
+
 .range-slider {
   -webkit-appearance: none;
 
@@ -1378,6 +1490,17 @@ input-feedback:active,
     position: relative;
    width: 175px;
     height: 24px;
+}
+.range-slider::after {
+  content: "";
+  height: 4px;
+  width: 91px;
+  background-color: rgba(255,255,255,1);
+  position: absolute;
+  top: 9px;
+  left: 28px;
+
+
 }
 
 .range-slider input[type="range"] {
@@ -1535,7 +1658,7 @@ margin-top: -9px;
   line-height: 18px;
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
-  padding: 12px 29px 9px 31px;
+  padding: 15px 29px 9px 1px;
   background-color: #849d8f;
   border-radius: 20px;
 }
@@ -1612,19 +1735,49 @@ margin-top: -9px;
   line-height: 41px;
   color: rgba(255, 255, 255, 1);
 }
+.catalog-wrapper .catalog-item {
+  margin-bottom: 25px;
+}
+.catalog-wrapper .catalog-item-description
+{
+  margin:0;
+}
 .filtered-results .catalog-item {
   margin-left: 0;
 }
 /*****paginator****/
 .paginator {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   display: flex;
   justify-content: flex-end;
   padding-top: 10px;
-  padding-right: 26px;
+      position: relative;
 }
 .pagination ul {
   list-style: none;
+}
+.pager-last:before {
+  position: absolute;
+  content: "";
+  border-bottom:2px solid rgba(255,255,255,1);
+  border-right: 2px solid rgba(255,255,255,1);
+  height: 7px;
+  width:7px;
+  transform: rotate(136deg);
+top: 20px;
+    right: 181px;
+
+}
+.pager-next:before {
+  position: absolute;
+  content: "";
+  border-bottom:2px solid rgba(255,255,255,1);
+  border-right: 2px solid rgba(255,255,255,1);
+  height: 7px;
+  width:7px;
+transform: rotate(-48deg);
+    top: 20px;
+    right: 4px;
 }
 .pager-item a,
 .pager-last a,
@@ -1655,7 +1808,6 @@ margin-top: -9px;
 }
 .pagination {
   display: flex;
-  width: 190px;
   justify-content: space-between;
   padding: 0;
   margin: 0;
@@ -1667,14 +1819,19 @@ margin-top: -9px;
   list-style: none;
   padding: 0;
   margin: 0;
+      margin-right: 2px;
 }
 .pager-current.first {
   color: rgba(0, 0, 0, 1);
   background-color: rgba(255, 255, 255, 1);
 }
-/*исправить ховер сабменю ссылки красные
- поправить распорку афтер на место поставить.
- пиксель перфект каталога настроить 
- спереть двойной рэйндж или не спереть
+/*исправить ховер сабменю ссылки красные done
+ поправить распорку афтер на место поставить. done
+ пиксель перфект каталога настроить  done
+ спереть двойной рэйндж или не спереть done
  сдать на проверку как можно раньше
- вернуть ховеры на меню
+ вернуть ховеры на меню done
+
+
+ проверить инпуты на состояния как в ебучем стайлгайде
+исправить распорку на иннере

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <!--<link href="css/outline.css" rel="stylesheet">-->
+    <script type="text/javascript" src="js/main.js"></script>
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
@@ -154,43 +154,36 @@
         <h2 class="visually-hidden">Перечень вкусов</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <a href="catalog-item.html">
               <p class="catalog-item-price">310 &#8381;<span>/кг</span></p>
               <p class="catalog-item-image hit">
                 <img src="img/orange.jpg" alt="orange" height="267" width="267">
               </p>
               <p class="catalog-item-description">Сливочое с апельсиновым джемом и цитрусовой стружкой</p>
-            </a>
             <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <a href="catalog-item.html">
               <p class="catalog-item-price">380 &#8381;<span>/кг</span></p>
               <p class="catalog-item-image hit">
                 <img src="img/coffee.jpg" alt="coffee" height="267" width="267">
               </p>
               <p class="catalog-item-description">Сливочно-кофейное с кусочками шоколада</p>
-            </a>
+            
             <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <a href="catalog-item.html">
               <p class="catalog-item-price">355 &#8381;<span>/кг</span></p>
               <p class="catalog-item-image hit">
                 <img src="img/strawberry.jpg" alt="strawberry" height="267" width="267">
               </p>
               <p class="catalog-item-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
-            </a>
             <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <a href="catalog-item.html">
               <p class="catalog-item-price">415 &#8381;<span>/кг</span></p>
               <p class="catalog-item-image hit">
                 <img src="img/creme-brulee.jpg" alt="creme-brulee" height="267" width="267">
               </p>
               <p class="catalog-item-description">Сливочное крем-брюле с карамельной подливкой</p>
-            </a>
             <a class="button button-visual" href="#">Быстрый просмотр</a>
           </li>
         </ul>
@@ -239,10 +232,10 @@
     <footer class="main-footer container">
       <div class="footer-social">
         <ul>
-          <li><a class="social-link" href="#"><img src="img/twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
-          <li><a class="social-link" href="#"><img src="img/instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
-          <li><a class="social-link" href="#"><img src="img/facebook.svg" width="32" height="32" alt="Фейсбук"></a></li>
-          <li><a class="social-link" href="#"><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
+          <li class="twitter-social"><a class="social-link" href="#"></a></li>
+          <li class="instagram-social"><a class="social-link" href="#"></a></li>
+          <li class="facebook-social"><a class="social-link" href="#"></a></li>
+          <li class="vkontakte-social"><a class="social-link" href="#"></a></li>
         </ul>
       </div>
       <section class="commercial-information">
@@ -283,102 +276,7 @@
         <button class="button feedback-button" type="submit">Отправить</button>
       </form>
     </section>
-    <script>
-      var modalSearch = document.querySelector(".modal-search");
-      var searchLink = document.querySelector(".search-hover");
-      var loginLink = document.querySelector(".login-hover");
-      var modalLogin = document.querySelector(".modal-login");
-      var bucketLink = document.querySelector(".bucket-hover");
-      var modalBucket = document.querySelector(".modal-bucket");
-      var contactButton = document.querySelector(".contact-form-button");
-      var modalFeedback = document.querySelector(".modal-feedback");
-      var modalclose = document.querySelector(".modal-close");
-      var email = modalLogin.querySelector(".user-email");
-      var form = modalLogin.querySelector(".login-form");
-      var password = modalLogin.querySelector(".user-password");
-      var isStorageSupport = true;
-      var storage = "";
-      
-      try {
-      storage = localStorage.getItem("email");
-      } catch (err) {
-      isStorageSupport = false;
-      }
-      
-      
-      searchLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      modalSearch.classList.add("modal-show-search");
-      });
-      window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (modalSearch.classList.contains("modal-show-search")) {
-      modalSearch.classList.remove("modal-show-search");
-      modalSearch.classList.remove("modal-error");
-      }
-      }
-      });
-      
-      loginLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      modalLogin.classList.add("modal-show-login");
-      });
-      if (storage) {
-      email.value = storage;
-      password.focus();
-      }else{
-      
-      email.focus();
-      }  
-      form.addEventListener("submit", function (evt) {
-      evt.preventDefault();
-      modalLogin.classList.remove("modal-error");
-      modalLogin.offsetWidth = modalLogin.offsetWidth;
-      modalLogin.classList.add("modal-error");
-      modalLogin.classList.remove("modal-error");
-      
-      if (!email.value || !password.value) {
-      evt.preventDefault();
-      console.log("Нужно ввести почту и пароль");
-      }  else {
-      if (isStorageSupport) {
-      localStorage.setItem("email", email.value);
-      }
-      }
-      });
-      window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (modalLogin.classList.contains("modal-show-login")) {
-      modalLogin.classList.remove("modal-show-login");
-      modalLogin.classList.remove("modal-error");
-      }
-      }
-      });
-      bucketLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      modalBucket.classList.add("modal-show-bucket");
-      });
-      window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (modalBucket.classList.contains("modal-show-bucket")) {
-      modalBucket.classList.remove("modal-show-bucket");
-      modalBucket.classList.remove("modal-show-bucket");
-      }
-      }
-      });
-      
-      contactButton.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      modalFeedback.classList.add("modal-show-feedback");
-      });
-      modalclose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      modalFeedback.classList.remove("modal-show-feedback");
-      }); 
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </div>
 </html>
