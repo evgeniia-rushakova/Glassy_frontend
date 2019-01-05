@@ -7,7 +7,6 @@ body
 
     margin: 0;
     padding: 0;
-    padding-left: 58px;
 
     background-color: #849d8f;
 }
@@ -136,7 +135,6 @@ input[type='radio'].visually-hidden
 
             clip-path: inset(100%);
 }
-
 a
 {
     text-decoration: none;
@@ -195,20 +193,22 @@ a
 
 .placeholder:hover
 {
-    -webkit-box-shadow: 0 0 0 2px rgba(154, 154, 154, .52) inset;
-            box-shadow: 0 0 0 2px rgba(154, 154, 154, .52) inset;
+    -webkit-box-shadow: 0 0 0 1px rgba(154, 154, 154, .52) inset;
+            box-shadow: 0 0 0 1px rgba(154, 154, 154, .52) inset;
 }
 
 .placeholder:focus
 {
-    -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, .52);
-            box-shadow: 0 0 0 2px rgba(46, 136, 228, .52);
+    -webkit-box-shadow: 0 0 0 1px rgba(46, 136, 228, .52);
+            box-shadow: 0 0 0 1px rgba(46, 136, 228, .52);
+    outline: none;
 }
 
 
 .main-header
 {
     width: auto;
+    padding-top: 9px;
 }
 .navigation-wrapper
 {
@@ -315,7 +315,7 @@ a
 .active:hover::after
 {
     position: absolute;
-    top: 36px;
+    top: 47px;
     left: 351px;
 
     width: 91px;
@@ -910,7 +910,6 @@ a
 .slider-wrapper
 {
     margin: 0 auto;
-    padding: 0 27px;
 
     -webkit-transition: background-image .5s ease, background-color .5s ease;
 
@@ -920,7 +919,7 @@ a
 
     background-image: url('../img/first-slide.png');
     background-repeat: no-repeat;
-    background-position: 50% -.5%;;
+    background-position: 50% 0;;
 }
 .slider-wrapper::before,
 .slider-wrapper::after
@@ -989,8 +988,7 @@ a
 
     position: absolute;
     z-index: 20;
-    bottom: 22px;
-    left: 161px;
+    bottom: 25px;
 }
 .slider-controls label
 {
@@ -1012,6 +1010,7 @@ a
     border: 2px solid rgba(255,255,255,1);
     background-color: rgba(248, 247, 244,.4);
 }
+
 
 #product-1:checked ~ .slider-wrapper #slide1,
 #product-2:checked ~ .slider-wrapper #slide2,
@@ -1046,9 +1045,12 @@ a
 }
 .container
 {
-    width: 1146px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 27px;
+        
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .special-offer
@@ -1107,7 +1109,7 @@ a
 
     color: rgba(255, 255, 255, 1);
 }
-.raspberry.topping-gifts a
+.button-raspberry
 {
     font-size: 18px;
     font-weight: bold;
@@ -1122,7 +1124,7 @@ a
 
         align-self: flex-end;
 }
-.chocolate.topping-gifts a
+.button-chocolate
 {
     font-size: 18px;
     font-weight: bold;
@@ -1206,7 +1208,8 @@ a
 {
     margin-left: 0;
 }
-.catalog-item:hover::after
+.catalog-item-image:hover::after,
+.catalog-item-description:hover::after
 {
     position: absolute;
     z-index: 2;
@@ -1285,6 +1288,7 @@ a
     z-index: 1;
     top: 225px;
     left: 0;
+    
 
     margin: 0;
     padding: 0;
@@ -1321,6 +1325,11 @@ a
 
     color: rgba(255, 255, 255, 1);
 }
+.catalog-item-description:hover,
+.catalog-item-description:active {
+    color: rgba(255, 188, 158, 1);
+}
+
 
 .our-features
 {
@@ -1333,7 +1342,7 @@ a
     display: flex;
 
     width: 1146px;
-    margin-top: 11px;
+    margin-top: 28px;
     margin-bottom: 39px;
 
     border-radius: 15px;
@@ -1436,7 +1445,7 @@ a
     display: -ms-flexbox;
     display: flex;
 
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 
     -webkit-box-pack: justify;
 
@@ -1481,6 +1490,10 @@ a
     text-decoration: underline;
 
     color: #323232;
+}
+.our-blog a:hover,
+.our-blog a:active {
+    color: rgba(232, 77, 55,1);
 }
 .subscribe-block
 {
@@ -1546,13 +1559,13 @@ a
     border: 1px solid rgba(178, 178, 178, .52);
     border-radius: 5px;
 }
-input-feedback:hover,
+.input-feedback:hover,
 .feedback-item textarea:hover
 {
     -webkit-box-shadow: 0 0 0 2px rgba(154, 154, 154, .52) inset;
             box-shadow: 0 0 0 2px rgba(154, 154, 154, .52) inset;
 }
-input-feedback:active,
+.input-feedback:active,
 .feedback-item textarea:active
 {
     -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, .52) inset;
@@ -1566,6 +1579,7 @@ input-feedback:active,
     width: 1200px;
     height: 430px;
     margin: 0 auto;
+    margin-left: -27px;
 }
 .map iframe
 {
@@ -1598,7 +1612,7 @@ input-feedback:active,
 .contacts p
 {
     margin-top: 14px;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     padding-top: 12px;
     padding-right: 25px;
     padding-left: 25px;
@@ -1835,6 +1849,7 @@ input-feedback:active,
 .commercial-information
 {
     margin-left: 205px;
+    padding-top: 15px;
 }
 .commercial-information a
 {
@@ -1933,7 +1948,8 @@ input-feedback:active,
         -ms-flex-direction: column;
             flex-direction: column;
 
-    margin-left: 158px;
+    margin-left: 233px;
+    margin-top: 2px;
 }
 .copyright span
 {
@@ -2001,6 +2017,10 @@ input-feedback:active,
 .current-cream a
 {
     color: rgba(255,255,255,1);
+}
+.current-cream:active a,
+.current-cream:hover a {
+    color:rgba(0,0,0,1);
 }
 .bucket-full:before
 {
@@ -2120,7 +2140,9 @@ input-feedback:active,
 
             order: 1;
 }
-
+.filters {
+    margin-bottom: 15px;
+}
 
 .filtered-results
 {
@@ -2148,21 +2170,6 @@ input-feedback:active,
     color: rgba(255, 255, 255, 1);
 }
 
-
-.filters-row
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    margin-bottom: 15px;
-
-    -webkit-box-align: baseline;
-
-        -ms-flex-align: baseline;
-
-            align-items: baseline;
-}
 .filter-item-select
 {
     display: -webkit-box;
@@ -2217,12 +2224,12 @@ input-feedback:active,
         -ms-flex-direction: column;
             flex-direction: column;
 
-    margin-right: 14px;
+    margin-right: 17px;
 }
 
 .pricerange
 {
-    padding: 8px 19px 2px 22px;
+    padding: 16px 20px 15px 22px;
 
     border-radius: 20px;
     background-color: rgba(255,255,255,.4);
@@ -2232,19 +2239,19 @@ input-feedback:active,
 .range-slider
 {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     overflow: hidden;
 
-    width: 175px;
-    height: 24px;
 
     -webkit-appearance: none;
 }
 .range-slider::after
 {
     position: absolute;
-    top: 9px;
-    left: 28px;
+    top: 52px;
+    left: 53px;
 
     width: 91px;
     height: 4px;
@@ -2253,22 +2260,35 @@ input-feedback:active,
 
     background-color: rgba(255,255,255,1);
 }
-
-.range-slider input[type='range']
-{
+.range-slider::before {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 44px;
+    left: 131px;
 
-    overflow: hidden;
+    width: 4px;
+    height: 4px;
 
-    width: 200px;
-    height: 22px;
+    content: '';
+
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 1;
+
+    border: 8px solid rgba(255,255,255,1);
+    border-radius: 50%;
+    background-color: rgba(132, 157, 143,1);
+
+}
+
+.range-slider .pricerange
+{
+
+
+
+    width: 174px;
 
     pointer-events: none;
 
-    outline: none;
-    background-color: transparent;
 
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -2344,6 +2364,7 @@ input-feedback:active,
 
     margin-bottom: 6px;
     padding-left: 16px;
+    padding-top: 13px;
 }
 .sort-fat-item-wrapper
 {
@@ -2404,7 +2425,7 @@ input-feedback:active,
     top: -2px;
     left: -31px;
 
-    width: 14px;
+    width: 15px;
     height: 15px;
 
     content: '';
@@ -2460,7 +2481,8 @@ input-feedback:active,
     font-weight: bold;
     line-height: 16px;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    margin-top: 15px;
     padding-left: 15px;
 
     color: rgba(255, 255, 255, 1);
@@ -2477,7 +2499,7 @@ input-feedback:active,
 
         align-self: flex-start;
 }
-.filters-row > .topping-check
+.topping-check
 {
     font-size: 16px;
     line-height: 18px;
@@ -2495,6 +2517,10 @@ input-feedback:active,
     color: rgba(255, 255, 255, 1);
     border-radius: 20px;
     background-color: #849d8f;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .topping-wrapper input[type='checkbox']
@@ -2530,6 +2556,7 @@ input-feedback:active,
     margin-right: 19px;
     margin-bottom: 7px;
     padding-left: 16px;
+    padding-top: 13px;
 }
 .topping-check-range span
 {
@@ -2575,8 +2602,10 @@ input-feedback:active,
     font-size: 16px;
     font-weight: bold;
     line-height: 18px;
+    align-self: baseline;
 
     padding: 7px 27px;
+    margin-top: 38px;
 
     color: rgba(255, 255, 255, 1);
     border: 2px solid rgba(255, 255, 255, 1);
@@ -2750,3 +2779,4 @@ input-feedback:active,
     color: rgba(0, 0, 0, 1);
     background-color: rgba(255, 255, 255, 1);
 }
+/*в иннере поправить карточки катлога,возможно поправить ширину в некоторых каталог итем дескрипшн внутри р почему то*/

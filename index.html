@@ -2,18 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <script src="js/main.js"></script>
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
+    <div class="container">
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
     <input class="visually-hidden" type="radio" id="product-2" name="toggle">
     <input class="visually-hidden" type="radio" id="product-3" name="toggle">
     <div class="slider-wrapper">
-      <header class="main-header container">
+      <header class="main-header">
         <div class="navigation-wrapper">
           <a class="main-header-logo">
           <img src="img/header-logo.svg" alt="Логотип магазина" width="154" height="64">
@@ -70,37 +70,6 @@
               </li>
               <li class="user-navigation-item bucket-hover">
                 <a class="bucket-link" href="Bucket.html">Пусто</a>
-                <section class="modal modal-bucket">
-                  <h4 class="visually-hidden">bucket</h4>
-                  <table class="client-choise">
-                    <tr class="client-choise-row">
-                      <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-                      <td><img src="img/orange.jpg" width="33" height="33" alt="пломбир апельсин"></td>
-                      <td><a class="icecream-link" href="#">Пломбир с апельсиновым джемом</a></td>
-                      <td>
-                        <p>1,5кг х <span>200 руб.</span></p>
-                      </td>
-                      <td>
-                        <p>300 руб</p>
-                      </td>
-                    </tr>
-                    <tr class="client-choise-row">
-                      <td class="delete"><img src="img/delete.svg" alt="удалить из заказа" width="11" height="11"></td>
-                      <td><img src="img/strawberry.jpg" width="33" height="33" alt="пломбир клубника"></td>
-                      <td><a class="icecream-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                      <td>
-                        <p>1,5кг х <span>300 руб.</span></p>
-                      </td>
-                      <td>
-                        <p>450 руб</p>
-                      </td>
-                    </tr>
-                    <tr class="client-choise-row-amount">
-                      <td colspan="5">Итого: 750 руб.</td>
-                    </tr>
-                  </table>
-                  <a class="button button-choise" href="#">Оформить заказ</a>
-                </section>
               </li>
             </ul>
           </nav>
@@ -109,9 +78,9 @@
       </header>
       <section class="slider">
         <div class="slider-controls">
-          <label for="product-1">Первый</label>
-          <label for="product-2">Второй</label>
-          <label for="product-3">Третий</label>
+          <label for="product-1" tabindex="0">Первый</label>
+          <label for="product-2" tabindex="0">Второй</label>
+          <label for="product-3" tabindex="0">Третий</label>
         </div>
         <ul class="slider-list">
           <li class="slider-item slide" id="slide1">
@@ -134,19 +103,19 @@
           </li>
         </ul>
       </section>
-      <main class="container">
+      <main>
         <h1 class="visually-hidden">Магазин мороженого "Глэcси"</h1>
         <section class="special-offer">
           <h2 class="visually-hidden">Специальные предложения</h2>
           <div class="topping-gifts raspberry">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="button" href="#">Хочу варенье!</a>
+            <a class="button button-raspberry" href="#">Хочу варенье!</a>
           </div>
           <div class="topping-gifts chocolate">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="button" href="#">Хочу шоколадки!</a>
+            <a class="button button-chocolate" href="#">Хочу шоколадки!</a>
           </div>
         </section>
         <section class="type-of-icecream-list">
@@ -157,7 +126,7 @@
               <p class="catalog-item-image hit">
                 <img src="img/orange.jpg" alt="orange" height="267" width="267">
               </p>
-              <p class="catalog-item-description">Сливочое с апельсиновым джемом и цитрусовой стружкой</p>
+              <a class="catalog-item-description" href="#">Сливочое с апельсиновым джемом и цитрусовой стружкой</a>
               <a class="button button-visual" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
@@ -165,7 +134,7 @@
               <p class="catalog-item-image hit">
                 <img src="img/coffee.jpg" alt="coffee" height="267" width="267">
               </p>
-              <p class="catalog-item-description">Сливочно-кофейное с кусочками шоколада</p>
+              <a class="catalog-item-description" href="#">Сливочно-кофейное с кусочками шоколада</a>
               <a class="button button-visual" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
@@ -173,7 +142,7 @@
               <p class="catalog-item-image hit">
                 <img src="img/strawberry.jpg" alt="strawberry" height="267" width="267">
               </p>
-              <p class="catalog-item-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+              <a class="catalog-item-description" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
               <a class="button button-visual" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
@@ -181,7 +150,7 @@
               <p class="catalog-item-image hit">
                 <img src="img/creme-brulee.jpg" alt="creme-brulee" height="267" width="267">
               </p>
-              <p class="catalog-item-description">Сливочное крем-брюле с карамельной подливкой</p>
+              <a class="catalog-item-description" href="#">Сливочное крем-брюле с карамельной подливкой</a>
               <a class="button button-visual" href="#">Быстрый просмотр</a>
             </li>
           </ul>
@@ -227,25 +196,23 @@
           <a class="button contact-form-button" href="writeme.html">Форма обратной связи</a>
         </section>
       </section>
-      <footer class="main-footer container">
+      <footer class="main-footer">
         <div class="footer-social">
           <ul>
-            <li class="twitter-social"><a class="social-link" href="#"></a></li>
-            <li class="instagram-social"><a class="social-link" href="#"></a></li>
-            <li class="facebook-social"><a class="social-link" href="#"></a></li>
-            <li class="vkontakte-social"><a class="social-link" href="#"></a></li>
+            <li class="twitter-social" tabindex="0" aria-label="наша страница в твиттере"><a class="social-link" href="#"></a></li>
+            <li class="instagram-social" tabindex="0" aria-label="наша страница в инстаграмм"><a class="social-link" href="#"></a></li>
+            <li class="facebook-social" tabindex="0" aria-label="наша страница в фэйсбук"><a class="social-link" href="#" ></a></li>
+            <li class="vkontakte-social" tabindex="0" aria-label="наша страница в вконтакте"><a class="social-link" href="#"></a></li>
           </ul>
         </div>
         <section class="commercial-information">
           <h2 class="visually-hidden"> Коммерческая информация </h2>
-          <div class="commercial-block">
             <ul class="commercial-column">
               <li class="commercial-block-item"><a href="forproviders.html">Для поставщиков</a></li>
               <li class="commercial-block-item"><a href="documents.html">Наши документы</a></li>
               <li class="commercial-block-item"><a href="production.html">О производстве</a></li>
               <li class="commercial-block-item"><a href="ecology.html">Экологические стандарты</a></li>
             </ul>
-          </div>
         </section>
         <div class="copyright">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
@@ -274,7 +241,8 @@
           <button class="button feedback-button" type="submit">Отправить</button>
         </form>
       </section>
-      <script src="js/main.js"></script>
     </div>
+  </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
