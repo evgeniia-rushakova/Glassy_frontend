@@ -9,7 +9,12 @@ var modalFeedback = document.querySelector(".modal-feedback");
 var modalclose = document.querySelector(".modal-close");
 var email = document.querySelector(".user-email");
 var form = document.querySelector(".login-form");
+var feedbackForm = document.querySelector(".feedback-form");
+var feedname = feedbackForm.querySelector("[name=name]");
+var feedMail = feedbackForm.querySelector("[name=email]");
+var feedText = feedbackForm.querySelector("[name=feedback-text]");
 var password = document.querySelector(".user-password");
+var overlay = document.querySelector(".overlay");
 var isStorageSupport = true;
 var storage = "";
 
@@ -38,29 +43,26 @@ loginLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalLogin.classList.add("modal-show-login");
 });
-if (storage) {
-  email.value = storage;
-  password.focus();
-} else {
 
-  email.focus();
-}
 form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  modalLogin.classList.remove("modal-error");
-  modalLogin.offsetWidth = modalLogin.offsetWidth;
-  modalLogin.classList.add("modal-error");
-  modalLogin.classList.remove("modal-error");
-
   if (!email.value || !password.value) {
     evt.preventDefault();
-    console.log("Нужно ввести почту и пароль");
+    form.classList.remove("modal-error");
+    form.offsetWidth = form.offsetWidth;
+    form.classList.add("modal-error");
+    if (storage) {
+      email.value = storage;
+      password.focus();
+    } else {
+      password.focus();
+    }
   } else {
     if (isStorageSupport) {
       localStorage.setItem("email", email.value);
     }
   }
 });
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
@@ -82,13 +84,29 @@ window.addEventListener("keydown", function (evt) {
       modalBucket.classList.remove("modal-show-bucket");
     }
   }
+
 });
 
 contactButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalFeedback.classList.add("modal-show-feedback");
+  overlay.classList.add("overlay-show");
+
 });
+
+
+feedbackForm.addEventListener("submit", function (evt) {
+  if (!feedname.value || !feedMail.value || !feedText.value) {
+    evt.preventDefault();
+    feedbackForm.classList.remove("modal-error");
+    feedbackForm.offsetWidth = form.offsetWidth;
+    feedbackForm.classList.add("modal-error");
+  }
+});
+
+
 modalclose.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalFeedback.classList.remove("modal-show-feedback");
+  overlay.classList.remove("overlay-show");
 });
