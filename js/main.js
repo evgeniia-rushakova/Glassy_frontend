@@ -9,6 +9,7 @@ var modalFeedback = document.querySelector(".modal-feedback");
 var modalclose = document.querySelector(".modal-close");
 var email = document.querySelector(".user-email");
 var form = document.querySelector(".login-form");
+var wrapperForm=document.querySelector(".modal-login-wrapper")
 var feedbackForm = document.querySelector(".feedback-form");
 var feedname = feedbackForm.querySelector("[name=name]");
 var feedMail = feedbackForm.querySelector("[name=email]");
@@ -40,16 +41,15 @@ window.addEventListener("keydown", function (evt) {
 });
 
 loginLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
   modalLogin.classList.add("modal-show-login");
 });
 
 form.addEventListener("submit", function (evt) {
   if (!email.value || !password.value) {
     evt.preventDefault();
-    form.classList.remove("modal-error");
-    form.offsetWidth = form.offsetWidth;
-    form.classList.add("modal-error");
+    wrapperForm.classList.remove("modal-error");
+    wrapperForm.offsetWidth = wrapperForm.offsetWidth;
+    wrapperForm.classList.add("modal-error");
     if (storage) {
       email.value = storage;
       password.focus();
@@ -99,7 +99,7 @@ feedbackForm.addEventListener("submit", function (evt) {
   if (!feedname.value || !feedMail.value || !feedText.value) {
     evt.preventDefault();
     feedbackForm.classList.remove("modal-error");
-    feedbackForm.offsetWidth = form.offsetWidth;
+    feedbackForm.offsetWidth = feedbackForm.offsetWidth;
     feedbackForm.classList.add("modal-error");
   }
 });

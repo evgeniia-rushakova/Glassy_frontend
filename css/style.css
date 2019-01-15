@@ -1318,13 +1318,13 @@ a {
   padding: 13px 0 13px 15px;
 }
 
-.input-feedback,
+
 .feedback-item textarea {
 
   border-radius: 5px;
 }
 
-.input-feedback:hover,
+
 .feedback-item textarea:hover
 {
   -webkit-box-shadow: 0 0 0 1px rgba(154, 154, 154, .52) inset;
@@ -1332,13 +1332,12 @@ a {
   border-radius: 5px;
 }
 
-.input-feedback:active,
-.feedback-item textarea:active,
- .input-feedback:focus,
-.feedback-item textarea:focus{
-  -webkit-box-shadow: 0 0 0 1px rgba(46, 136, 228, .52) inset;
-  box-shadow: 0 0 0 1px rgba(46, 136, 228, .52) inset;
+
+ .feedback-item textarea:focus,
+ .feedback-item textarea:active{
   border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(46, 136, 228, .52);
+  outline: none;
 }
 
 .subscribe-wrapper {
